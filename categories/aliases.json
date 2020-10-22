@@ -1,58 +1,62 @@
 [
   {
-    "number": 7,
-    "alias": "gas price"
-  },
-  {
-    "number": 7,
-    "alias": "gas"
-  },
-  {
-    "number": 9,
-    "alias": "swrv"
+    "number": 1,
+    "alias": "vesting"
   },
   {
     "number": 1,
-    "alias": "swerve"
+    "alias": "vesting schedule"
   },
   {
     "number": 2,
-    "alias": "farm"
-  },
-  {
-    "number": 2,
-    "alias": "farm swrv"
+    "alias": "token distribution"
   },
   {
     "number": 3,
-    "alias": "boost"
-  },
-  {
-    "number": 11,
-    "alias": "boost v2"
-  },
-  {
-    "number": 4,
-    "alias": "buy swrv"
-  },
-  {
-    "number": 5,
-    "alias": "governance"
-  },
-  {
-    "number": 6,
     "alias": "supply"
   },
   {
+    "number": 4,
+    "alias": "contract"
+  },
+  {
+    "number": 5,
+    "alias": "LaunchDAO"
+  },
+  {
     "number": 6,
-    "alias": "inflation"
+    "alias": "BarnBridgeDAO"
   },
   {
     "number": 8,
-    "alias": "tx failed"
+    "alias": "telegram"
   },
   {
     "number": 10,
-    "alias": "governance mechanism"
+    "alias": "BOND NFT"
+  },
+  {
+    "number": 11,
+    "alias": "BOND NFT list"
+  },
+  {
+    "number": 20,
+    "alias": "tranche"
+  },
+  {
+    "number": 21,
+    "alias": "Smart Yield BOND"
+  },
+  {
+    "number": 22,
+    "alias": "Smart Alpha BOND"
+  },
+  {
+    "number": 25,
+    "alias": "gas price"
+  },
+  {
+    "number": 25,
+    "alias": "gas"
   }
 ]
