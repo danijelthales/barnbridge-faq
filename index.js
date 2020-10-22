@@ -1073,7 +1073,7 @@ setInterval(function () {
 
 setInterval(function () {
 
-    clientTknPrice.guilds.cache.forEach(function (value, key) {
+    clientBtcPrice.guilds.cache.forEach(function (value, key) {
         value.members.cache.get("768970849549156392").setNickname("$" + btcPrice);
         value.members.cache.get("768970849549156392").user.setActivity("marketcap=$" + getNumberLabel(btcMarketCap), {type: 'PLAYING'});
     });
