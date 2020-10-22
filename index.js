@@ -1099,8 +1099,6 @@ setInterval(function () {
             minutes %= 60;
             seconds %= 60;
 
-            exampleEmbed.addField("Countdown:", days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ", false);
-
             value.members.cache.get("768970504735817750").setNickname("⌛$$$⌛");
             value.members.cache.get("768970504735817750").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ", {type: 'PLAYING'});
         } catch (e) {
