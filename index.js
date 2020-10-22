@@ -20,6 +20,19 @@ var kucoinUsd = 3.74;
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
 
+
+const clientBondPrice = new Discord.Client();
+clientBondPrice.login(process.env.BOT_TOKEN_BOND);
+
+const clientBtcPrice = new Discord.Client();
+clientBtcPrice.login(process.env.BOT_TOKEN_BTC);
+
+var bondPrice = 100;
+var bondMarketCap = 1000000;
+
+var btcPrice = 13000;
+var btcMarketCap = 242750958733;
+
 console.log("Redis URL:" + process.env.REDIS_URL);
 
 if (process.env.REDIS_URL) {
@@ -1028,5 +1041,76 @@ setInterval(function () {
         console.log(e);
     }
 }, 60 * 1000);
+
+
+setInterval(function () {
+    https.get('https://api.coingecko.com/api/v3/coins/bitcoin', (resp) => {
+        let data = '';
+
+        // A chunk of data has been recieved.
+        resp.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        // The whole response has been received. Print out the result.
+        resp.on('end', () => {
+            try {
+                let result = JSON.parse(data);
+                btcPrice = result.market_data.current_price.usd;
+                btcPrice = Math.round(((btcPrice * 1.0) + Number.EPSILON) * 100) / 100;
+                btcMarketCap = result.market_data.market_cap.usd;
+            } catch (e) {
+                console.log(e);
+            }
+        });
+
+    }).on("error", (err) => {
+        console.log("Error: " + err.message);
+    });
+
+}, 50 * 1000);
+
+
+setInterval(function () {
+
+    clientTknPrice.guilds.cache.forEach(function (value, key) {
+        value.members.cache.get("768970849549156392").setNickname("$" + btcPrice);
+        value.members.cache.get("768970849549156392").user.setActivity("marketcap=$" + getNumberLabel(btcMarketCap), {type: 'PLAYING'});
+    });
+
+}, 45 * 1000);
+
+
+setInterval(function () {
+
+    clientBondPrice.guilds.cache.forEach(function (value, key) {
+        try {
+
+            var today = new Date();
+            while (today > payday) {
+                payday.setDate(payday.getDate() + 7);
+            }
+            var difference = payday.getTime() - today.getTime();
+            var seconds = Math.floor(difference / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            hours %= 24;
+            minutes %= 60;
+            seconds %= 60;
+
+            exampleEmbed.addField("Countdown:", days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ", false);
+
+            value.members.cache.get("768970504735817750").setNickname("⌛$$$⌛");
+            value.members.cache.get("768970504735817750").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 1 * 1000);
+
+
+var payday = new Date('2020-10-19 00:00');
 
 client.login(process.env.BOT_TOKEN);
