@@ -8,8 +8,6 @@ const redis = require("redis");
 let redisClient = null;
 
 var fs = require('fs');
-var swervePrice = 0.668;
-var swerveMarketcap = 5242720;
 
 var coingeckoUsd = 3.74;
 var coingeckoEth = 0.01051993;
@@ -66,7 +64,7 @@ client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
 })
 client.on("guildMemberAdd", function (member) {
-    member.send("Hi and welcome to Swerve! I am Swerve FAQ bot. I will be very happy to assist you, just ask me for **help**.");
+    member.send("Hi and welcome to Barnbridge! I am 007 FAQ bot. I will be very happy to assist you, just ask me for **help**.");
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
@@ -170,7 +168,7 @@ client.on("message", msg => {
             if (!(msg.channel.type == "dm")) {
                 // this is logic for channels
                 if (msg.content.toLowerCase().trim() == "!faq") {
-                    msg.reply("Hi, I am Swerve FAQ bot. I will be very happy to assist you, just ask me for **help** in DM.");
+                    msg.reply("Hi, I am 007 FAQ bot. I will be very happy to assist you, just ask me for **help** in DM.");
                 } else if (msg.content.toLowerCase().includes("<@!513707101730897921>")) {
                     msg.reply("I've called for master, he will be with you shortly.");
                 } else if (msg.content.toLowerCase().trim() == "!faq help") {
@@ -250,9 +248,9 @@ client.on("message", msg => {
                             if (command == "question") {
                                 msg.reply("Choose your question with ***question questionNumber***, e.g. ***question 1***\nYou can get the question number via **list** command");
                             } else if (command == "category") {
-                                msg.reply("Choose your category with ***category categoryName***, e.g. ***category swerve***\nCategory name is fetched from **categories** command");
+                                msg.reply("Choose your category with ***category categoryName***, e.g. ***category BONDS***\nCategory name is fetched from **categories** command");
                             } else if (command == "search") {
-                                msg.reply("Search for questions with ***search searchTerm***, e.g. ***search swerve price***");
+                                msg.reply("Search for questions with ***search searchTerm***, e.g. ***search bond price***");
                             } else {
                                 msg.reply("I don't know that one. Try just **help** for known commands");
                             }
@@ -296,7 +294,7 @@ client.on("message", msg => {
                             });
 
                             if (!found) {
-                                exampleEmbed.addField('\u200b', "That doesn't look like a known category. Use a category name from **categories** command, e.g. **category swerve**");
+                                exampleEmbed.addField('\u200b', "That doesn't look like a known category. Use a category name from **categories** command, e.g. **category BONDS**");
                             } else {
                                 exampleEmbed.addField('\u200b', 'Choose your question with e.g. **question 1**');
                             }
@@ -352,7 +350,7 @@ client.on("message", msg => {
             let exampleEmbed = new Discord.MessageEmbed()
                 .setColor('#0099ff')
                 .setTitle('Known aliases')
-                .setURL('https://github.com/dgornjakovic/swerve-faq');
+                .setURL('https://github.com/dgornjakovic/barnbridge-faq');
             exampleEmbed.setDescription('Hello, here are the aliases I know:');
 
             let counter = 0;
@@ -380,7 +378,7 @@ client.on("message", msg => {
                     exampleEmbed = new Discord.MessageEmbed()
                         .setColor('#0099ff')
                         .setTitle('Known aliases page ' + pagenumber)
-                        .setURL('https://github.com/dgornjakovic/swerve-faq');
+                        .setURL('https://github.com/dgornjakovic/barnbridge-faq');
                     exampleEmbed.setDescription('Hello, here are the aliases I know:');
                     pagenumber++;
                     counter = 0;
@@ -483,7 +481,7 @@ client.on("message", msg => {
                 exampleEmbed.addField(category.name, category.desc, false);
             });
 
-            exampleEmbed.addField('\u200b', "Choose the category with **category categoryName**, e.g. **category SNX**, or **category Synthetix.Exchange**");
+            exampleEmbed.addField('\u200b', "Choose the category with **category categoryName**, e.g. **category BONDS*");
             msg.reply(exampleEmbed);
         }
 
