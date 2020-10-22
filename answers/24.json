@@ -1,0 +1,12 @@
+{
+  "title": "Question 24:",
+  "description": "How to Yield Farm and Liquidity Mine?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "1. Stake Stablecoins (DAI/USDC/sUSD) and earn $BOND. \n2. Provide liquidity on Uniswap w/ earned $BOND and USDC. \n3. Get LP tokens & stake them on #BarnBridge. \n4. Earn $BOND rewards for staking LP tokens."
+    }
+  ],
+  "footer": {}
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Question 21:",
+  "description": "What is Smart Yield BOND?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "This is the first DeFi product of the BarnBridge Platform designed to mitigate interest rate volatility risk using debt based derivatives.\nCurrently, the decentralized financial system is primarily offering variable rate annuities. However, the ability to structure yield into fixed rates will come in the form of locked collateral with maturity on repayments, or bonds, as well as fixed rate yields with no maturity, or annuities. We don’t believe this to be a novel idea & we believe naturally that these types of products will come to DeFi over time. However, the types of derivatives & complexity reduction in financial planning you’ll be able to structure and implement with the existence of fixed yield in smart contracts will be mind blowing to traditional financial markets. [Learn more](https://github.com/BarnBridge/BarnBridge-Whitepaper#21-smart-yield-bonds)."
+    }
+  ],
+  "footer": {}
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Question 15:",
+  "description": "Is the soft peg of DAI different from the hard peg of USDC to the US dollar in terms of $BOND reward the user receives in the Yield Farming program?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "No, even though the tokens value can fluctuate, the pro rata reward is determined by the number of the tokens so 1 DAI will get you the same as 1 USDC or 1 sUSD of $BOND."
+    }
+  ],
+  "footer": {}
+}

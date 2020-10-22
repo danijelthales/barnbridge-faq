@@ -1,0 +1,12 @@
+{
+  "title": "Question 5:",
+  "description": "What is the LaunchDAO?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "The Founders, Seeders, and Advisors are using an Aragon DAO Company Template which uses transferable tokens to represent ownership stake. Decisions are made based on stake-weighted voting. The native token of the LaunchDAO is will be $BBVOTE. \nThe Founders will receive 45%, Seeders will receive 45%, and Advisors will get 10%. The support will be set to 62%, which means more than 62% of the voting shares need to be present at a vote. The minimum will be set to 62%, meaning for a proposal to be passed it must be approved by at least 62%. The funds from the seeders and the initial supply of the $BOND token will be kept in the Launch DAO treasury. \nYou can find the LaunchDAO [here](https://client.aragon.org/#/barnbridgelaunch/)."
+    }
+  ],
+  "footer": {}
+}

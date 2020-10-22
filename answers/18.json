@@ -1,0 +1,12 @@
+{
+  "title": "Question 18:",
+  "description": "What token(s) can I stake in the “Liquidity Pool Incentivization” program?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "You must stake the uniswapv2 BOND/USDC LP token (USDC_BOND_UNI_LP) on BarnBridge platform and earn $BOND rewards out of that."
+    }
+  ],
+  "footer": {}
+}

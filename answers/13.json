@@ -1,0 +1,12 @@
+{
+  "title": "Question 13:",
+  "description": "What tokens can I stake in the \"Yield Farming\" program?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Stablecoins - specifically DAI, USDC, and sUSD."
+    }
+  ],
+  "footer": {}
+}

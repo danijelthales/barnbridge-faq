@@ -1,0 +1,12 @@
+{
+  "title": "Question 8:",
+  "description": "Is there a Telegram?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "We do have a Telegram group but we’re currently building community on Discord."
+    }
+  ],
+  "footer": {}
+}

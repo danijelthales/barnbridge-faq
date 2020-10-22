@@ -1,0 +1,20 @@
+{
+  "title": "Question 19:",
+  "description": "What is “Liquidity Mining” in the BarnBridge ecosystem?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Liquidity mining in the BarnBridge ecosystem is a two-phased liquidity mining program that will be releasing staking contracts with distinct specification around $BOND token distribution:"
+    },
+    {
+      "title": "1:",
+      "value": "Yield Farming - The first mechanism delivering initial $BOND token distribution to the community will be the Yield Farming staking contract. This contract will be distributed to community members who stake DAI, USDC, & sUSD. We chose these three stable coins (DAI, USDC, sUSD) because they will serve as the initial set of yield-producing assets utilized in our first product, the SMART Yield BOND. Participants can harvest their yield at the conclusion of each epoch. Each epoch will last 1 week, and an equal number of $BOND tokens will be distributed during each epoch."
+    },
+    {
+      "title": "2:",
+      "value": "Liquidity Pool Incentives - After the first epoch (1 week) of the Yield Farming program, we will offer the ability to harvest your spoils and migrate to new fertile soil in part 2: Liquidity Pool Incentivization. The concept behind the Liquidity Pool Incentivization initiative is to reward long-term liquidity providers with progressively more power over the protocol as they continue to signal their belief in the BarnBridge vision. We will again be using the uniswapv2 BOND/USDC Liquidity Pool token (USDC_BOND_UNI_LP) as a means to reward liquidity pool providers a massive incentive to bootstrap protocol liquidity. The Liquidity Pool Incentivization initiative will run for 100 weeks and each epoch will last 1 week. At the end of the epoch the user can harvest their $BOND. This initiative will be granted 2,000,000 $BOND tokens and each epoch will have 20,000 $BOND tokens to start."
+    }
+  ],
+  "footer": {}
+}

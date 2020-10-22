@@ -1,0 +1,12 @@
+{
+  "title": "Question 12:",
+  "description": "What is \"Yield Farming\" in the BarnBridge ecosystem?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "The Yield Farming staking contract is the first mechanism delivering initial $BOND token distribution to the community. This contract will hold 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD."
+    }
+  ],
+  "footer": {}
+}

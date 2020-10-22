@@ -1,0 +1,58 @@
+[
+  {
+    "number": 7,
+    "alias": "gas price"
+  },
+  {
+    "number": 7,
+    "alias": "gas"
+  },
+  {
+    "number": 9,
+    "alias": "swrv"
+  },
+  {
+    "number": 1,
+    "alias": "swerve"
+  },
+  {
+    "number": 2,
+    "alias": "farm"
+  },
+  {
+    "number": 2,
+    "alias": "farm swrv"
+  },
+  {
+    "number": 3,
+    "alias": "boost"
+  },
+  {
+    "number": 11,
+    "alias": "boost v2"
+  },
+  {
+    "number": 4,
+    "alias": "buy swrv"
+  },
+  {
+    "number": 5,
+    "alias": "governance"
+  },
+  {
+    "number": 6,
+    "alias": "supply"
+  },
+  {
+    "number": 6,
+    "alias": "inflation"
+  },
+  {
+    "number": 8,
+    "alias": "tx failed"
+  },
+  {
+    "number": 10,
+    "alias": "governance mechanism"
+  }
+]

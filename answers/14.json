@@ -1,0 +1,12 @@
+{
+  "title": "Question 14:",
+  "description": "How many $BOND tokens are allocated to the Yield Farming program for distribution to staked token providers?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "Yield Farming staking contract will hold 8% (800,000 $BOND tokens) of the total supply and will be distributed to community members who stake DAI, USDC, and sUSD."
+    }
+  ],
+  "footer": {}
+}
