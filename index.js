@@ -1097,14 +1097,14 @@ setInterval(function () {
             minutes %= 60;
             seconds %= 60;
 
-            value.members.cache.get("768970504735817750").setNickname("⌛$$$⌛");
-            value.members.cache.get("768970504735817750").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ", {type: 'PLAYING'});
+            value.members.cache.get("768970504735817750").setNickname(days + " days " + hours + " hours " + minutes + " minutes ");
+            value.members.cache.get("768970504735817750").user.setActivity("🌜⌛$$$⌛🌛", {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
     });
 
-}, 1 * 1000);
+}, 30 * 1000);
 
 
 var payday = new Date('2020-10-19 00:00');
