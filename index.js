@@ -64,7 +64,42 @@ client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
 })
 client.on("guildMemberAdd", function (member) {
-    member.send("Hi and welcome to Barnbridge! I am 007 FAQ bot. I will be very happy to assist you, just ask me for **help**.");
+
+    const exampleEmbed = new Discord.MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle('Welcome');
+
+    exampleEmbed.addField('Hi, I am 007 FAQ bot. Welcome to the official BarnBridge Discord channel!',
+        ":information_source:  There is no public sale. \n" +
+        ":unicorn:  Uniswap listing of token after 26th Oct.\n" +
+        ":safety_vest:  [Audited](https://github.com/BarnBridge/BarnBridge-YieldFarming/blob/master/BarnBridge-Yield-Farming-and-Incentivization-AUDIT.pdf): \n");
+    exampleEmbed.addField(':barnbridge:  About Barnbridge',
+        "BarnBridge is the first tokenized risk protocol. With BarnBridge, " +
+        "you will be able to buy the asset you want, " +
+        "at the risk you prefer. Like ETH but don't like the price swing? Hedge it and receive a more certain return. ")
+    exampleEmbed.addField(':farmer_tone1:  To get $BOND token:',
+        "1. Yield Farming: 8% of total supply over 1 year [LIVE] \n" +
+        "2. Liquidity Pool Incentivization: 20% over 2 years [Coming 26th Oct] ");
+    exampleEmbed.addField(':books:  Deep dives:',
+        "1. [Yield Farming and LP Incentivization](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4)\n" +
+        "2. [Barnbridge Launch](https://medium.com/barnbridge/barnbridge-this-is-houston-you-are-go-for-launch-b92e29a7dd20)");
+    exampleEmbed.addField(':warning:  Check contract before deposit:',
+        "1. [Yield Farming Contract](https://etherscan.io/address/0xb0Fa2BeEe3Cf36a7Ac7E99B885b48538Ab364853)\n" +
+        "2. [$BOND Token Contract](https://etherscan.io/address/0x0391D2021f89DC339F60Fff84546EA23E337750f)");
+    exampleEmbed.addField(':link:  Ecosystem links:',
+        "(Project Explainer)[https://medium.com/barnbridge/introducing-barnbridge-3f0015fef3bb]\n" +
+        "(Governance Explainer)[https://medium.com/barnbridge/dao-first-a-new-governance-model-863e8434bf00]\n" +
+        "(Yield farming)[https://app.barnbridge.com/pools]\n" +
+        "(Whitepaper)[https://github.com/BarnBridge/BarnBridge-Whitepaper]\n" +
+        "(FAQs)[https://barnbridge.gitbook.io/docs/faq]\n" +
+        "(Github)[https://github.com/BarnBridge]\n" +
+        "[ELI5](https://twitter.com/n2ckchong/status/1318314737864638464)");
+    exampleEmbed.addField('FAQ bot', "For any questions, please feel ask me and I will look through the list of FAQs I have. We get can get started if you send me a message with content ***help***" +
+        "\n" +
+        "Best, \n" +
+        "BarnBridge Team");
+
+    member.send(exampleEmbed);
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
