@@ -72,7 +72,7 @@ client.on("guildMemberAdd", function (member) {
     exampleEmbed.addField('Hi, I am 007 FAQ bot. Welcome to the official BarnBridge Discord channel!',
         ":information_source:  There is no public sale. \n" +
         ":unicorn:  Uniswap listing of token after 26th Oct.\n" +
-        ":safety_vest:  [Audited](https://github.com/BarnBridge/BarnBridge-YieldFarming/blob/master/BarnBridge-Yield-Farming-and-Incentivization-AUDIT.pdf): \n");
+        ":safety_vest:  [Audited](https://github.com/BarnBridge/BarnBridge-YieldFarming/blob/master/BarnBridge-Yield-Farming-and-Incentivization-AUDIT.pdf) \n");
     exampleEmbed.addField(':barnbridge:  About Barnbridge',
         "BarnBridge is the first tokenized risk protocol. With BarnBridge, " +
         "you will be able to buy the asset you want, " +
@@ -87,14 +87,14 @@ client.on("guildMemberAdd", function (member) {
         "1. [Yield Farming Contract](https://etherscan.io/address/0xb0Fa2BeEe3Cf36a7Ac7E99B885b48538Ab364853)\n" +
         "2. [$BOND Token Contract](https://etherscan.io/address/0x0391D2021f89DC339F60Fff84546EA23E337750f)");
     exampleEmbed.addField(':link:  Ecosystem links:',
-        "(Project Explainer)[https://medium.com/barnbridge/introducing-barnbridge-3f0015fef3bb]\n" +
-        "(Governance Explainer)[https://medium.com/barnbridge/dao-first-a-new-governance-model-863e8434bf00]\n" +
-        "(Yield farming)[https://app.barnbridge.com/pools]\n" +
-        "(Whitepaper)[https://github.com/BarnBridge/BarnBridge-Whitepaper]\n" +
-        "(FAQs)[https://barnbridge.gitbook.io/docs/faq]\n" +
-        "(Github)[https://github.com/BarnBridge]\n" +
+        "[Project Explainer](https://medium.com/barnbridge/introducing-barnbridge-3f0015fef3bb)\n" +
+        "[Governance Explainer](https://medium.com/barnbridge/dao-first-a-new-governance-model-863e8434bf00)\n" +
+        "[Yield farming](https://app.barnbridge.com/pools)\n" +
+        "[Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper)\n" +
+        "[FAQs](https://barnbridge.gitbook.io/docs/faq)\n" +
+        "[Github](https://github.com/BarnBridge)\n" +
         "[ELI5](https://twitter.com/n2ckchong/status/1318314737864638464)");
-    exampleEmbed.addField('FAQ bot', "For any questions, please feel ask me and I will look through the list of FAQs I have. We get can get started if you send me a message with content ***help***" +
+    exampleEmbed.addField('FAQ bot', "For any questions, please feel free to ask me and I will look through the list of FAQs I have. We get can get started if you send me a message with content ***help***" +
         "\n" +
         "Best, \n" +
         "BarnBridge Team");
