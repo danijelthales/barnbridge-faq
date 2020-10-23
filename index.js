@@ -73,7 +73,7 @@ client.on("guildMemberAdd", function (member) {
         ":information_source:  There is no public sale. \n" +
         ":unicorn:  Uniswap listing of token after 26th Oct.\n" +
         ":safety_vest:  [Audited](https://github.com/BarnBridge/BarnBridge-YieldFarming/blob/master/BarnBridge-Yield-Farming-and-Incentivization-AUDIT.pdf) \n");
-    exampleEmbed.addField(':barnbridge:  About Barnbridge',
+    exampleEmbed.addField('About Barnbridge',
         "BarnBridge is the first tokenized risk protocol. With BarnBridge, " +
         "you will be able to buy the asset you want, " +
         "at the risk you prefer. Like ETH but don't like the price swing? Hedge it and receive a more certain return. ")
