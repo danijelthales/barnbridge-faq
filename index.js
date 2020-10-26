@@ -204,8 +204,6 @@ client.on("message", msg => {
                 // this is logic for channels
                 if (msg.content.toLowerCase().trim() == "!faq") {
                     msg.reply("Hi, I am 007 FAQ bot. I will be very happy to assist you, just ask me for **help** in DM.");
-                } else if (msg.content.toLowerCase().includes("<@!513707101730897921>")) {
-                    msg.reply("I've called for master, he will be with you shortly.");
                 } else if (msg.content.toLowerCase().trim() == "!faq help") {
                     msg.reply("I can only answer a predefined question by its number or by alias in a channel, e.g. **question 1**, or **gas price**. \n For more commands and options send me **help** in DM");
                 } else if (msg.content.toLowerCase().trim().replace(/ +(?= )/g, '').startsWith("!faq question")) {
@@ -1142,8 +1140,8 @@ setInterval(function () {
 setInterval(function () {
 
     clientBondPrice.guilds.cache.forEach(function (value, key) {
-        value.members.cache.get("768970504735817750").setNickname("$" + bondPrice);
-        value.members.cache.get("768970504735817750").user.setActivity("Ξ" + bondPriceETH, {type: 'PLAYING'});
+        value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd);
+        value.members.cache.get("768970504735817750").user.setActivity("Ξ" + coingeckoEth + ' ₿' + coingeckoBtc, {type: 'PLAYING'});
     });
 
 }, 30 * 1000);
