@@ -9,8 +9,8 @@ let redisClient = null;
 
 var fs = require('fs');
 
-var coingeckoUsd = 3.74;
-var coingeckoEth = 0.01051993;
+var coingeckoUsd = 100;
+var coingeckoEth = 0.171;
 var coingeckoBtc = 0.000351;
 var binanceUsd = 3.74;
 var kucoinUsd = 3.74;
@@ -717,39 +717,36 @@ setInterval(function () {
 }, 50 * 1000);
 
 
-// setInterval(function () {
-//     https.get('https://api.coingecko.com/api/v3/coins/bond', (resp) => {
-//         let data = '';
-//
-//         // A chunk of data has been recieved.
-//         resp.on('data', (chunk) => {
-//             data += chunk;
-//         });
-//
-//         // The whole response has been received. Print out the result.
-//         resp.on('end', () => {
-//             try {
-//                 let result = JSON.parse(data);
-//                 swervePrice = result.market_data.current_price.usd;
-//                 swervePrice = Math.round(((swervePrice * 1.0) + Number.EPSILON) * 1000) / 1000;
-//                 swerveMarketcap = result.market_data.market_cap.usd;
-//
-//                 coingeckoUsd = result.market_data.current_price.usd;
-//                 coingeckoEth = result.market_data.current_price.eth;
-//                 coingeckoEth = Math.round(((coingeckoEth * 1.0) + Number.EPSILON) * 1000) / 1000;
-//                 coingeckoBtc = result.market_data.current_price.btc;
-//                 coingeckoBtc = Math.round(((coingeckoBtc * 1.0) + Number.EPSILON) * 1000000) / 1000000;
-//             } catch (e) {
-//                 console.log(e);
-//             }
-//
-//         });
-//
-//     }).on("error", (err) => {
-//         console.log("Error: " + err.message);
-//     });
-//
-// }, 50 * 1000);
+setInterval(function () {
+    https.get('https://api.coingecko.com/api/v3/coins/barnbridge', (resp) => {
+        let data = '';
+
+        // A chunk of data has been recieved.
+        resp.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        // The whole response has been received. Print out the result.
+        resp.on('end', () => {
+            try {
+                let result = JSON.parse(data);
+
+                coingeckoUsd = result.market_data.current_price.usd;
+                coingeckoEth = result.market_data.current_price.eth;
+                coingeckoEth = Math.round(((coingeckoEth * 1.0) + Number.EPSILON) * 1000) / 1000;
+                coingeckoBtc = result.market_data.current_price.btc;
+                coingeckoBtc = Math.round(((coingeckoBtc * 1.0) + Number.EPSILON) * 1000000) / 1000000;
+            } catch (e) {
+                console.log(e);
+            }
+
+        });
+
+    }).on("error", (err) => {
+        console.log("Error: " + err.message);
+    });
+
+}, 20 * 1000);
 
 setInterval(function () {
     //'https://gasprice.poa.network/
@@ -1114,34 +1111,66 @@ setInterval(function () {
 }, 45 * 1000);
 
 
+// setInterval(function () {
+//
+//     clientBondPrice.guilds.cache.forEach(function (value, key) {
+//         try {
+//
+//             var today = new Date();
+//             while (today > payday) {
+//                 payday.setDate(payday.getDate() + 7);
+//             }
+//             var difference = payday.getTime() - today.getTime();
+//             var seconds = Math.floor(difference / 1000);
+//             var minutes = Math.floor(seconds / 60);
+//             var hours = Math.floor(minutes / 60);
+//             var days = Math.floor(hours / 24);
+//             hours %= 24;
+//             minutes %= 60;
+//             seconds %= 60;
+//
+//             value.members.cache.get("768970504735817750").setNickname(days + " days " + hours + " hours " + minutes + " minutes ");
+//             value.members.cache.get("768970504735817750").user.setActivity("🌜⌛$$$⌛🌛", {type: 'PLAYING'});
+//         } catch (e) {
+//             console.log(e);
+//         }
+//     });
+//
+// }, 30 * 1000);
+
+
 setInterval(function () {
 
     clientBondPrice.guilds.cache.forEach(function (value, key) {
-        try {
-
-            var today = new Date();
-            while (today > payday) {
-                payday.setDate(payday.getDate() + 7);
-            }
-            var difference = payday.getTime() - today.getTime();
-            var seconds = Math.floor(difference / 1000);
-            var minutes = Math.floor(seconds / 60);
-            var hours = Math.floor(minutes / 60);
-            var days = Math.floor(hours / 24);
-            hours %= 24;
-            minutes %= 60;
-            seconds %= 60;
-
-            value.members.cache.get("768970504735817750").setNickname(days + " days " + hours + " hours " + minutes + " minutes ");
-            value.members.cache.get("768970504735817750").user.setActivity("🌜⌛$$$⌛🌛", {type: 'PLAYING'});
-        } catch (e) {
-            console.log(e);
-        }
+        value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd);
+        value.members.cache.get("768970504735817750").user.setActivity("Ξ" + coingeckoEth, {type: 'PLAYING'});
     });
 
 }, 30 * 1000);
 
 
 var payday = new Date('2020-10-19 00:00');
+
+// const {ChainId, Fetcher, Route, Trade, TokenAmount, TradeType, WETH, Token} = require('@uniswap/sdk');
+// var bond = null;
+// var pair = null;
+// var bondPrice = 100;
+
+// setInterval(async function () {
+//     try {
+//         bond = new Token(ChainId.MAINNET, '0x0391d2021f89dc339f60fff84546ea23e337750f', 18)
+//
+//         // note that you may want/need to handle this async code differently,
+//         // for example if top-level await is not an option
+//         pair = await Fetcher.fetchPairData(bond, WETH[bond.chainId])
+//
+//         var route = new Route([pair], WETH[bond.chainId])
+//
+//         var bondPrice = route.midPrice.invert().toSignificant(6) * ethPrice;
+//         bondPrice = Math.round(((yaxisPrice * 1.0) + Number.EPSILON) * 100) / 100;
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }, 10 * 1000);
 
 client.login(process.env.BOT_TOKEN);
