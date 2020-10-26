@@ -1142,8 +1142,8 @@ setInterval(function () {
 setInterval(function () {
 
     clientBondPrice.guilds.cache.forEach(function (value, key) {
-        value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd);
-        value.members.cache.get("768970504735817750").user.setActivity("Ξ" + coingeckoEth, {type: 'PLAYING'});
+        value.members.cache.get("768970504735817750").setNickname("$" + bondPrice);
+        value.members.cache.get("768970504735817750").user.setActivity("Ξ" + bondPriceETH, {type: 'PLAYING'});
     });
 
 }, 30 * 1000);
@@ -1151,26 +1151,57 @@ setInterval(function () {
 
 var payday = new Date('2020-10-19 00:00');
 
-// const {ChainId, Fetcher, Route, Trade, TokenAmount, TradeType, WETH, Token} = require('@uniswap/sdk');
-// var bond = null;
-// var pair = null;
-// var bondPrice = 100;
+const {ChainId, Fetcher, Route, Trade, TokenAmount, TradeType, WETH, Token} = require('@uniswap/sdk');
+var bond = null;
+var pair = null;
+var bondPrice = 100;
+var bondPriceETH = 100;
 
-// setInterval(async function () {
-//     try {
-//         bond = new Token(ChainId.MAINNET, '0x0391d2021f89dc339f60fff84546ea23e337750f', 18)
-//
-//         // note that you may want/need to handle this async code differently,
-//         // for example if top-level await is not an option
-//         pair = await Fetcher.fetchPairData(bond, WETH[bond.chainId])
-//
-//         var route = new Route([pair], WETH[bond.chainId])
-//
-//         var bondPrice = route.midPrice.invert().toSignificant(6) * ethPrice;
-//         bondPrice = Math.round(((yaxisPrice * 1.0) + Number.EPSILON) * 100) / 100;
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 10 * 1000);
+setInterval(async function () {
+    try {
+        bond = new Token(ChainId.MAINNET, '0x0391d2021f89dc339f60fff84546ea23e337750f', 18)
+
+        // note that you may want/need to handle this async code differently,
+        // for example if top-level await is not an option
+        pair = await Fetcher.fetchPairData(bond, WETH[bond.chainId])
+
+        var route = new Route([pair], WETH[bond.chainId])
+
+        bondPriceETH = route.midPrice.invert().toSignificant(6);
+        bondPrice = bondPriceETH * ethPrice;
+        bondPriceETH = Math.round(((bondPriceETH * 1.0) + Number.EPSILON) * 1000) / 1000;
+        bondPrice = Math.round(((bondPrice * 1.0) + Number.EPSILON) * 100) / 100;
+        console.log(bondPrice);
+    } catch (e) {
+        console.log(e);
+    }
+}, 10 * 1000);
+
+var ethPrice = 360;
+
+setInterval(function () {
+    https.get('https://api.coingecko.com/api/v3/coins/ethereum', (resp) => {
+        let data = '';
+
+        // A chunk of data has been recieved.
+        resp.on('data', (chunk) => {
+            data += chunk;
+        });
+
+        // The whole response has been received. Print out the result.
+        resp.on('end', () => {
+            try {
+                let result = JSON.parse(data);
+                ethPrice = result.market_data.current_price.usd;
+            } catch (e) {
+                console.log(e);
+            }
+        });
+
+    }).on("error", (err) => {
+        console.log("Error: " + err.message);
+    });
+
+}, 20 * 1000);
 
 client.login(process.env.BOT_TOKEN);
