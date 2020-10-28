@@ -1102,8 +1102,12 @@ setInterval(function () {
 setInterval(function () {
 
     clientBtcPrice.guilds.cache.forEach(function (value, key) {
-        value.members.cache.get("768970849549156392").setNickname("$" + btcPrice);
-        value.members.cache.get("768970849549156392").user.setActivity("marketcap=$" + getNumberLabel(btcMarketCap), {type: 'PLAYING'});
+        try {
+            value.members.cache.get("768970849549156392").setNickname("$" + btcPrice);
+            value.members.cache.get("768970849549156392").user.setActivity("marketcap=$" + getNumberLabel(btcMarketCap), {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
     });
 
 }, 45 * 1000);
@@ -1140,8 +1144,12 @@ setInterval(function () {
 setInterval(function () {
 
     clientBondPrice.guilds.cache.forEach(function (value, key) {
-        value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd);
-        value.members.cache.get("768970504735817750").user.setActivity("Ξ" + coingeckoEth + ' ₿' + coingeckoBtc, {type: 'PLAYING'});
+        try {
+            value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd);
+            value.members.cache.get("768970504735817750").user.setActivity("Ξ" + coingeckoEth + ' ₿' + coingeckoBtc, {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
     });
 
 }, 30 * 1000);
