@@ -1,11 +1,11 @@
 {
-  "title": "Question 6:",
-  "description": "What is the BarnBridgeDAO?",
+  "title": "Question 6",
+  "description": "How many $BOND tokens are there?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "BarnBridgeDAO will be the DAO that is controlled by the $BOND community. The BarnBridgeDAO will have full control over the protocol and the features that are built into it. BarnbridgeDAO will be the final protocol DAO."
+      "value": "The total amount of $BOND tokens is and will be **10,000,000**. No minting allowed."
     }
   ],
   "footer": {}

@@ -1,11 +1,11 @@
 {
-  "title": "Question 22:",
-  "description": "What is Smart Alpha BOND?",
+  "title": "Question 22",
+  "description": "How can I earn with LP Incentivization?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Market Price Exposure Risk Mitigation using tranched volatility derivatives.\nThe SMART Alpha bonds will not be structured via traditional yield tranches but instead with various levels of market price exposure, which we will call risk ramps. The idea is that every bucket or tranche of price exposure does not need to be flat across the entire risk curve, meaning the first $100 of price exposure does not need to deserve the same upside and downside volatility. This is similar to having fractional ownership but with different risk/reward for the fractions. [Learn more](https://github.com/BarnBridge/BarnBridge-Whitepaper#22-smart-alpha-bonds)."
+      "value": "1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here](https://app.barnbridge.com)."
     }
   ],
   "footer": {}

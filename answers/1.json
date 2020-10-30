@@ -1,11 +1,11 @@
 {
-  "title": "Question 1:",
-  "description": "How long is the vesting schedule?",
+  "title": "Question 1",
+  "description": "What is the purpose of the project?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "The vesting schedule is designed so that there is not a giant cliff waiting over users heads at a specific point. The tokens allocated to the Founders, Seed Investors, and Advisors are locked in a smart contract that releases the tokens on a weekly basis over a two year period. The vesting period starts with the launch of the Yield Farming mechanism. \n [Learn more](https://github.com/BarnBridge/BarnBridge-Whitepaper#311-fair-vesting)"
+      "value": "BarnBridge is the first risk tokenizing protocol. Its purpose is to integrate with other protocols letting hedging the yield risks on those lending and other platforms."
     }
   ],
   "footer": {}

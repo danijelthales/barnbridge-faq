@@ -1,12 +1,13 @@
 {
-  "title": "Question 8:",
-  "description": "Is there a Telegram?",
+  "title": "Question 8",
+  "description": "What is the token distribution?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "We do have a Telegram group but we’re currently building community on Discord."
+      "value": "The distribution breakdown is designed to facilitate the most decentralized protocol and make sure power doesn’t reside in the hands of a few."
     }
   ],
+  "image": "TokenDistribution.png",
   "footer": {}
 }

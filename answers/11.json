@@ -1,11 +1,11 @@
 {
-  "title": "Question 11:",
-  "description": "Where can I find a list of the BOND NFT's?",
+  "title": "Question 11",
+  "description": "What is BarnBridgeDAO?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "$BOND is a contract for 200 (two hundred) fully compliant ERC-721 tokens minted by InfiNFT and viewable on OpenSea [here](https://opensea.io/storefront/barnbridge-non-fungible-token)"
+      "value": "BarnBridgeDAO will be the DAO that is controlled by the $BOND community. The BarnBridgeDAO will have full control over the protocol and the features that are built into it. BarnbridgeDAO will be the final protocol DAO."
     }
   ],
   "footer": {}

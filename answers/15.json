@@ -1,11 +1,11 @@
 {
-  "title": "Question 15:",
-  "description": "Is the soft peg of DAI different from the hard peg of USDC to the US dollar in terms of $BOND reward the user receives in the Yield Farming program?",
+  "title": "Question 15",
+  "description": "What is Yield Farming in the BarnBridge ecosystem?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "No, even though the tokens value can fluctuate, the pro rata reward is determined by the number of the tokens so 1 DAI will get you the same as 1 USDC or 1 sUSD of $BOND."
+      "value": "The Yield Farming staking contract is the first mechanism delivering initial $BOND token distribution to the community. This contract holds 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD. \n\nTokens to be distributed: 800,000 $BOND. \nProgram duration: 25 weeks. \nStart date: Oct 19th, 2020."
     }
   ],
   "footer": {}

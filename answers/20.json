@@ -1,11 +1,11 @@
 {
-  "title": "Question 20:",
-  "description": "What is a tranche?",
+  "title": "Question 20",
+  "description": "What is Liquidity Pool Incentivization in the BarnBridge ecosystem?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Tranches are pieces of a pooled collection of securities, usually debt instruments, that are split up by risk or other characteristics in order to be marketable to different investors. Tranches carry different maturities, yields, and degrees of risk—and privileges in repayment in case of default."
+      "value": "The concept behind the Liquidity Pool Incentivization initiative is to reward long-term liquidity providers with progressively more power over the protocol as they continue to signal their belief in the BarnBridge vision. \n \nParticipants who believe in the vision represent the community, we hope, will gain significant control over the protocol’s long-term evolution, and are therefore the users who should be rewarded with the most plentiful harvest.	\n\nTokens to be distributed: 2,000,000 $BOND. \nProgram duration: 100 weeks. \nStart date: Oct 26th, 2020."
     }
   ],
   "footer": {}
