@@ -1,11 +1,11 @@
 {
-  "title": "Question 12:",
-  "description": "What is \"Yield Farming\" in the BarnBridge ecosystem?",
+  "title": "Question 12",
+  "description": "What is the difference between LaunchDAO and BarnBridgeDAO?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "The Yield Farming staking contract is the first mechanism delivering initial $BOND token distribution to the community. This contract will hold 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD."
+      "value": "LaunchDAO is a temporary DAO consisting of the project founders, seeders and advisors for building the initial version of the protocol. LaunchDAO uses $BBVOTE token. \n\nBarnBridgeDAO is going to be the final DAO where the community can vote with their $BOND tokens. The BarnBridge DAO will become the core component of the BarnBridge platform as it enables decentralized decision making to enforce actions in the interest of the community."
     }
   ],
   "footer": {}

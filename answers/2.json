@@ -1,11 +1,11 @@
 {
-  "title": "Question 2?",
-  "description": "What is token distribution?",
+  "title": "Question 2",
+  "description": "How long is the vesting schedule?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "The distribution breakdown is designed to facilitate the most decentralized protocol and make sure power doesn’t reside in the hands of a few. \nToken Distribution:\n- 60% Community \n- 8% Yield farming \n- 12.5% Core Team \n- 7.5% Investors \n- 10% DAO Treasury \n- 2% Advisors"
+      "value": "The vesting schedule is designed so that there is not a giant cliff waiting over users heads at a specific point. The tokens allocated to the Founders, Seed Investors, and Advisors are locked in a smart contract that releases the tokens **on a weekly basis over a two year period**. The vesting period started with the launch of the Yield Farming mechanism. \n\n[Learn more](https://github.com/BarnBridge/BarnBridge-Whitepaper#311-fair-vesting)"
     }
   ],
   "footer": {}

@@ -1,11 +1,11 @@
 {
-  "title": "Question 14:",
-  "description": "How many $BOND tokens are allocated to the Yield Farming program for distribution to staked token providers?",
+  "title": "Question 14",
+  "description": "Where can I find a list of the BOND NFT’s?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Yield Farming staking contract will hold 8% (800,000 $BOND tokens) of the total supply and will be distributed to community members who stake DAI, USDC, and sUSD."
+      "value": "$BOND is a contract for 200 (two hundred) fully compliant ERC-721 tokens minted by InfiNFT and viewable on OpenSea here: [https://opensea.io/storefront/barnbridge-non-fungible-token](https://opensea.io/storefront/barnbridge-non-fungible-token)."
     }
   ],
   "footer": {}

@@ -1,12 +1,13 @@
 {
-  "title": "Question 23:",
-  "description": "What is the difference between \"Yield Farming\" and \"Liquidity Mining\" on BarnBridge?",
+  "title": "Question 23",
+  "description": "What is an APY for the LP Incentivization?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Yield Farming is the first mechanism delivering initial $BOND token distribution to the community. This contract will hold 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD. This is only phase one of Liquidity Mining.\nPhase two is the Liquidity Mining Incentivization Program. This initiative will be granted 20% of the total supply (2,000,000 $BOND tokens) and each epoch will have 20,000 $BOND tokens to start. This will last 100 weeks."
+      "value": "You can see it on [CoinGecko](https://www.coingecko.com/en/yield-farming). \n\nP.S. Make sure you are in degen mode 😄"
     }
   ],
+  "image": "DegenMode.png",
   "footer": {}
 }

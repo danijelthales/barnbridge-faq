@@ -1,11 +1,11 @@
 {
-  "title": "Question 18:",
-  "description": "What token(s) can I stake in the “Liquidity Pool Incentivization” program?",
+  "title": "Question 18",
+  "description": "Is there any difference in rewards between staking USDC, DAI or sUSDC?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "You must stake the uniswapv2 BOND/USDC LP token (USDC_BOND_UNI_LP) on BarnBridge platform and earn $BOND rewards out of that."
+      "value": "No, they are all equally rewarded. 1 USDC = 1 DAI = 1 sUSD."
     }
   ],
   "footer": {}

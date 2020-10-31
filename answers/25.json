@@ -1,7 +1,12 @@
 {
-  "title": "Question 25:",
-  "description": "What is the current gas price?",
+  "title": "Question 25",
+  "description": "What if I withdraw before the end of the epoch?",
   "color": "0099ff",
-  "url": "https://ethgasstation.info/",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "If you withdraw your deposit before the end of the epoch your potential $BOND reward will be lost."
+    }
+  ],
   "footer": {}
 }

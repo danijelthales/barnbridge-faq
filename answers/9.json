@@ -1,11 +1,11 @@
 {
-  "title": "Question 9:",
-  "description": "What does the $BOND token do?",
+  "title": "Question 9",
+  "description": "How many tokens are released each week?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "$BOND is an ERC-20 token. It will be used to stake in the system, and as a governance token when the governance module is launched. As it conforms to the ERC-20 standard, the $BOND token is tradeable on any exchange and storable on any wallet - allowing anyone in the world to access it."
+      "value": "For the first week when Yield Farming started: \n-Farming: 32,000 $BOND \n-Team: 22,000 $BOND \n**-Total: 54,000 $BOND** \n\n For the next weeks: \n-Farming: 32,000 $BOND \n-LP Incentivization: 20,000 $BOND \n-Team: 22,000 $BOND \n**-Total: 74,000 $BOND**"
     }
   ],
   "footer": {}

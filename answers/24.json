@@ -1,11 +1,11 @@
 {
-  "title": "Question 24:",
-  "description": "How to Yield Farm and Liquidity Mine?",
+  "title": "Question 24",
+  "description": "What if I deposit after the start of the epoch?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "1. Stake Stablecoins (DAI/USDC/sUSD) and earn $BOND. \n2. Provide liquidity on Uniswap w/ earned $BOND and USDC. \n3. Get LP tokens & stake them on #BarnBridge. \n4. Earn $BOND rewards for staking LP tokens."
+      "value": "When staling tokens during an epoch that’s currently running, your effective deposit amount will be proportionally reduced by the time that has passed from the start of the epoch. \n\nFor example, if you deposit the funds in the middle of epoch, you’ll get a 0.5 multiplier. \n\nThat’s why there is TVL and effective TVL displayed on BardBridge platform."
     }
   ],
   "footer": {}

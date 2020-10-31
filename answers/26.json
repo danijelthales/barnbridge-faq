@@ -1,0 +1,12 @@
+{
+  "title": "Question 26",
+  "description": "What tokens can I stake in the Liquidity Pool Incentivization program?",
+  "color": "0099ff",
+  "fields": [
+    {
+      "title": "Answer:",
+      "value": "You have to stake the uniswapv2 LP tokens (USDC_BOND_UNI_LP). You’ll get them for providing liquidity to the [BOND/USDC pool](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) on Uniswap."
+    }
+  ],
+  "footer": {}
+}

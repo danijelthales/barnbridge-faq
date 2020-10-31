@@ -1,11 +1,11 @@
 {
-  "title": "Question 17:",
-  "description": "How many BOND tokens are allocated to the “Liquidity Pool Incentivization” program for distribution to staked token providers?",
+  "title": "Question 17",
+  "description": "What tokens can I stake in the Yield Farming program?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "This initiative will be granted 20% (2,000,000 $BOND tokens) and each epoch will have 20,000 $BOND tokens to start. The Liquidity Pool Incentivization initiative will run for 100 weeks and each epoch will last 1 week. At the end of the epoch the user can harvest their $BOND."
+      "value": "Stablecoins - specifically DAI, USDC, and sUSD."
     }
   ],
   "footer": {}

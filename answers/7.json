@@ -1,11 +1,11 @@
 {
-  "title": "Question 7:",
-  "description": "What is the difference between LaunchDAO and BarnBridge DAO?",
+  "title": "Question 7",
+  "description": "What is the $BOND token contract address?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "LaunchDAO is a temporary DAO consisting of the project founders, seeders, and advisors for building the initial version of the protocol. LaunchDAO uses a $BBVOTE token.\nBarnBridgeDAO is going to be the final DAO where the community can vote with their $BOND tokens. The BarnBridge DAO will become the core component of the BarnBridge Platform as it enables decentralized decision making to enforce actions in the interest of the community. \nThe whole DAO setup is done to solidify the path towards Smart Yield Bonds. This is the first DeFi product of the BarnBridge Platform. BarnBridge will be a fully autonomous organization where the community decides what we do and where we go. It means that the protocol will be as fluid and fast moving as the community."
+      "value": "[0x0391D2021f89DC339F60Fff84546EA23E337750f](https://etherscan.io/token/0x0391D2021f89DC339F60Fff84546EA23E337750f)"
     }
   ],
   "footer": {}
