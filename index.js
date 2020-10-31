@@ -1137,7 +1137,7 @@ setInterval(function () {
             minutes %= 60;
             seconds %= 60;
 
-            value.members.cache.get("772028195264266240").setNickname("tvl=" + getNumberLabel(tvl));
+            value.members.cache.get("772028195264266240").setNickname("tvl=$" + getNumberLabel(tvl));
             value.members.cache.get("772028195264266240").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes ", {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
