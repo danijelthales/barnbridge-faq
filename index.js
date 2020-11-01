@@ -130,39 +130,39 @@ function doInnerQuestion(command, doReply, msg) {
         exampleEmbed.setDescription(answer.description);
         exampleEmbed.setURL(answer.url);
 
-        if (command == "25") {
-
-            exampleEmbed.addField("Safe low gas price:", lowGasPrice + ' gwei', false);
-            exampleEmbed.addField("Standard gas price:", gasPrice + ' gwei', false);
-            exampleEmbed.addField("Fast gas price:", fastGasPrice + ' gwei', false);
-            exampleEmbed.addField("Instant gas price:", instantGasPrice + ' gwei', false);
-            if (doReply) {
-                msg.reply(exampleEmbed);
-            } else {
-                msg.channel.send(exampleEmbed).then(function (message) {
-                    message.react("❌");
-                }).catch(function () {
-                    //Something
-                });
-            }
-
-
-        } else if (command == "26") {
-
-            exampleEmbed.addField("USD (coingecko)", coingeckoUsd, false);
-            exampleEmbed.addField("ETH (coingecko):", coingeckoEth, false);
-            exampleEmbed.addField("BTC (coingecko):", coingeckoBtc, false);
-            if (doReply) {
-                msg.reply(exampleEmbed);
-            } else {
-                msg.channel.send(exampleEmbed).then(function (message) {
-                    message.react("❌");
-                }).catch(function () {
-                    //Something
-                });
-            }
-
-        } else {
+        // if (command == "25") {
+        //
+        //     exampleEmbed.addField("Safe low gas price:", lowGasPrice + ' gwei', false);
+        //     exampleEmbed.addField("Standard gas price:", gasPrice + ' gwei', false);
+        //     exampleEmbed.addField("Fast gas price:", fastGasPrice + ' gwei', false);
+        //     exampleEmbed.addField("Instant gas price:", instantGasPrice + ' gwei', false);
+        //     if (doReply) {
+        //         msg.reply(exampleEmbed);
+        //     } else {
+        //         msg.channel.send(exampleEmbed).then(function (message) {
+        //             message.react("❌");
+        //         }).catch(function () {
+        //             //Something
+        //         });
+        //     }
+        //
+        //
+        // } else if (command == "26") {
+        //
+        //     exampleEmbed.addField("USD (coingecko)", coingeckoUsd, false);
+        //     exampleEmbed.addField("ETH (coingecko):", coingeckoEth, false);
+        //     exampleEmbed.addField("BTC (coingecko):", coingeckoBtc, false);
+        //     if (doReply) {
+        //         msg.reply(exampleEmbed);
+        //     } else {
+        //         msg.channel.send(exampleEmbed).then(function (message) {
+        //             message.react("❌");
+        //         }).catch(function () {
+        //             //Something
+        //         });
+        //     }
+        //
+        // } else {
 
             answer.fields.forEach(function (field) {
                 exampleEmbed.addField(field.title, field.value, field.inline);
@@ -192,7 +192,7 @@ function doInnerQuestion(command, doReply, msg) {
                     //Something
                 });
             }
-        }
+        // }
     } catch (e) {
         if (doReply) {
             msg.reply("Oops, there seems to be something wrong there. \nChoose your question with ***question questionNumber***, e.g. **question 1**\nYou can get the question number via **list**");
