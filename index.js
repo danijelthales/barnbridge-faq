@@ -15,6 +15,8 @@ var coingeckoBtc = 0.000351;
 var binanceUsd = 3.74;
 var kucoinUsd = 3.74;
 
+var tvl = 531132484;
+
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
 
@@ -24,6 +26,10 @@ clientBondPrice.login(process.env.BOT_TOKEN_BOND);
 
 const clientBtcPrice = new Discord.Client();
 clientBtcPrice.login(process.env.BOT_TOKEN_BTC);
+
+
+const clientEpoch = new Discord.Client();
+clientEpoch.login(process.env.BOT_TOKEN_EPOCH);
 
 var bondPrice = 100;
 var bondMarketCap = 1000000;
@@ -124,39 +130,39 @@ function doInnerQuestion(command, doReply, msg) {
         exampleEmbed.setDescription(answer.description);
         exampleEmbed.setURL(answer.url);
 
-        if (command == "25") {
-
-            exampleEmbed.addField("Safe low gas price:", lowGasPrice + ' gwei', false);
-            exampleEmbed.addField("Standard gas price:", gasPrice + ' gwei', false);
-            exampleEmbed.addField("Fast gas price:", fastGasPrice + ' gwei', false);
-            exampleEmbed.addField("Instant gas price:", instantGasPrice + ' gwei', false);
-            if (doReply) {
-                msg.reply(exampleEmbed);
-            } else {
-                msg.channel.send(exampleEmbed).then(function (message) {
-                    message.react("❌");
-                }).catch(function () {
-                    //Something
-                });
-            }
-
-
-        } else if (command == "26") {
-
-            exampleEmbed.addField("USD (coingecko)", coingeckoUsd, false);
-            exampleEmbed.addField("ETH (coingecko):", coingeckoEth, false);
-            exampleEmbed.addField("BTC (coingecko):", coingeckoBtc, false);
-            if (doReply) {
-                msg.reply(exampleEmbed);
-            } else {
-                msg.channel.send(exampleEmbed).then(function (message) {
-                    message.react("❌");
-                }).catch(function () {
-                    //Something
-                });
-            }
-
-        } else {
+        // if (command == "25") {
+        //
+        //     exampleEmbed.addField("Safe low gas price:", lowGasPrice + ' gwei', false);
+        //     exampleEmbed.addField("Standard gas price:", gasPrice + ' gwei', false);
+        //     exampleEmbed.addField("Fast gas price:", fastGasPrice + ' gwei', false);
+        //     exampleEmbed.addField("Instant gas price:", instantGasPrice + ' gwei', false);
+        //     if (doReply) {
+        //         msg.reply(exampleEmbed);
+        //     } else {
+        //         msg.channel.send(exampleEmbed).then(function (message) {
+        //             message.react("❌");
+        //         }).catch(function () {
+        //             //Something
+        //         });
+        //     }
+        //
+        //
+        // } else if (command == "26") {
+        //
+        //     exampleEmbed.addField("USD (coingecko)", coingeckoUsd, false);
+        //     exampleEmbed.addField("ETH (coingecko):", coingeckoEth, false);
+        //     exampleEmbed.addField("BTC (coingecko):", coingeckoBtc, false);
+        //     if (doReply) {
+        //         msg.reply(exampleEmbed);
+        //     } else {
+        //         msg.channel.send(exampleEmbed).then(function (message) {
+        //             message.react("❌");
+        //         }).catch(function () {
+        //             //Something
+        //         });
+        //     }
+        //
+        // } else {
 
             answer.fields.forEach(function (field) {
                 exampleEmbed.addField(field.title, field.value, field.inline);
@@ -186,7 +192,7 @@ function doInnerQuestion(command, doReply, msg) {
                     //Something
                 });
             }
-        }
+        // }
     } catch (e) {
         if (doReply) {
             msg.reply("Oops, there seems to be something wrong there. \nChoose your question with ***question questionNumber***, e.g. **question 1**\nYou can get the question number via **list**");
@@ -1113,32 +1119,32 @@ setInterval(function () {
 }, 45 * 1000);
 
 
-// setInterval(function () {
-//
-//     clientBondPrice.guilds.cache.forEach(function (value, key) {
-//         try {
-//
-//             var today = new Date();
-//             while (today > payday) {
-//                 payday.setDate(payday.getDate() + 7);
-//             }
-//             var difference = payday.getTime() - today.getTime();
-//             var seconds = Math.floor(difference / 1000);
-//             var minutes = Math.floor(seconds / 60);
-//             var hours = Math.floor(minutes / 60);
-//             var days = Math.floor(hours / 24);
-//             hours %= 24;
-//             minutes %= 60;
-//             seconds %= 60;
-//
-//             value.members.cache.get("768970504735817750").setNickname(days + " days " + hours + " hours " + minutes + " minutes ");
-//             value.members.cache.get("768970504735817750").user.setActivity("🌜⌛$$$⌛🌛", {type: 'PLAYING'});
-//         } catch (e) {
-//             console.log(e);
-//         }
-//     });
-//
-// }, 30 * 1000);
+setInterval(function () {
+
+    clientEpoch.guilds.cache.forEach(function (value, key) {
+        try {
+
+            var today = new Date();
+            while (today > payday) {
+                payday.setDate(payday.getDate() + 7);
+            }
+            var difference = payday.getTime() - today.getTime();
+            var seconds = Math.floor(difference / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            hours %= 24;
+            minutes %= 60;
+            seconds %= 60;
+
+            value.members.cache.get("772028195264266240").setNickname("tvl=$" + getNumberLabel(tvl));
+            value.members.cache.get("772028195264266240").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes ", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 30 * 1000);
 
 
 setInterval(function () {
@@ -1163,25 +1169,25 @@ var pair = null;
 var bondPrice = 100;
 var bondPriceETH = 100;
 
-setInterval(async function () {
-    try {
-        bond = new Token(ChainId.MAINNET, '0x0391d2021f89dc339f60fff84546ea23e337750f', 18)
-
-        // note that you may want/need to handle this async code differently,
-        // for example if top-level await is not an option
-        pair = await Fetcher.fetchPairData(bond, WETH[bond.chainId])
-
-        var route = new Route([pair], WETH[bond.chainId])
-
-        bondPriceETH = route.midPrice.invert().toSignificant(6);
-        bondPrice = bondPriceETH * ethPrice;
-        bondPriceETH = Math.round(((bondPriceETH * 1.0) + Number.EPSILON) * 1000) / 1000;
-        bondPrice = Math.round(((bondPrice * 1.0) + Number.EPSILON) * 100) / 100;
-        console.log(bondPrice);
-    } catch (e) {
-        console.log(e);
-    }
-}, 10 * 1000);
+// setInterval(async function () {
+//     try {
+//         bond = new Token(ChainId.MAINNET, '0x0391d2021f89dc339f60fff84546ea23e337750f', 18)
+//
+//         // note that you may want/need to handle this async code differently,
+//         // for example if top-level await is not an option
+//         pair = await Fetcher.fetchPairData(bond, WETH[bond.chainId])
+//
+//         var route = new Route([pair], WETH[bond.chainId])
+//
+//         bondPriceETH = route.midPrice.invert().toSignificant(6);
+//         bondPrice = bondPriceETH * ethPrice;
+//         bondPriceETH = Math.round(((bondPriceETH * 1.0) + Number.EPSILON) * 1000) / 1000;
+//         bondPrice = Math.round(((bondPrice * 1.0) + Number.EPSILON) * 100) / 100;
+//         console.log(bondPrice);
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }, 10 * 1000);
 
 var ethPrice = 360;
 
@@ -1209,5 +1215,42 @@ setInterval(function () {
     });
 
 }, 20 * 1000);
+
+
+async function getTVL() {
+    try {
+        console.log("Fetching tvl");
+        const browser = await puppeteer.launch({
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+            ],
+        });
+        const page = await browser.newPage();
+        await page.setViewport({width: 1000, height: 926});
+        await page.goto("https://app.barnbridge.com/pools", {waitUntil: 'networkidle2'});
+
+        /** @type {string[]} */
+        var prices = await page.evaluate(() => {
+            var div = document.querySelectorAll('.styles_value__2W3Hv');
+
+            var prices = []
+            div.forEach(element => {
+                prices.push(element.textContent);
+            });
+
+            return prices
+        })
+
+        tvl = prices[0];
+        tvl = tvl.replace(/,/g, '').replace(/\$/g, '') * 1.0;
+        browser.close()
+    } catch (e) {
+        console.log("Error happened on getting data from barnbridge.");
+        console.log(e);
+    }
+}
+
+setInterval(getTVL, 1000 * 30);
 
 client.login(process.env.BOT_TOKEN);
