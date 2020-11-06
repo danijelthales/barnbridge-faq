@@ -1,11 +1,11 @@
 {
   "title": "Question 19",
-  "description": "What is an APY for the Yield Farming?",
+  "description": "What is an APY?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Check it out on [CoinGecko](https://www.coingecko.com/en/yield-farming)."
+      "value": "You can check the APY for both Pool 1 (Yield Farming) and Pool 2 (LP Incentivization) on [CoinGecko](https://www.coingecko.com/en/yield-farming)."
     }
   ],
   "footer": {}

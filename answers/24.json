@@ -1,11 +1,11 @@
 {
   "title": "Question 24",
-  "description": "What if I deposit after the start of the epoch?",
+  "description": "What if I withdraw before the end of the epoch?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "When staling tokens during an epoch that’s currently running, your effective deposit amount will be proportionally reduced by the time that has passed from the start of the epoch. \n\nFor example, if you deposit the funds in the middle of epoch, you’ll get a 0.5 multiplier. \n\nThat’s why there is TVL and effective TVL displayed on BarnBridge platform."
+      "value": "If you withdraw your deposit before the end of the epoch your potential $BOND reward will be lost."
     }
   ],
   "footer": {}

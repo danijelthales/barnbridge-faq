@@ -97,7 +97,7 @@
   },
   {
     "number": 19,
-    "alias": "yield farming apy"
+    "alias": "apy"
   },
   {
     "number": 20,
@@ -113,14 +113,10 @@
   },
   {
     "number": 23,
-    "alias": "lp apy"
-  },
-  {
-    "number": 24,
     "alias": "effective tvl"
   },
   {
-    "number": 26,
+    "number": 25,
     "alias": "lp tokens"
   },
   {
@@ -132,31 +128,31 @@
     "alias": "tranche"
   },
   {
-    "number": 30,
+    "number": 31,
     "alias": "tranches"
   },
   {
-    "number": 31,
+    "number": 32,
     "alias": "senior tranche"
   },
   {
-    "number": 31,
+    "number": 32,
     "alias": "junior tranche"
   },
   {
-    "number": 31,
+    "number": 32,
     "alias": "senior tranches"
   },
   {
-    "number": 31,
+    "number": 32,
     "alias": "junior tranches"
   },
   {
-    "number": 32,
+    "number": 33,
     "alias": "smart yield"
   },
   {
-    "number": 33,
+    "number": 34,
     "alias": "smart alpha"
   }
 ]
