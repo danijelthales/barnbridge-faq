@@ -1,13 +1,12 @@
 {
   "title": "Question 23",
-  "description": "What is an APY for the LP Incentivization?",
+  "description": "What if I deposit after the start of the epoch?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "You can see it on [CoinGecko](https://www.coingecko.com/en/yield-farming). \n\nP.S. Make sure you are in degen mode 😄"
+      "value": "When staling tokens during an epoch that’s currently running, your effective deposit amount will be proportionally reduced by the time that has passed from the start of the epoch. \n\nFor example, if you deposit the funds in the middle of epoch, you’ll get a 0.5 multiplier. \n\nThat’s why there is TVL and effective TVL displayed on BarnBridge platform."
     }
   ],
-  "image": "DegenMode.png",
   "footer": {}
 }

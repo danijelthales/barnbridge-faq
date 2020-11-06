@@ -1,11 +1,11 @@
 {
   "title": "Question 32",
-  "description": "What is SMART Yield Bond?",
+  "description": "What are senior and junior tranches?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "This is the first DeFi product of the BarnBridge platform designed to mitigate interest rate volatility risk using debt-based derivatives. \n\nRead more in our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper#21-smart-yield-bonds)."
+      "value": "Senior and junior tranches will be available in our main products - SMART Alpha & SMART Bonds. \n\nIn the meantime we're distributing $BOND tokens to the community running Yield Farming & LP Incentivization programs. You can learn more in our [Medium article](https://medium.com/barnbridge/barnbridge-this-is-houston-you-are-go-for-launch-b92e29a7dd20). "
     }
   ],
   "footer": {}

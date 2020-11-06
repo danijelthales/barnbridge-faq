@@ -55,16 +55,18 @@
       26,
       27,
       28,
-      29
+      29,
+      30
     ]
   },
   {
     "name": "SMART Yield & SMART Alpha",
     "desc": "Basic information about BarnBridge products",
     "questions": [
-      30,
       31,
-      32
+      32,
+      33,
+      34
     ]
   }
 ]
