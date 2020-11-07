@@ -20,9 +20,14 @@ var tvl = 531132484;
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
 
+var barnApy = '590%';
+var bondApy = '15%';
 
 const clientBondPrice = new Discord.Client();
 clientBondPrice.login(process.env.BOT_TOKEN_BOND);
+
+const clientApy = new Discord.Client();
+clientApy.login(process.env.BOT_TOKEN_APY);
 
 const clientBtcPrice = new Discord.Client();
 clientBtcPrice.login(process.env.BOT_TOKEN_BTC);
@@ -164,34 +169,34 @@ function doInnerQuestion(command, doReply, msg) {
         //
         // } else {
 
-            answer.fields.forEach(function (field) {
-                exampleEmbed.addField(field.title, field.value, field.inline);
+        answer.fields.forEach(function (field) {
+            exampleEmbed.addField(field.title, field.value, field.inline);
+        });
+
+        if (answer.footer.title) {
+            exampleEmbed.setFooter(answer.footer.title, answer.footer.value);
+
+        }
+
+        if (answer.image) {
+            exampleEmbed.attachFiles(['images/' + answer.image])
+                .setImage('attachment://' + answer.image);
+        }
+
+        if (answer.thumbnail) {
+            exampleEmbed.attachFiles(['images/' + answer.thumbnail])
+                .setThumbnail('attachment://' + answer.thumbnail);
+        }
+
+        if (doReply) {
+            msg.reply(exampleEmbed);
+        } else {
+            msg.channel.send(exampleEmbed).then(function (message) {
+                message.react("❌");
+            }).catch(function () {
+                //Something
             });
-
-            if (answer.footer.title) {
-                exampleEmbed.setFooter(answer.footer.title, answer.footer.value);
-
-            }
-
-            if (answer.image) {
-                exampleEmbed.attachFiles(['images/' + answer.image])
-                    .setImage('attachment://' + answer.image);
-            }
-
-            if (answer.thumbnail) {
-                exampleEmbed.attachFiles(['images/' + answer.thumbnail])
-                    .setThumbnail('attachment://' + answer.thumbnail);
-            }
-
-            if (doReply) {
-                msg.reply(exampleEmbed);
-            } else {
-                msg.channel.send(exampleEmbed).then(function (message) {
-                    message.react("❌");
-                }).catch(function () {
-                    //Something
-                });
-            }
+        }
         // }
     } catch (e) {
         if (doReply) {
@@ -938,6 +943,7 @@ async function getChart(type) {
     }
 }
 
+
 // setTimeout(function () {
 //     try {
 //         getChart('realtime');
@@ -1146,6 +1152,20 @@ setInterval(function () {
 
 }, 30 * 1000);
 
+setInterval(function () {
+
+    clientApy.guilds.cache.forEach(function (value, key) {
+        try {
+
+            value.members.cache.get("774419786935173140").setNickname("APY");
+            value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD="+barnApy +", USDC/BOND="+bondApy, {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 30 * 1000);
+
 
 setInterval(function () {
 
@@ -1251,6 +1271,64 @@ async function getTVL() {
     }
 }
 
+async function getAPY() {
+    try {
+        console.log("Fetching APY");
+        const browser = await puppeteer.launch({
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+            ],
+        });
+        const page = await browser.newPage();
+        await page.setViewport({width: 1000, height: 926});
+        await page.goto("https://www.coingecko.com/en/yield-farming", {waitUntil: 'networkidle2'});
+        await page.waitForSelector('table');
+
+        /** @type {string[]} */
+        var farm = await page.evaluate(() => {
+            var div = document.querySelectorAll('tr td:nth-child(2) a');
+
+            var farm = new Object();
+            farm.assets = [];
+            div.forEach(element => {
+                farm.assets.push(element.textContent);
+            });
+
+            div = document.querySelectorAll('tr td:nth-child(3) a');
+            farm.pools = [];
+            div.forEach(element => {
+                farm.pools.push(element.textContent);
+            });
+
+            div = document.querySelectorAll('tr td div div.mr-4');
+            farm.apys = [];
+            div.forEach(element => {
+                farm.apys.push(element.textContent);
+            });
+
+            return farm
+        })
+
+        for (var i = 0; i < farm.pools.length; i++) {
+            if (farm.pools[i].includes("Barn")) {
+                barnApy = farm.apys[i];
+                barnApy=barnApy.substring(0, barnApy.indexOf("Yearly")).replace("\n","");
+            }
+            if (farm.pools[i].includes("BOND")) {
+                bondApy = farm.apys[i];
+                bondApy=bondApy.substring(0, bondApy.indexOf("Yearly")).replace("\n","");
+            }
+        }
+
+        browser.close()
+    } catch (e) {
+        console.log("Error happened on getting data from barnbridge.");
+        console.log(e);
+    }
+}
+
+setTimeout(getAPY, 1000 * 20);
 setInterval(getTVL, 1000 * 30);
 
 client.login(process.env.BOT_TOKEN);
