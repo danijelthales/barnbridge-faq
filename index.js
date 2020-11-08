@@ -20,8 +20,8 @@ var tvl = 531132484;
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
 
-var barnApy = '590%';
-var bondApy = '15%';
+var barnApy = '15%';
+var bondApy = '590%';
 
 const clientBondPrice = new Discord.Client();
 clientBondPrice.login(process.env.BOT_TOKEN_BOND);
@@ -1328,7 +1328,7 @@ async function getAPY() {
     }
 }
 
-setTimeout(getAPY, 1000 * 20);
+setInterval(getAPY, 1000 * 30);
 setInterval(getTVL, 1000 * 30);
 
 client.login(process.env.BOT_TOKEN);
