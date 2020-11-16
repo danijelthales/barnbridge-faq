@@ -1362,7 +1362,7 @@ setInterval(function () {
     } catch (e) {
         console.log(e);
     }
-}, 5 * 1000);
+}, 50 * 1000);
 
 
 //https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest
