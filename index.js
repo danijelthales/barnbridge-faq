@@ -1158,7 +1158,9 @@ setInterval(function () {
         try {
 
             value.members.cache.get("774419786935173140").setNickname("APY");
-            value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD="+barnApy +", USDC/BOND="+bondApy, {type: 'PLAYING'});
+            value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD="+barnApy
+                +", USDC/BOND="+bondApy
+                +", BOND staking="+bondStakingApy, {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
@@ -1330,5 +1332,39 @@ async function getAPY() {
 
 setInterval(getAPY, 1000 * 30);
 setInterval(getTVL, 1000 * 30);
+
+let bondStakingApy=20;
+setInterval(function () {
+    try {
+        https.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest', (resp) => {
+            let data = '';
+
+            // A chunk of data has been recieved.
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            // The whole response has been received. Print out the result.
+            resp.on('end', () => {
+                try {
+                    let result = JSON.parse(data);
+                    var results = result.result / 1000000000000000000;
+                    bondStakingApy = 52*5000*100/results;
+                    bondStakingApy = Math.round(((bondStakingApy * 1.0) + Number.EPSILON) * 100) / 100+'%';
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+        }).on("error", (err) => {
+            console.log("Error: " + err.message);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}, 5 * 1000);
+
+
+//https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest
 
 client.login(process.env.BOT_TOKEN);
