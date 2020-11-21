@@ -1251,7 +1251,7 @@ async function getTVL() {
         const page = await browser.newPage();
         await page.setViewport({width: 1000, height: 926});
         await page.goto("https://app.barnbridge.com/pools", {waitUntil: 'networkidle2'});
-
+        await delay(5000);
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
             var div = document.querySelectorAll('.styles_value__2W3Hv');
@@ -1271,6 +1271,12 @@ async function getTVL() {
         console.log("Error happened on getting data from barnbridge.");
         console.log(e);
     }
+}
+
+function delay(time) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, time)
+    });
 }
 
 async function getAPY() {
