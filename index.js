@@ -1157,7 +1157,7 @@ setInterval(function () {
     clientApy.guilds.cache.forEach(function (value, key) {
         try {
 
-            value.members.cache.get("774419786935173140").setNickname("APY");
+            value.members.cache.get("774419786935173140").setNickname("APR");
             value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD="+barnApy
                 +", USDC/BOND="+bondApy
                 +", BOND staking="+bondStakingApy, {type: 'PLAYING'});
@@ -1166,7 +1166,7 @@ setInterval(function () {
         }
     });
 
-}, 30 * 1000);
+}, 60 * 1000);
 
 
 setInterval(function () {
