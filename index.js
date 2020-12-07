@@ -1157,7 +1157,7 @@ setInterval(function () {
     clientApy.guilds.cache.forEach(function (value, key) {
         try {
 
-            value.members.cache.get("774419786935173140").setNickname("APY");
+            value.members.cache.get("774419786935173140").setNickname("APR");
             value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD="+barnApy
                 +", USDC/BOND="+bondApy
                 +", BOND staking="+bondStakingApy, {type: 'PLAYING'});
@@ -1166,7 +1166,7 @@ setInterval(function () {
         }
     });
 
-}, 30 * 1000);
+}, 60 * 1000);
 
 
 setInterval(function () {
@@ -1251,7 +1251,7 @@ async function getTVL() {
         const page = await browser.newPage();
         await page.setViewport({width: 1000, height: 926});
         await page.goto("https://app.barnbridge.com/pools", {waitUntil: 'networkidle2'});
-
+        await delay(5000);
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
             var div = document.querySelectorAll('.styles_value__2W3Hv');
@@ -1271,6 +1271,12 @@ async function getTVL() {
         console.log("Error happened on getting data from barnbridge.");
         console.log(e);
     }
+}
+
+function delay(time) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, time)
+    });
 }
 
 async function getAPY() {
