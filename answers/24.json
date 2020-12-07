@@ -1,11 +1,11 @@
 {
   "title": "Question 24",
-  "description": "What if I withdraw before the end of the epoch?",
+  "description": "What if I deposit after the start of the epoch?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "If you withdraw your deposit before the end of the epoch your potential $BOND reward will be lost."
+      "value": "The deposit works like this: for the current epoch, the amount that is taken into consideration when the reward is calculated is relative to the time when you deposited. \n\nIf you enter when there’s only 20% time left, your effective balance will be equal to actual balance * 20% where the multiplier is exactly that 20%. For the next epoch (and any subsequent epoch), the multiplier is set back to 100%. \n\nIf you deposit some more, the multiplier will be less, but the effective balance will always be greater than the previous. For example: you start the epoch with 100 DAI, then deposit 100 DAI at exactly 50% of the epoch => your effective balance for this epoch is 150 DAI = 100 + 50% * 100 or 200*75% - 75% being the new weighted-average multiplier."
     }
   ],
   "footer": {}

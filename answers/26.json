@@ -1,11 +1,11 @@
 {
   "title": "Question 26",
-  "description": "How are Uniswap rewards distributed in the BOND/USDC Liquidity Pool?",
+  "description": "What tokens can I stake in the Liquidity Pool Incentivization program?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "BarnBridge Uniswap fees are not automatically distributed. They are added to the pool, so when you burn your LP tokens and withdraw your liquidity from the pool, you’ll also get the fees. The staking contract does not collect any fees and neither is BarnBridge. You can read more here: [https://uniswap.org/docs/v2/advanced-topics/fees/](https://uniswap.org/docs/v2/advanced-topics/fees/). Check out the first paragraph - “Liquidity provider fees”."
+      "value": "You have to stake the uniswapv2 LP tokens (USDC_BOND_UNI_LP). You’ll get them for providing liquidity to the [BOND/USDC pool](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) on Uniswap."
     }
   ],
   "footer": {}

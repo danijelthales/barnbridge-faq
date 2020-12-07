@@ -1,11 +1,11 @@
 {
   "title": "Question 30",
-  "description": "Why were Yield Farming and Liquidity Mining done before the actual products?",
+  "description": "Will my rewards burn if I don't claim them each Monday?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "We designed Pool 1 and Pool 2 to distribute the token to the community. Pool 1 is providing proof of capital to the network at 8% of the supply. It's to ensure decentralized governance from day 1 when the products are live. Pool 2 exists to provide liquidity for pool 1."
+      "value": "No, it will accumulate for however much time you stay staked in the pool."
     }
   ],
   "footer": {}

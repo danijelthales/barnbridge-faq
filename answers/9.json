@@ -1,12 +1,13 @@
 {
   "title": "Question 9",
-  "description": "How many tokens are released each week?",
+  "description": "What is the token distribution?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "**Week 1:** \n- Farming: 32,000 $BOND \n- Team: 22,000 $BOND \n- Total: 54,000 $BOND \n\n **Week 2-4:** \n- Farming: 32,000 $BOND \n- LP: 20,000 $BOND \n- Team: 22,000 $BOND \n- Total: 74,000 $BOND \n\n **Week 5+:** \n- Farming: 32,000 $BOND \n- LP: 20,000 $BOND \n- BOND Pool: 5,000 $BOND \n- Team: 22,000 $BOND \n- Total: 79,000 $BOND"
+      "value": "The distribution breakdown is designed to facilitate the most decentralized protocol and make sure power doesn’t reside in the hands of a few."
     }
   ],
+  "image": "TokenDistribution.png",
   "footer": {}
 }

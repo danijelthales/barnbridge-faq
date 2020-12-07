@@ -1,11 +1,11 @@
 {
   "title": "Question 22",
-  "description": "How can I earn with LP Incentivization?",
+  "description": "How many $BOND tokens are allocated to the Liquidity Pool Incentivization program?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here](https://app.barnbridge.com)."
+      "value": "This initiative is granted with 20% (2,000,000 $BOND tokens) and each epoch will have 20,000 $BOND tokens to start. \n\nThe Liquidity Pool Incentivization will run for 100 weeks and each epoch will last 1 week. At the end of the epoch the users can claim their $BOND."
     }
   ],
   "footer": {}

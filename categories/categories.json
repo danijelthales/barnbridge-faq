@@ -5,43 +5,43 @@
     "questions": [
       1,
       2,
-      3
+      3,
+      4
     ]
   },
   {
     "name": "$BOND Token",
     "desc": "Token-related questions",
     "questions": [
-      4,
       5,
       6,
       7,
       8,
-      9
+      9,
+      10
     ]
   },
   {
     "name": "DAO Structure",
     "desc": "Questions about the DAO structure",
     "questions": [
-      10,
       11,
-      12
+      12,
+      13
     ]
   },
   {
     "name": "$BOND NFTs",
     "desc": "Info about $BOND Non-Fungible Tokens",
     "questions": [
-      13,
-      14
+      14,
+      15
     ]
   },
   {
     "name": "Yield Farming & LP Incentivization Programs",
     "desc": "Everything about Yield Farming and Liquidity Mining token distribution programs",
     "questions": [
-      15,
       16,
       17,
       18,
@@ -56,17 +56,18 @@
       27,
       28,
       29,
-      30
+      30,
+      31
     ]
   },
   {
     "name": "SMART Yield & SMART Alpha",
     "desc": "Basic information about BarnBridge products",
     "questions": [
-      31,
       32,
       33,
-      34
+      34,
+      35
     ]
   }
 ]

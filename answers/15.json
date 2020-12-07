@@ -1,11 +1,11 @@
 {
   "title": "Question 15",
-  "description": "What is Yield Farming in the BarnBridge ecosystem?",
+  "description": "Where can I find the list of the $BOND NFTs?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "The Yield Farming staking contract is the first mechanism delivering initial $BOND token distribution to the community. This contract holds 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD. \n\nTokens to be distributed: 800,000 $BOND. \nProgram duration: 25 weeks. \nStart date: Oct 19th, 2020."
+      "value": "$BOND is a contract for 200 (two hundred) fully compliant ERC-721 tokens minted by InfiNFT and viewable on OpenSea here: [https://opensea.io/storefront/barnbridge-non-fungible-token](https://opensea.io/storefront/barnbridge-non-fungible-token)."
     }
   ],
   "footer": {}

@@ -1,11 +1,11 @@
 {
   "title": "Question 7",
-  "description": "What is the $BOND token contract address?",
+  "description": "How many $BOND tokens are there?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "[0x0391D2021f89DC339F60Fff84546EA23E337750f](https://etherscan.io/token/0x0391D2021f89DC339F60Fff84546EA23E337750f)"
+      "value": "The total amount of $BOND tokens is and will be **10,000,000**. No minting allowed."
     }
   ],
   "footer": {}

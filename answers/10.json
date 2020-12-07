@@ -1,11 +1,11 @@
 {
   "title": "Question 10",
-  "description": "What is LaunchDAO?",
+  "description": "How many tokens are released each week?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "The Founders, Seeders, and Advisors are using an Aragon DAO Company Template which uses transferable tokens to represent ownership stake. Decisions are made based on stake-weighted voting with the $BBVOTE token. \n\nThe Founders received 45%, Seeders received 45%, and Advisors got 10%. The minimum voting support is set to 62%, meaning for a proposal to be passed it must be approved by at least 62%. \n\nThe funds from the seeders and the initial supply of the $BOND token will be kept in the Launch DAO treasury. You can find the LaunchDAO [here](https://client.aragon.org/#/barnbridgelaunch/)."
+      "value": "**Week 1:** \n- Farming: 32,000 $BOND \n- Team: 22,000 $BOND \n- Total: 54,000 $BOND \n\n **Week 2-4:** \n- Farming: 32,000 $BOND \n- LP: 20,000 $BOND \n- Team: 22,000 $BOND \n- Total: 74,000 $BOND \n\n **Week 5+:** \n- Farming: 32,000 $BOND \n- LP: 20,000 $BOND \n- BOND Pool: 5,000 $BOND \n- Team: 22,000 $BOND \n- Total: 79,000 $BOND"
     }
   ],
   "footer": {}

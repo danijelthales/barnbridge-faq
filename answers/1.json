@@ -1,11 +1,11 @@
 {
   "title": "Question 1",
-  "description": "What is the purpose of the project?",
+  "description": "Where to start?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "BarnBridge is the first risk tokenizing protocol. Its purpose is to integrate with other protocols letting hedging the yield risks on those lending and other platforms."
+      "value": "BarnBridge is the first risk tokenizing protocol. It allows hedging yield sensitivity and price volatility.  BarnBridge does this by accessing debt pools on other DeFi protocols, and transforming single pools into multiple assets with varying risk/return characteristics. \n\nIf you want to learn more about the project you should start by reading the [Introducing BarnBridge](https://medium.com/barnbridge/introducing-barnbridge-3f0015fef3bb) article on our [blog](https://barnbridge.com/). For a better understanding of the idea behind BarnBridge, take a look at our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper). In addition, you can view all our contributors on the [team page](http://barnbridge.io/team). \n\nFollow us on [Twitter](https://twitter.com/barn_bridge), [Medium](https://medium.com/barnbridge) and sign up for the [newsletter](https://barnbridge.com/) to always get the latest updates."
     }
   ],
   "footer": {}

@@ -1,11 +1,11 @@
 {
   "title": "Question 18",
-  "description": "Is there any difference in rewards between staking USDC, DAI or sUSDC?",
+  "description": "What tokens can I stake in the Yield Farming program?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "No, they are all equally rewarded. 1 USDC = 1 DAI = 1 sUSD."
+      "value": "Stablecoins - specifically DAI, USDC, and sUSD."
     }
   ],
   "footer": {}
