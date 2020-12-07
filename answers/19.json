@@ -1,11 +1,11 @@
 {
   "title": "Question 19",
-  "description": "What is an APY?",
+  "description": "Is there any difference in rewards between staking USDC, DAI or sUSDC?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "You can check the APY for both Pool 1 (Yield Farming) and Pool 2 (LP Incentivization) on [CoinGecko](https://www.coingecko.com/en/yield-farming)."
+      "value": "No, they are all equally rewarded. 1 USDC = 1 DAI = 1 sUSD."
     }
   ],
   "footer": {}

@@ -1,11 +1,11 @@
 {
   "title": "Question 27",
-  "description": "What is Liquidity Mining in the BarnBridge ecosystem?",
+  "description": "How are Uniswap rewards distributed in the BOND/USDC Liquidity Pool?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Liquidity mining in the BarnBridge ecosystem is a two-phased liquidity mining program that is releasing staking contracts with distinct specifications around $BOND token distribution. \n\nLiquidity Mining consists of Yield Farming and LP Incentivization programs."
+      "value": "BarnBridge Uniswap fees are not automatically distributed. They are added to the pool, so when you burn your LP tokens and withdraw your liquidity from the pool, you’ll also get the fees. The staking contract does not collect any fees and neither is BarnBridge. You can read more here: [https://uniswap.org/docs/v2/advanced-topics/fees/](https://uniswap.org/docs/v2/advanced-topics/fees/). Check out the first paragraph - “Liquidity provider fees”."
     }
   ],
   "footer": {}

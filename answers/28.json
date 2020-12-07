@@ -1,11 +1,11 @@
 {
   "title": "Question 28",
-  "description": "What is the difference between Yield Farming and Liquidity Mining on BarnBridge?",
+  "description": "What is Liquidity Mining in the BarnBridge ecosystem?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Yield Farming is the first mechanism delivering initial $BOND token distribution to the community. This contract holds 8% of the total supply (800,000 $BOND tokens) and is being distributed to community members who stake DAI, USDC, & sUSD during the period of 25 weeks. \n \nPhase two is the Liquidity Mining Incentivization Program. This initiative is granted 20% of the total supply (2,000,000 $BOND tokens) and each epoch has 20,000 $BOND tokens. This will last 100 weeks."
+      "value": "Liquidity mining in the BarnBridge ecosystem is a two-phased liquidity mining program that is releasing staking contracts with distinct specifications around $BOND token distribution. \n\nLiquidity Mining consists of Yield Farming and LP Incentivization programs."
     }
   ],
   "footer": {}

@@ -1,11 +1,11 @@
 {
   "title": "Question 5",
-  "description": "What does the $BOND token do?",
+  "description": "What is a $BOND token?",
   "color": "0099ff",
   "fields": [
     {
-      "title": "Answer:",
-      "value": "$BOND is an ERC-20 token. It will be used to stake in the system, and as a governance token when the governance module is launched. \n\nAs it conforms to the ERC-20 standard, the $BOND token is tradeable on any exchange and storable on any wallet - allowing anyone in the world to access it."
+      "title": "Answer",
+      "value": "$BOND token is a pure governance token that powers the BarnBridge DAO protocol. You can read more about it [here](https://barnbridge.com/token-bond/)."
     }
   ],
   "footer": {}

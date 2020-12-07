@@ -1,11 +1,11 @@
 {
   "title": "Question 23",
-  "description": "What if I deposit after the start of the epoch?",
+  "description": "How can I earn with LP Incentivization?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "When staking tokens during an epoch that’s currently running, your effective deposit amount will be proportionally reduced by the time that has passed from the start of the epoch. \n\nFor example, if you deposit the funds in the middle of epoch, you’ll get a 0.5 multiplier. \n\nThat’s why there is TVL and effective TVL displayed on BarnBridge platform."
+      "value": "1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here](https://app.barnbridge.com)."
     }
   ],
   "footer": {}

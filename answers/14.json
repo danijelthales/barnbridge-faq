@@ -1,11 +1,11 @@
 {
   "title": "Question 14",
-  "description": "Where can I find the list of the $BOND NFTs?",
+  "description": "What are the $BOND NFT tokens?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "$BOND is a contract for 200 (two hundred) fully compliant ERC-721 tokens minted by InfiNFT and viewable on OpenSea here: [https://opensea.io/storefront/barnbridge-non-fungible-token](https://opensea.io/storefront/barnbridge-non-fungible-token)."
+      "value": "BarnBridge Non-Fungible Tokens, also taking the ticker for $BOND, may be and will likely be completely pointless outside of being cool and fun. Every $BOND NFT is one of a kind. There may be similar ones in the collection but no 2 are exactly the same. \n\nDownstream, we’ve seen DeFi projects propose using NFTs as proof of liquidity in income streams & wrapped NFTs as loan representations. With almost every high profile DeFi project experimenting in one way or another, the point is clear: DeFi is looking into NFTs. While we’ve been looking at what NFTs mean for DeFi, at the moment, we’re just paying attention. \n\nLearn more in our [Medium article](https://medium.com/barnbridge/introducing-the-barnbridge-erc-721-the-nft-bond-collection-ca2be6aefa84)."
     }
   ],
   "footer": {}

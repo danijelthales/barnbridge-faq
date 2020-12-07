@@ -1,11 +1,11 @@
 {
   "title": "Question 4",
-  "description": "What is a $BOND token?",
+  "description": "Is there a Telegram group?",
   "color": "0099ff",
   "fields": [
     {
-      "title": "Answer",
-      "value": "$BOND token is a pure governance token that powers the BarnBridge DAO protocol."
+      "title": "Answer:",
+      "value": "We do have a Telegram group but we’re currently building community on Discord."
     }
   ],
   "footer": {}
