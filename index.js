@@ -1168,19 +1168,23 @@ setInterval(function () {
 
 }, 60 * 1000);
 
-
+let cSupply = 869164.76;
 setInterval(function () {
 
     clientBondPrice.guilds.cache.forEach(function (value, key) {
         try {
-            value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd);
-            value.members.cache.get("768970504735817750").user.setActivity("Ξ" + coingeckoEth + ' ₿' + coingeckoBtc, {type: 'PLAYING'});
+            value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd + "Ξ" + coingeckoEth);
+            value.members.cache.get("768970504735817750").user.setActivity("cSupply=" + numberWithCommas(cSupply) + "$BOND", {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
     });
 
 }, 30 * 1000);
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 
 var payday = new Date('2020-10-19 00:00');
@@ -1357,6 +1361,34 @@ setInterval(function () {
                     var results = result.result / 1000000000000000000;
                     bondStakingApy = 52 * 5000 * 100 / results;
                     bondStakingApy = Math.round(((bondStakingApy * 1.0) + Number.EPSILON) * 100) / 100 + '%';
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+        }).on("error", (err) => {
+            console.log("Error: " + err.message);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}, 50 * 1000);
+
+setInterval(function () {
+    try {
+        https.get('https://tokenapi.barnbridge.com/circulating-supply', (resp) => {
+            let data = '';
+
+            // A chunk of data has been recieved.
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            // The whole response has been received. Print out the result.
+            resp.on('end', () => {
+                try {
+                    let result = JSON.parse(data) * 1.0;
+                    cSupply = result.toFixed(2);
                 } catch (e) {
                     console.log(e);
                 }
