@@ -1173,8 +1173,8 @@ setInterval(function () {
 
     clientBondPrice.guilds.cache.forEach(function (value, key) {
         try {
-            value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd + "Ξ" + coingeckoEth);
-            value.members.cache.get("768970504735817750").user.setActivity("cSupply=" + numberWithCommas(cSupply) + "$BOND", {type: 'PLAYING'});
+            value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd + " Ξ" + coingeckoEth);
+            value.members.cache.get("768970504735817750").user.setActivity("⨊=" + numberWithCommas(cSupply) + " $BOND", {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
