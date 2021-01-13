@@ -26,6 +26,9 @@ var bondApy = '590%';
 const clientBondPrice = new Discord.Client();
 clientBondPrice.login(process.env.BOT_TOKEN_BOND);
 
+const clientBondSupply = new Discord.Client();
+clientBondSupply.login(process.env.BOT_TOKEN_SUPPLY);
+
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
 
@@ -1168,23 +1171,19 @@ setInterval(function () {
 
 }, 60 * 1000);
 
-let cSupply = 869164.76;
+
 setInterval(function () {
 
     clientBondPrice.guilds.cache.forEach(function (value, key) {
         try {
-            value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd + " Ξ" + coingeckoEth);
-            value.members.cache.get("768970504735817750").user.setActivity("⨊=" + numberWithCommas(cSupply) + " $BOND", {type: 'PLAYING'});
+            value.members.cache.get("768970504735817750").setNickname("$" + coingeckoUsd);
+            value.members.cache.get("768970504735817750").user.setActivity("Ξ" + coingeckoEth + ' ₿' + coingeckoBtc, {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
     });
 
 }, 30 * 1000);
-
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
 
 var payday = new Date('2020-10-19 00:00');
@@ -1374,6 +1373,8 @@ setInterval(function () {
     }
 }, 50 * 1000);
 
+
+let cSupply = 869164.76;
 setInterval(function () {
     try {
         https.get('https://tokenapi.barnbridge.com/circulating-supply', (resp) => {
@@ -1402,6 +1403,23 @@ setInterval(function () {
     }
 }, 50 * 1000);
 
+
+setInterval(function () {
+
+    clientBondSupply.guilds.cache.forEach(function (value, key) {
+        try {
+            value.members.cache.get("798924765728342047").setNickname("Circulating Supply");
+            value.members.cache.get("798924765728342047").user.setActivity(numberWithCommas(cSupply) + " $BOND", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 30 * 1000);
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 //https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest
 
