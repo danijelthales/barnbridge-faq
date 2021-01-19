@@ -26,6 +26,9 @@ var bondApy = '590%';
 const clientBondPrice = new Discord.Client();
 clientBondPrice.login(process.env.BOT_TOKEN_BOND);
 
+const clientBondSupply = new Discord.Client();
+clientBondSupply.login(process.env.BOT_TOKEN_SUPPLY);
+
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
 
@@ -1157,10 +1160,12 @@ setInterval(function () {
     clientApy.guilds.cache.forEach(function (value, key) {
         try {
 
-            value.members.cache.get("774419786935173140").setNickname("APR");
-            value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD="+barnApy
-                +", USDC/BOND="+bondApy
-                +", BOND staking="+bondStakingApy, {type: 'PLAYING'});
+            if (!bondApy.includes("590")) {
+                value.members.cache.get("774419786935173140").setNickname("APR");
+                value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD=" + barnApy
+                    + ", USDC/BOND=" + bondApy
+                    + ", BOND staking=" + bondStakingApy, {type: 'PLAYING'});
+            }
         } catch (e) {
             console.log(e);
         }
@@ -1321,11 +1326,11 @@ async function getAPY() {
         for (var i = 0; i < farm.pools.length; i++) {
             if (farm.pools[i].includes("Barn")) {
                 barnApy = farm.apys[i];
-                barnApy=barnApy.substring(0, barnApy.indexOf("Yearly")).replace("\n","");
+                barnApy = barnApy.substring(0, barnApy.indexOf("Yearly")).replace("\n", "");
             }
-            if (farm.pools[i].includes("BOND")) {
+            if (farm.pools[i].includes("BOND") && farm.pools[i].includes("USDC")) {
                 bondApy = farm.apys[i];
-                bondApy=bondApy.substring(0, bondApy.indexOf("Yearly")).replace("\n","");
+                bondApy = bondApy.substring(0, bondApy.indexOf("Yearly")).replace("\n", "");
             }
         }
 
@@ -1339,7 +1344,7 @@ async function getAPY() {
 setInterval(getAPY, 1000 * 30);
 setInterval(getTVL, 1000 * 30);
 
-let bondStakingApy=20;
+let bondStakingApy = 20;
 setInterval(function () {
     try {
         https.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest', (resp) => {
@@ -1355,8 +1360,8 @@ setInterval(function () {
                 try {
                     let result = JSON.parse(data);
                     var results = result.result / 1000000000000000000;
-                    bondStakingApy = 52*5000*100/results;
-                    bondStakingApy = Math.round(((bondStakingApy * 1.0) + Number.EPSILON) * 100) / 100+'%';
+                    bondStakingApy = 52 * 5000 * 100 / results;
+                    bondStakingApy = Math.round(((bondStakingApy * 1.0) + Number.EPSILON) * 100) / 100 + '%';
                 } catch (e) {
                     console.log(e);
                 }
@@ -1370,6 +1375,53 @@ setInterval(function () {
     }
 }, 50 * 1000);
 
+
+let cSupply = 869164.76;
+setInterval(function () {
+    try {
+        https.get('https://tokenapi.barnbridge.com/circulating-supply', (resp) => {
+            let data = '';
+
+            // A chunk of data has been recieved.
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            // The whole response has been received. Print out the result.
+            resp.on('end', () => {
+                try {
+                    let result = JSON.parse(data) * 1.0;
+                    cSupply = result.toFixed(2);
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+        }).on("error", (err) => {
+            console.log("Error: " + err.message);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}, 50 * 1000);
+
+
+setInterval(function () {
+
+    clientBondSupply.guilds.cache.forEach(function (value, key) {
+        try {
+            value.members.cache.get("798924765728342047").setNickname("Circulating Supply");
+            value.members.cache.get("798924765728342047").user.setActivity(numberWithCommas(cSupply) + " $BOND", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 30 * 1000);
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 //https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest
 
