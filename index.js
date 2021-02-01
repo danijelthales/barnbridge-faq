@@ -29,6 +29,9 @@ clientBondPrice.login(process.env.BOT_TOKEN_BOND);
 const clientBondSupply = new Discord.Client();
 clientBondSupply.login(process.env.BOT_TOKEN_SUPPLY);
 
+const clientBondCap = new Discord.Client();
+clientBondCap.login(process.env.BOT_TOKEN_CAP);
+
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
 
@@ -748,6 +751,7 @@ setInterval(function () {
                 coingeckoEth = Math.round(((coingeckoEth * 1.0) + Number.EPSILON) * 1000) / 1000;
                 coingeckoBtc = result.market_data.current_price.btc;
                 coingeckoBtc = Math.round(((coingeckoBtc * 1.0) + Number.EPSILON) * 1000000) / 1000000;
+                bondMarketCap = result.market_data.market_cap.usd;
             } catch (e) {
                 console.log(e);
             }
@@ -946,136 +950,6 @@ async function getChart(type) {
     }
 }
 
-
-// setTimeout(function () {
-//     try {
-//         getChart('realtime');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 5 * 1000);
-// setTimeout(function () {
-//     try {
-//         getChart('24H');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 8 * 1000);
-// setTimeout(function () {
-//     try {
-//         getChart('7D');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 10 * 1000);
-// setTimeout(function () {
-//     try {
-//         getChart('1M');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 20 * 1000);
-// setTimeout(function () {
-//     try {
-//         getChart('3M');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 30 * 1000);
-// setTimeout(function () {
-//     try {
-//         getChart('6M');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 40 * 1000);
-//
-// setTimeout(function () {
-//     try {
-//         getChart('YTD');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 50 * 1000);
-// setTimeout(function () {
-//     try {
-//         getChart('1Y');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 1000);
-// setTimeout(function () {
-//     try {
-//         getChart('ALL');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 70 * 1000);
-//
-//
-// setInterval(function () {
-//     try {
-//         getChart('realtime');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('24H');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 7 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('7D');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 10 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('1M');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 20 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('3M');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 25 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('6M');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 50 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('YTD');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 50 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('1Y');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 50 * 1000);
-// setInterval(function () {
-//     try {
-//         getChart('ALL');
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 60 * 100 * 1000);
 
 setInterval(function () {
     try {
@@ -1412,6 +1286,19 @@ setInterval(function () {
         try {
             value.members.cache.get("798924765728342047").setNickname("Circulating Supply");
             value.members.cache.get("798924765728342047").user.setActivity(numberWithCommas(cSupply) + " $BOND", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 30 * 1000);
+
+setInterval(function () {
+
+    clientBondCap.guilds.cache.forEach(function (value, key) {
+        try {
+            value.members.cache.get("804654823030128660").setNickname("Market Cap");
+            value.members.cache.get("804654823030128660").user.setActivity("$" + numberWithCommas(bondMarketCap), {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
