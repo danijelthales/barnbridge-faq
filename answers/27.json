@@ -1,11 +1,11 @@
 {
   "title": "Question 27",
-  "description": "How are Uniswap rewards distributed in the BOND/USDC Liquidity Pool?",
+  "description": "Are you considering L2 as a possible solution for improving gas fee efficiency?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "BarnBridge Uniswap fees are not automatically distributed. They are added to the pool, so when you burn your LP tokens and withdraw your liquidity from the pool, you’ll also get the fees. The staking contract does not collect any fees and neither is BarnBridge. You can read more here: [https://uniswap.org/docs/v2/advanced-topics/fees/](https://uniswap.org/docs/v2/advanced-topics/fees/). Check out the first paragraph - “Liquidity provider fees”."
+      "value": "Yes, we’re definitely looking at L2 solutions and their adoption across other protocols. Check some of our previous answers on Discord: [here](https://discord.com/channels/748538797662273636/751179180053364830/801127333746049095) and [here](https://discord.com/channels/748538797662273636/751179159077650549/788041682590367745)."
     }
   ],
   "footer": {}

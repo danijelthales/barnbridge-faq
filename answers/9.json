@@ -1,13 +1,12 @@
 {
   "title": "Question 9",
-  "description": "What is the token distribution?",
+  "description": "How many tokens are released each week?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "The distribution breakdown is designed to facilitate the most decentralized protocol and make sure power doesn’t reside in the hands of a few."
+      "value": "As of right now, a total of 79,000 %BOND tokens is distributed weekly. \n- USDC/DAI/sUSD Pool: 32,000; \n- USDC/BOND Pool: 20,000; \n- $BOND #Hodl Pool: 5,000; \n- Team vesting: 22,000."
     }
   ],
-  "image": "TokenDistribution.png",
   "footer": {}
 }

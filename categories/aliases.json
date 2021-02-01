@@ -17,55 +17,71 @@
   },
   {
     "number": 3,
-    "alias": "vesting"
-  },
-  {
-    "number": 3,
-    "alias": "vesting schedule"
-  },
-  {
-    "number": 4,
     "alias": "telegram"
   },
   {
-    "number": 5,
-    "alias": "bond"
+    "number": 3,
+    "alias": "telegram group"
   },
   {
-    "number": 5,
+    "number": 4,
+    "alias": "bond"
+  },
+   {
+    "number": 4,
     "alias": "token"
   },
   {
-    "number": 7,
+    "number": 5,
     "alias": "amount"
   },
   {
-    "number": 7,
+    "number": 5,
+    "alias": "total supply"
+  },
+  {
+    "number": 5,
     "alias": "supply"
   },
   {
-    "number": 8,
+    "number": 6,
     "alias": "contract"
   },
   {
-    "number": 8,
+    "number": 6,
     "alias": "contract address"
   },
   {
-    "number": 9,
+    "number": 7,
     "alias": "distribution"
   },
   {
-    "number": 9,
+    "number": 7,
     "alias": "token distribution"
   },
   {
-    "number": 10,
+    "number": 8,
+    "alias": "vesting"
+  },
+  {
+    "number": 8,
+    "alias": "vesting schedule"
+  },
+   {
+    "number": 9,
     "alias": "weekly distribution"
+  },
+  {
+    "number": 10,
+    "alias": "bond nft"
   },
   {
     "number": 11,
     "alias": "launchdao"
+  },
+  {
+    "number": 11,
+    "alias": "launch dao"
   },
   {
     "number": 12,
@@ -77,114 +93,94 @@
   },
   {
     "number": 14,
-    "alias": "bond nft"
-  },
-  {
-    "number": 14,
-    "alias": "gas price"
-  },
-  {
-    "number": 16,
     "alias": "yield farming"
   },
   {
-    "number": 17,
-    "alias": "yield farming supply"
-  },
-  {
-    "number": 18,
-    "alias": "stake"
-  },
-  {
-    "number": 18,
-    "alias": "staking"
-  },
-  {
-    "number": 19,
-    "alias": "stablecoins"
-  },
-  {
-    "number": 20,
-    "alias": "apy"
-  },
-  {
-    "number": 21,
+    "number": 15,
     "alias": "lp"
   },
   {
-    "number": 22,
-    "alias": "lp supply"
+    "number": 15,
+    "alias": "pool 2"
   },
   {
-    "number": 23,
+    "number": 16,
     "alias": "lp earn"
   },
   {
-    "number": 24,
+    "number": 17,
+    "alias": "pool 3"
+  },
+  {
+    "number": 17,
+    "alias": "hodl pool"
+  },
+  {
+    "number": 18,
+    "alias": "dao pool"
+  },
+  {
+    "number": 18,
+    "alias": "dao staking pool"
+  },
+  {
+    "number": 19,
     "alias": "effective tvl"
   },
   {
-    "number": 24,
+    "number": 19,
     "alias": "deposit"
   },
   {
-    "number": 25,
+    "number": 20,
     "alias": "withdraw"
   },
   {
-    "number": 26,
-    "alias": "lp tokens"
-  },
-  {
-    "number": 30,
+    "number": 21,
     "alias": "rewards"
   },
   {
-    "number": 31,
-    "alias": "tranche"
+    "number": 22,
+    "alias": "apy"
   },
   {
-    "number": 32,
-    "alias": "tranches"
-  },
-  {
-    "number": 33,
-    "alias": "senior tranche"
-  },
-  {
-    "number": 33,
-    "alias": "junior tranche"
-  },
-  {
-    "number": 33,
-    "alias": "senior tranches"
-  },
-  {
-    "number": 33,
-    "alias": "junior tranches"
-  },
-  {
-    "number": 34,
+    "number": 23,
     "alias": "smart yield"
   },
   {
-    "number": 34,
-    "alias": "yield"
-  },
-  {
-    "number": 35,
+    "number": 24,
     "alias": "smart alpha"
   },
   {
-    "number": 35,
-    "alias": "alpha"
+    "number": 25,
+    "alias": "tranche"
   },
   {
-    "number": 36,
+    "number": 25,
+    "alias": "tranches"
+  },
+   {
+    "number": 26,
+    "alias": "senior tranche"
+  },
+  {
+    "number": 26,
+    "alias": "junior tranche"
+  },
+  {
+    "number": 26,
+    "alias": "senior tranches"
+  },
+  {
+    "number": 26,
+    "alias": "junior tranches"
+  },
+  {
+    "number": 27,
     "alias": "l2"
   },
   {
-    "number": 36,
+    "number": 27,
     "alias": "layer2"
   }
 ]
