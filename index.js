@@ -29,11 +29,11 @@ clientBondPrice.login(process.env.BOT_TOKEN_BOND);
 const clientBondSupply = new Discord.Client();
 clientBondSupply.login(process.env.BOT_TOKEN_SUPPLY);
 
-// const clientBondCap = new Discord.Client();
-// clientBondCap.login(process.env.BOT_TOKEN_CAP);
+const clientBondCap = new Discord.Client();
+clientBondCap.login(process.env.BOT_TOKEN_CAP);
 
-const clientBetAPY = new Discord.Client();
-clientBetAPY.login(process.env.BOT_TOKEN_APY);
+// const clientBetAPY = new Discord.Client();
+// clientBetAPY.login(process.env.BOT_TOKEN_APY);
 
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
