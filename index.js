@@ -29,8 +29,11 @@ clientBondPrice.login(process.env.BOT_TOKEN_BOND);
 const clientBondSupply = new Discord.Client();
 clientBondSupply.login(process.env.BOT_TOKEN_SUPPLY);
 
-const clientBondCap = new Discord.Client();
-clientBondCap.login(process.env.BOT_TOKEN_CAP);
+// const clientBondCap = new Discord.Client();
+// clientBondCap.login(process.env.BOT_TOKEN_CAP);
+
+const clientBetAPY = new Discord.Client();
+clientBetAPY.login(process.env.BOT_TOKEN_APY);
 
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
@@ -1313,3 +1316,16 @@ function numberWithCommas(x) {
 //https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest
 
 client.login(process.env.BOT_TOKEN);
+
+// setInterval(function () {
+//
+//     clientBondCap.guilds.cache.forEach(function (value, key) {
+//         try {
+//             value.members.cache.get("806453685495529512").setNickname("Market Cap");
+//             value.members.cache.get("806453685495529512").user.setActivity("$" + numberWithCommas(bondMarketCap), {type: 'PLAYING'});
+//         } catch (e) {
+//             console.log(e);
+//         }
+//     });
+//
+// }, 30 * 1000);
