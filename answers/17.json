@@ -1,12 +1,13 @@
 {
   "title": "Question 17",
-  "description": "How many $BOND tokens are allocated to the Yield Farming program?",
+  "description": "$BOND Hodl Pool",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Yield Farming staking contract holds 8% (800,000 $BOND tokens) of the total supply and is distributed to community members who stake DAI, USDC, and sUSD."
+      "value": "$BOND Hodl Pool was launched on Nov 16th, 2020. It has been running for 12 epochs (weeks) and distributing 60,000 $BOND tokens in rewards to the users. \n\nRead more information on Medium: [Introducing BarnBridge Pool #Hodl.](https://medium.com/barnbridge/introducing-barnbridge-pool-hodl-b07f206e9c6a)"
     }
   ],
+  "image": "pool3.png",
   "footer": {}
 }

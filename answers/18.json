@@ -1,11 +1,11 @@
 {
   "title": "Question 18",
-  "description": "What tokens can I stake in the Yield Farming program?",
+  "description": "DAO Staking Pool",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Stablecoins - specifically DAI, USDC, and sUSD."
+      "value": "DAO Staking pool will be launched on Feb 8th, 2021. It will distribute rewards to the users who stake $BOND on the BarnBridge DAO. More details to be revealed soon."
     }
   ],
   "footer": {}

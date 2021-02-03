@@ -1,11 +1,11 @@
 {
   "title": "Question 20",
-  "description": "What is the current APY?",
+  "description": "What if I withdraw before the end of the epoch?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "You can check the APY for Pool 1 (Yield Farming), Pool 2 (LP Incentivization), and Pool 3 ($BOND Staking) on [CoinGecko](https://www.coingecko.com/en/yield-farming) or using our Discord APR Bot displayed under the Casino Royale section."
+      "value": "NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool. \n\nIf you withdraw before the epoch ends, there are 2 possibilities: \n1. You withdraw the full amount => in which case your effective balance goes to 0 because your actual balance, which is now 0, multiplied by any kind of multiplier is still 0. \n2. You withdraw only a part of it => the multiplier is recalculated as the weighted average of the deposits (let’s say you deposit 100 DAI then after half of the time you withdraw 50 DAI => you’ll end up just like you initially deposited 50 DAI). \n\nAny withdrawal causes the reward for the amount of money withdrawn to be lost."
     }
   ],
   "image": "APYBot.png",

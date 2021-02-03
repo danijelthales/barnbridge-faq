@@ -1,12 +1,13 @@
 {
   "title": "Question 22",
-  "description": "How many $BOND tokens are allocated to the Liquidity Pool Incentivization program?",
+  "description": "What is the current APY?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "This initiative is granted with 20% (2,000,000 $BOND tokens) and each epoch will have 20,000 $BOND tokens to start. \n\nThe Liquidity Pool Incentivization will run for 100 weeks and each epoch will last 1 week. At the end of the epoch the users can claim their $BOND."
+      "value": "You can check the APY all pools on [CoinGecko](https://www.coingecko.com/en/yield-farming) or using our Discord APR Bot displayed under the Casino Royale section."
     }
   ],
+  "image": "APYBot.png",
   "footer": {}
 }

@@ -1,11 +1,11 @@
 {
   "title": "Question 12",
-  "description": "What is BarnBridgeDAO?",
+  "description": "What is BarnBridge DAO?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "BarnBridgeDAO will be the DAO that is controlled by the $BOND community. The BarnBridgeDAO will have full control over the protocol and the features that are built into it. BarnbridgeDAO will be the final protocol DAO. \n\nYou can read more about it [here](https://barnbridge.com/dao/)."
+      "value": "BarnBridge DAO is the DAO that is controlled by the $BOND community. The BarnBridgeDAO has full control over the protocol and the features that are built into it. It is the final protocol DAO. \n\nBarnBridge DAO specifications are fully covered by this Medium post: [BarnBridge DAO: Built for the Future.](https://medium.com/barnbridge/barnbridge-dao-built-for-the-future-3735fbd671c5)"
     }
   ],
   "footer": {}

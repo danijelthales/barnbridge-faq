@@ -5,14 +5,14 @@
     "questions": [
       1,
       2,
-      3,
-      4
+      3
     ]
   },
   {
     "name": "$BOND Token",
     "desc": "Token-related questions",
     "questions": [
+      4,
       5,
       6,
       7,
@@ -31,44 +31,29 @@
     ]
   },
   {
-    "name": "$BOND NFTs",
-    "desc": "Info about $BOND Non-Fungible Tokens",
-    "questions": [
-      14,
-      15
-    ]
-  },
-  {
-    "name": "Yield Farming & LP Incentivization Programs",
+    "name": "Token Distribution Programs",
     "desc": "Everything about Yield Farming and Liquidity Mining token distribution programs",
     "questions": [
+      14,
+      15,     
       16,
       17,
       18,
       19,
       20,
       21,
-      22,
+      22
+    ]
+  },
+  {
+    "name": "Products",
+    "desc": "Basic information about BarnBridge products",
+    "questions": [
       23,
       24,
       25,
       26,
-      27,
-      28,
-      29,
-      30,
-      31
-    ]
-  },
-  {
-    "name": "SMART Yield & SMART Alpha",
-    "desc": "Basic information about BarnBridge products",
-    "questions": [
-      32,
-      33,
-      34,
-      35,
-      36
+      27
     ]
   }
 ]

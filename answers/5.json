@@ -1,11 +1,11 @@
 {
   "title": "Question 5",
-  "description": "What is a $BOND token?",
+  "description": "What is $BOND total supply?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer",
-      "value": "$BOND token is a pure governance token that powers the BarnBridge DAO protocol. You can read more about it [here](https://barnbridge.com/token-bond/)."
+      "value": "The total amount of $BOND tokens is fixed at **10,000,000**. There is no ability to create or issue additional tokens."
     }
   ],
   "footer": {}

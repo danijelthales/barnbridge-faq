@@ -1,11 +1,11 @@
 {
   "title": "Question 10",
-  "description": "How many tokens are released each week?",
+  "description": "What are $BOND NFT tokens?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "**Week 1:** \n- Farming: 32,000 $BOND \n- Team: 22,000 $BOND \n- Total: 54,000 $BOND \n\n **Week 2-4:** \n- Farming: 32,000 $BOND \n- LP: 20,000 $BOND \n- Team: 22,000 $BOND \n- Total: 74,000 $BOND \n\n **Week 5+:** \n- Farming: 32,000 $BOND \n- LP: 20,000 $BOND \n- BOND Pool: 5,000 $BOND \n- Team: 22,000 $BOND \n- Total: 79,000 $BOND"
+      "value": "BarnBridge Non-Fungible Tokens program was an additional initiative for rewarding active community participants with custom ERC-721 NFTs. The program has ended on Jan 28th, 2021. Read more in this [Medium post](https://medium.com/barnbridge/sunsetting-our-nft-program-with-community-rewards-85fc8fd1a82a), also taking the ticker for $BOND, were just another way of incentivizing early project supporters may be and will likely be completely pointless outside of being cool and fun. Every $BOND NFT is one of a kind. There may be similar ones in the collection but no 2 are exactly the same. \n\nDownstream, we’ve seen DeFi projects propose using NFTs as proof of liquidity in income streams & wrapped NFTs as loan representations. With almost every high profile DeFi project experimenting in one way or another, the point is clear: DeFi is looking into NFTs. While we’ve been looking at what NFTs mean for DeFi, at the moment, we’re just paying attention. \n\nLearn more in our [Medium article.](https://medium.com/barnbridge/introducing-the-barnbridge-erc-721-the-nft-bond-collection-ca2be6aefa84)"
     }
   ],
   "footer": {}

@@ -1,11 +1,11 @@
 {
   "title": "Question 4",
-  "description": "Is there a Telegram group?",
+  "description": "What is the $BOND token?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "We do have a Telegram group but we’re currently building community on Discord."
+      "value": "The $BOND token is a governance token that powers the BarnBridge DAO protocol. \n\n$BOND is an ERC-20 token. Holders of the token will have the ability to govern the network by staking their holdings in return for the right to govern the network. \n\nThe $BOND token is tradeable on any exchange and storable on any wallet that has adopted the ERC-20 token standard - providing broad access across the world."
     }
   ],
   "footer": {}
