@@ -1136,7 +1136,7 @@ async function getTVL() {
         await delay(5000);
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
-            var div = document.querySelectorAll('.styles_value__2W3Hv');
+            var div = document.querySelectorAll('.styles_heading__JDdQE');
 
             var prices = []
             div.forEach(element => {
