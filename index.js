@@ -33,7 +33,7 @@ const clientBondCap = new Discord.Client();
 clientBondCap.login(process.env.BOT_TOKEN_CAP);
 
 const clientBetAPY = new Discord.Client();
-clientBetAPY.login(process.env.BOT_TOKEN_APY);
+clientBetAPY.login(process.env.BOT_TOKEN_BET_APY);
 
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
