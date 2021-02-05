@@ -1332,7 +1332,7 @@ setInterval(function () {
             // The whole response has been received. Print out the result.
             resp.on('end', () => {
                 try {
-                    let result = JSON.parse(data) / 1e18;
+                    let result = JSON.parse(data).result / 1e18;
                     lockedBondBet = result.toFixed(2);
                 } catch (e) {
                     console.log(e);
