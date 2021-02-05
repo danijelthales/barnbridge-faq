@@ -32,8 +32,8 @@ clientBondSupply.login(process.env.BOT_TOKEN_SUPPLY);
 const clientBondCap = new Discord.Client();
 clientBondCap.login(process.env.BOT_TOKEN_CAP);
 
-// const clientBetAPY = new Discord.Client();
-// clientBetAPY.login(process.env.BOT_TOKEN_APY);
+const clientBetAPY = new Discord.Client();
+clientBetAPY.login(process.env.BOT_TOKEN_APY);
 
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
@@ -1066,6 +1066,7 @@ setInterval(function () {
 
 
 var payday = new Date('2020-10-19 00:00');
+var bondbetpayday = new Date('2021-02-07 22:20');
 
 const {ChainId, Fetcher, Route, Trade, TokenAmount, TradeType, WETH, Token} = require('@uniswap/sdk');
 var bond = null;
@@ -1313,19 +1314,63 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-//https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest
-
 client.login(process.env.BOT_TOKEN);
 
-// setInterval(function () {
-//
-//     clientBondCap.guilds.cache.forEach(function (value, key) {
-//         try {
-//             value.members.cache.get("806453685495529512").setNickname("Market Cap");
-//             value.members.cache.get("806453685495529512").user.setActivity("$" + numberWithCommas(bondMarketCap), {type: 'PLAYING'});
-//         } catch (e) {
-//             console.log(e);
-//         }
-//     });
-//
-// }, 30 * 1000);
+//https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xeA7EaEcBff99cE2412E794437325F3BD225EE78F&tag=latest
+
+let lockedBondBet = 3715;
+setInterval(function () {
+    try {
+        https.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xeA7EaEcBff99cE2412E794437325F3BD225EE78F&tag=latest', (resp) => {
+            let data = '';
+
+            // A chunk of data has been recieved.
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            // The whole response has been received. Print out the result.
+            resp.on('end', () => {
+                try {
+                    let result = JSON.parse(data) / 1e18;
+                    lockedBondBet = result.toFixed(2);
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+        }).on("error", (err) => {
+            console.log("Error: " + err.message);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}, 50 * 1000);
+
+
+setInterval(function () {
+
+    clientBetAPY.guilds.cache.forEach(function (value, key) {
+        try {
+
+            var today = new Date();
+            while (today > bondbetpayday) {
+                bondbetpayday.setDate(bondbetpayday.getDate() + 7);
+            }
+            var difference = bondbetpayday.getTime() - today.getTime();
+            var seconds = Math.floor(difference / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            hours %= 24;
+            minutes %= 60;
+            seconds %= 60;
+
+            value.members.cache.get("806453685495529512").setNickname("Locked=" + lockedBondBet + " $BOND");
+            value.members.cache.get("806453685495529512").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes ", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 30 * 1000);
