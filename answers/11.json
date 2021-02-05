@@ -5,7 +5,7 @@
   "fields": [
     {
       "title": "Answer:",
-      "value": "The Founders, Seeders, and Advisors are using an Aragon DAO Company Template which uses transferable tokens to represent ownership stake. Decisions are made based on stake-weighted voting with the $BBVOTE token. \n\nThe Founders received 45%, Seeders received 45%, and Advisors got 10%. The minimum voting support is set to 62%, meaning for a proposal to be passed it must be approved by at least 62%. \n\nThe funds from the seeders and the initial supply of the $BOND token will be kept in the Launch DAO treasury. You can find the LaunchDAO [here](https://client.aragon.org/#/barnbridgelaunch/)."
+      "value": "BarnBridge has been using the “DAO First” governance model, which means it has never been, and never will be, a traditional company. Instead, BarnBridge founders decided to launch the project as a DAO and split the governance between the core team. This DAO was called LaunchDAO. \n\nIt was created using Aragon DAO Company Template which uses transferable tokens to represent ownership stake. Decisions are made based on stake-weighted voting with the $BBVOTE token. \n\nThe Founders received 45%, Seeders received 45%, and Advisors got 10%. The minimum voting support is set to 62%, meaning for a proposal to be passed it must be approved by at least 62%. \n\nThe funds from the seeders and the initial supply of the $BOND token will be kept in the Launch DAO treasury. You can find the LaunchDAO [here](https://client.aragon.org/#/barnbridgelaunch/)."
     }
   ],
   "footer": {}

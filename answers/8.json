@@ -1,11 +1,11 @@
 {
   "title": "Question 8",
-  "description": "What is the $BOND token contract address?",
+  "description": "How long is the vesting schedule?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "[0x0391D2021f89DC339F60Fff84546EA23E337750f](https://etherscan.io/token/0x0391D2021f89DC339F60Fff84546EA23E337750f)"
+      "value": "The vesting schedule is designed so that there is not a giant cliff waiting over user’s heads at a specific point. The tokens allocated to the Founders, Seed Investors, and Advisors are locked in a smart contract that releases the tokens **on a weekly basis over a two year period.** The vesting period started with the launch of the Yield Farming mechanism. \n\n[Learn More](https://github.com/BarnBridge/BarnBridge-Whitepaper#311-fair-vesting)"
     }
   ],
   "footer": {}

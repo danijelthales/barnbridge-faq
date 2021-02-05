@@ -1,11 +1,11 @@
 {
   "title": "Question 3",
-  "description": "How long is the vesting schedule?",
+  "description": "Is there a Telegram group?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "The vesting schedule is designed so that there is not a giant cliff waiting over users heads at a specific point. The tokens allocated to the Founders, Seed Investors, and Advisors are locked in a smart contract that releases the tokens **on a weekly basis over a two year period**. The vesting period started with the launch of the Yield Farming mechanism. \n\n[Learn more](https://github.com/BarnBridge/BarnBridge-Whitepaper#311-fair-vesting)"
+      "value": "We do have a Telegram group but we’re currently building community on Discord. \n\nAttention! The only official BarnBridge Telegram group is[https://t.me/barnbridge_official](https://t.me/barnbridge_official). Other groups or bots are scams. Please, report as you see them."
     }
   ],
   "footer": {}

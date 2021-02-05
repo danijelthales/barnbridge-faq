@@ -1,11 +1,11 @@
 {
   "title": "Question 6",
-  "description": "What does the $BOND token do?",
+  "description": "What is the $BOND token contract address?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "$BOND is an ERC-20 token. It will be used to stake in the system, and as a governance token when the governance module is launched. \n\nAs it conforms to the ERC-20 standard, the $BOND token is tradeable on any exchange and storable on any wallet - allowing anyone in the world to access it.\n\nYou can read more about it [here](https://barnbridge.com/token-bond/)"
+      "value": "[0x0391D2021f89DC339F60Fff84546EA23E337750f](https://etherscan.io/token/0x0391D2021f89DC339F60Fff84546EA23E337750f)"
     }
   ],
   "footer": {}
