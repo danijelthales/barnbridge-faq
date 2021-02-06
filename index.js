@@ -1368,6 +1368,8 @@ setInterval(function () {
             minutes %= 60;
             seconds %= 60;
 
+
+            value.members.cache.get("806453685495529512").setNickname("Bond.Bet");
             value.members.cache.get("806453685495529512").user.setActivity(days + "D:" + hours + "H:" + minutes + "M deposited=" + lockedBondBet + " $BOND", {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
