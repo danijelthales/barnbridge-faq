@@ -32,7 +32,7 @@
   },
   {
     "name": "Token Distribution Programs",
-    "desc": "Everything about Yield Farming and Liquidity Mining token distribution programs",
+    "desc": "Eevrything about Yield Farming, Liquidity Mining, and DAO Staking",
     "questions": [
       14,
       15,     
@@ -47,7 +47,7 @@
   },
   {
     "name": "Products",
-    "desc": "Basic information about BarnBridge products",
+    "desc": "Basic information about BarnBridge upcoming products",
     "questions": [
       23,
       24,

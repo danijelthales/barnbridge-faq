@@ -5,8 +5,9 @@
   "fields": [
     {
       "title": "Answer:",
-      "value": "DAO Staking pool will be launched on Feb 8th, 2021. It will distribute rewards to the users who stake $BOND on the BarnBridge DAO. More details to be revealed soon."
+      "value": "DAO Staking pool was launched on Feb 8th, 2021. It was designed as an extra incentive for the early DAO participants. In addition to voting power, you also receive rewards from the DAO rewards pool. \n\nThe pool is currently preloaded with 610,000 $BOND tokens and should run for 50 weeks. \n\nFind more details about DAO staking here:[Pool 3 ends and DAO governance rewards begins](https://medium.com/barnbridge/pool-3-ends-and-dao-governance-rewards-begins-8e57ec5041)."
     }
   ],
+  "image":"daopool.png",
   "footer": {}
 }
