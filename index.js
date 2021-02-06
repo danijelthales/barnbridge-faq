@@ -1318,7 +1318,7 @@ client.login(process.env.BOT_TOKEN);
 
 //https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xeA7EaEcBff99cE2412E794437325F3BD225EE78F&tag=latest
 
-let lockedBondBet = 3715;
+let lockedBondBet = 3714;
 setInterval(function () {
     try {
         https.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xeA7EaEcBff99cE2412E794437325F3BD225EE78F&tag=latest', (resp) => {
@@ -1333,7 +1333,9 @@ setInterval(function () {
             resp.on('end', () => {
                 try {
                     let result = JSON.parse(data).result / 1e18;
-                    lockedBondBet = result.toFixed(2);
+                    if (!isNaN(result)) {
+                        lockedBondBet = result.toFixed(2);
+                    }
                 } catch (e) {
                     console.log(e);
                 }
@@ -1366,8 +1368,7 @@ setInterval(function () {
             minutes %= 60;
             seconds %= 60;
 
-            value.members.cache.get("806453685495529512").setNickname("Locked=" + lockedBondBet + " $BOND");
-            value.members.cache.get("806453685495529512").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes ", {type: 'PLAYING'});
+            value.members.cache.get("806453685495529512").user.setActivity(days + "D:" + hours + "H:" + minutes + "M deposited=" + lockedBondBet + " $BOND", {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
