@@ -1,1 +1,1 @@
-Is there any difference in rewards between staking USDC, DAI or sUSDC?
+What if I deposit after the start of the epoch?
