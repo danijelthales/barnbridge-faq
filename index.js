@@ -1398,7 +1398,7 @@ setInterval(function () {
                     let result = JSON.parse(data).result / 1e18;
                     if (!isNaN(result)) {
                         daoBond = result.toFixed(2);
-                        daoBondAPR = 12200 * 365 * 100 / daoBond;
+                        daoBondAPR = 1742.86 * 365 * 100 / daoBond;
                         daoBondAPR = daoBondAPR.toFixed(2) + "%";
                     }
                 } catch (e) {
