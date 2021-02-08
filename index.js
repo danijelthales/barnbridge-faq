@@ -1319,7 +1319,6 @@ function numberWithCommas(x) {
 
 client.login(process.env.BOT_TOKEN);
 
-//https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xeA7EaEcBff99cE2412E794437325F3BD225EE78F&tag=latest
 
 let lockedBondBet = 3714;
 setInterval(function () {
@@ -1350,7 +1349,7 @@ setInterval(function () {
     } catch (e) {
         console.log(e);
     }
-}, 50 * 1000);
+}, 150 * 1000);
 
 
 setInterval(function () {
@@ -1412,4 +1411,4 @@ setInterval(function () {
     } catch (e) {
         console.log(e);
     }
-}, 50 * 1000);
+}, 80 * 1000);
