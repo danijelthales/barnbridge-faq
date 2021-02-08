@@ -24,7 +24,7 @@ var barnApy = '15%';
 var bondApy = '590%';
 
 let daoBond = 214311.49;
-let daoBondAPR = 2080 + "%";
+let daoBondAPR = 280 + "%";
 
 const clientBondPrice = new Discord.Client();
 clientBondPrice.login(process.env.BOT_TOKEN_BOND);
