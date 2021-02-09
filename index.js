@@ -23,6 +23,9 @@ let gasSubscribersLastPushMap = new Map();
 var barnApy = '15%';
 var bondApy = '590%';
 
+let daoBond = 214311.49;
+let daoBondAPR = 280 + "%";
+
 const clientBondPrice = new Discord.Client();
 clientBondPrice.login(process.env.BOT_TOKEN_BOND);
 
@@ -31,6 +34,9 @@ clientBondSupply.login(process.env.BOT_TOKEN_SUPPLY);
 
 const clientBondCap = new Discord.Client();
 clientBondCap.login(process.env.BOT_TOKEN_CAP);
+
+const clientBetAPY = new Discord.Client();
+clientBetAPY.login(process.env.BOT_TOKEN_BET_APY);
 
 const clientApy = new Discord.Client();
 clientApy.login(process.env.BOT_TOKEN_APY);
@@ -1038,7 +1044,7 @@ setInterval(function () {
                 value.members.cache.get("774419786935173140").setNickname("APR");
                 value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD=" + barnApy
                     + ", USDC/BOND=" + bondApy
-                    + ", BOND staking=" + bondStakingApy, {type: 'PLAYING'});
+                    + ", DAO=" + daoBondAPR, {type: 'PLAYING'});
             }
         } catch (e) {
             console.log(e);
@@ -1063,6 +1069,7 @@ setInterval(function () {
 
 
 var payday = new Date('2020-10-19 00:00');
+var bondbetpayday = new Date('2021-02-07 22:20');
 
 const {ChainId, Fetcher, Route, Trade, TokenAmount, TradeType, WETH, Token} = require('@uniswap/sdk');
 var bond = null;
@@ -1133,7 +1140,7 @@ async function getTVL() {
         await delay(5000);
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
-            var div = document.querySelectorAll('.styles_value__2W3Hv');
+            var div = document.querySelectorAll('.styles_heading__JDdQE');
 
             var prices = []
             div.forEach(element => {
@@ -1143,7 +1150,7 @@ async function getTVL() {
             return prices
         })
 
-        tvl = prices[0];
+        tvl = prices[1];
         tvl = tvl.replace(/,/g, '').replace(/\$/g, '') * 1.0;
         browser.close()
     } catch (e) {
@@ -1310,6 +1317,98 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-//https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xb0fa2beee3cf36a7ac7e99b885b48538ab364853&tag=latest
-
 client.login(process.env.BOT_TOKEN);
+
+
+let lockedBondBet = 3714;
+setInterval(function () {
+    try {
+        https.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0xeA7EaEcBff99cE2412E794437325F3BD225EE78F&tag=latest', (resp) => {
+            let data = '';
+
+            // A chunk of data has been recieved.
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            // The whole response has been received. Print out the result.
+            resp.on('end', () => {
+                try {
+                    let result = JSON.parse(data).result / 1e18;
+                    if (!isNaN(result)) {
+                        lockedBondBet = result.toFixed(2);
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+        }).on("error", (err) => {
+            console.log("Error: " + err.message);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}, 150 * 1000);
+
+
+setInterval(function () {
+
+    clientBetAPY.guilds.cache.forEach(function (value, key) {
+        try {
+
+            var today = new Date();
+            while (today > bondbetpayday) {
+                bondbetpayday.setDate(bondbetpayday.getDate() + 7);
+            }
+            var difference = bondbetpayday.getTime() - today.getTime();
+            var seconds = Math.floor(difference / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            hours %= 24;
+            minutes %= 60;
+            seconds %= 60;
+
+
+            value.members.cache.get("806453685495529512").setNickname("Bond.Bet");
+            value.members.cache.get("806453685495529512").user.setActivity(days + "D:" + hours + "H:" + minutes + "M deposited=" + lockedBondBet + " $BOND", {type: 'PLAYING'});
+        } catch (e) {
+            console.log(e);
+        }
+    });
+
+}, 30 * 1000);
+
+
+setInterval(function () {
+    try {
+        https.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0x10e138877df69Ca44Fdc68655f86c88CDe142D7F&tag=latest', (resp) => {
+            let data = '';
+
+            // A chunk of data has been recieved.
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            // The whole response has been received. Print out the result.
+            resp.on('end', () => {
+                try {
+                    let result = JSON.parse(data).result / 1e18;
+                    if (!isNaN(result)) {
+                        daoBond = result.toFixed(2);
+                        daoBondAPR = 1742.86 * 365 * 100 / daoBond;
+                        daoBondAPR = daoBondAPR.toFixed(2) + "%";
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+        }).on("error", (err) => {
+            console.log("Error: " + err.message);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}, 80 * 1000);
