@@ -1,1 +1,1 @@
-What if I don't claim rewards after the epoch ends?
+What if I withdraw before the end of the epoch?

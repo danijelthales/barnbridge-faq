@@ -1,12 +1,13 @@
 {
   "title": "Question 21",
-  "description": "What if I don't claim rewards after the epoch ends?",
+  "description": "What if I withdraw before the end of the epoch?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Nothing bad will happen. Your rewards will be accumulating for however much time you stay in the pool. You can also claim after you withdraw your deposit."
+      "value": "NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool. \n\nIf you withdraw before the epoch ends, there are 2 possibilities: \n1. You withdraw the full amount => in which case your effective balance goes to 0 because your actual balance, which is now 0, multiplied by any kind of multiplier is still 0. \n2. You withdraw only a part of it => the multiplier is recalculated as the weighted average of the deposits (let’s say you deposit 100 DAI then after half of the time you withdraw 50 DAI => you’ll end up just like you initially deposited 50 DAI). \n\nAny withdrawal causes the reward for the amount of money withdrawn to be lost."
     }
   ],
+  "image": "APYBot.png",
   "footer": {}
 }

@@ -1,13 +1,12 @@
 {
   "title": "Question 22",
-  "description": "What is the current APY?",
+  "description": "What if I don't claim rewards after the epoch ends?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "You can check the APY all pools on [CoinGecko](https://www.coingecko.com/en/yield-farming) or using our Discord APR Bot displayed under the Casino Royale section."
+      "value": "Nothing bad will happen. Your rewards will be accumulating for however much time you stay in the pool. You can also claim after you withdraw your deposit."
     }
   ],
-  "image": "APYBot.png",
   "footer": {}
 }
