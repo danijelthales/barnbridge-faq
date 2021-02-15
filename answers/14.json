@@ -1,13 +1,12 @@
 {
   "title": "Question 14",
-  "description": "USDC/DAI/sUSD Yield Farming Pool",
+  "description": "Why can’t I vote on the proposal if I staked in the DAO?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "USDC/DAI/sUSD yield farming pool was launched on Oct 19th, 2020. This staking contract was the first mechanism delivering initial $BOND token distribution to the community. This contract holds 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD. \n\nStablecoins are equally rewarded. 1 USDC = 1 DAI = 1 sUSD. \n\nRead more about the pool in this Medium post: [Yield Farming and LP Incentivization.](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4)"
+      "value": "You most likely staked $BOND tokens after the proposal was created. Proposals take a snapshot of user balances at the block they are created. It is designed this way to prevent double voting - if someone votes using one wallet address, then sends to another wallet address and votes again. By taking the snapshot at a block creation, the second address would register as having 0 voting power, which prevents the fraud."
     }
   ],
-  "image": "pool1.png",
   "footer": {}
 }

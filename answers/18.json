@@ -1,13 +1,13 @@
 {
   "title": "Question 18",
-  "description": "DAO Staking Pool",
+  "description": "$BOND Hodl Pool",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "DAO Staking pool was launched on Feb 8th, 2021. It was designed as an extra incentive for the early DAO participants. In addition to voting power, you also receive rewards from the DAO rewards pool. \n\nThe pool is currently preloaded with 610,000 $BOND tokens and should run for 50 weeks. \n\nFind more details about DAO staking here:[Pool 3 ends and DAO governance rewards begins](https://medium.com/barnbridge/pool-3-ends-and-dao-governance-rewards-begins-8e57ec5041)."
+      "value": "$BOND Hodl Pool was launched on Nov 16th, 2020. It has been running for 12 epochs (weeks) and distributing 60,000 $BOND tokens in rewards to the users. \n\n$BOND Hodl Pool ended on Feb 8th, 2021. If you haven’t claimed your rewards or withdrawn your deposit yet - don’t panic. You’ll be able to do that for literally forever but you will no longer be able to stake and earn rewards from the pool."
     }
   ],
-  "image":"daopool.png",
+  "image": "pool3.png",
   "footer": {}
 }

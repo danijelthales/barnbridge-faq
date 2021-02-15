@@ -1,1 +1,1 @@
-USDC/BOND LP Pool
+USDC/DAI/sUSD Yield Farming Pool
