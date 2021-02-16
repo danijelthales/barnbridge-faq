@@ -5,7 +5,7 @@
   "fields": [
     {
       "title": "Answer:",
-      "value": "1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \nStake LP tokens on BarnBridge platform [here.](https://app.barnbridge.com)"
+      "value": "1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here.](https://app.barnbridge.com)"
     }
   ],
   "footer": {}
