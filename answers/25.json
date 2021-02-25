@@ -1,11 +1,11 @@
 {
   "title": "Question 25",
-  "description": "What is a tranche?",
+  "description": "What is SMART Alpha Bond?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Tranches are pieces of a pooled collection of securities, usually debt instruments, that are split up by risk or other characteristics in order to be marketable to different investors. \n\nTranches carry different maturities, yields, and degrees of risk - and privileges in repayment in case of default."
+      "value": "Market Price Exposure Risk Mitigation using tranched volatility derivatives. \n\nThe SMART Alpha bonds will not be structured via traditional yield tranches but instead with various levels of market price exposure, which we will call risk ramps. The idea is that every bucket or tranche of price exposure does not need to be flat across the entire risk curve, meaning the first $100 of price exposure does not need to deserve the same upside and downside volatility. This is similar to having fractional ownership but with different risk/reward for the fractions. \n\nRead more in our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper#21-smart-yield-bonds) and on the [website.](https://barnbridge.com/)"
     }
   ],
   "footer": {}

@@ -85,6 +85,14 @@
   },
   {
     "number": 12,
+    "alias": "bb dao"
+  },
+  {
+    "number": 12,
+    "alias": "bbdao"
+  },
+  {
+    "number": 12,
     "alias": "barnbridgedao"
   },
   {
@@ -92,95 +100,95 @@
     "alias": "barnbridge dao"
   },
   {
-    "number": 14,
+    "number": 15,
     "alias": "yield farming"
   },
   {
-    "number": 15,
+    "number": 16,
     "alias": "lp"
   },
   {
-    "number": 15,
+    "number": 16,
     "alias": "pool 2"
   },
   {
-    "number": 16,
+    "number": 17,
     "alias": "lp earn"
   },
   {
-    "number": 17,
+    "number": 18,
     "alias": "pool 3"
   },
   {
-    "number": 17,
+    "number": 18,
     "alias": "hodl pool"
   },
   {
-    "number": 18,
+    "number": 19,
     "alias": "dao pool"
   },
   {
-    "number": 18,
+    "number": 19,
     "alias": "dao staking pool"
   },
   {
-    "number": 19,
+    "number": 20,
     "alias": "effective tvl"
   },
   {
-    "number": 19,
+    "number": 20,
     "alias": "deposit"
   },
   {
-    "number": 20,
+    "number": 21,
     "alias": "withdraw"
   },
   {
-    "number": 21,
+    "number": 22,
     "alias": "rewards"
   },
   {
-    "number": 22,
+    "number": 23,
     "alias": "apy"
   },
   {
-    "number": 23,
+    "number": 24,
     "alias": "smart yield"
   },
   {
-    "number": 24,
+    "number": 25,
     "alias": "smart alpha"
   },
   {
-    "number": 25,
+    "number": 26,
     "alias": "tranche"
   },
   {
-    "number": 25,
+    "number": 26,
     "alias": "tranches"
   },
    {
-    "number": 26,
+    "number": 27,
     "alias": "senior tranche"
   },
   {
-    "number": 26,
+    "number": 27,
     "alias": "junior tranche"
   },
   {
-    "number": 26,
+    "number": 27,
     "alias": "senior tranches"
   },
   {
-    "number": 26,
+    "number": 27,
     "alias": "junior tranches"
   },
   {
-    "number": 27,
+    "number": 28,
     "alias": "l2"
   },
   {
-    "number": 27,
+    "number": 28,
     "alias": "layer2"
   }
 ]

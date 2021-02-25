@@ -1,11 +1,11 @@
 {
   "title": "Question 20",
-  "description": "What if I withdraw before the end of the epoch?",
+  "description": "What if I deposit after the start of the epoch?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool. \n\nIf you withdraw before the epoch ends, there are 2 possibilities: \n1. You withdraw the full amount => in which case your effective balance goes to 0 because your actual balance, which is now 0, multiplied by any kind of multiplier is still 0. \n2. You withdraw only a part of it => the multiplier is recalculated as the weighted average of the deposits (let’s say you deposit 100 DAI then after half of the time you withdraw 50 DAI => you’ll end up just like you initially deposited 50 DAI). \n\nAny withdrawal causes the reward for the amount of money withdrawn to be lost."
+      "value": "*NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool.* \n\nThe deposit works like this: for the current epoch, the amount that is taken into consideration when the reward is calculated is relative to the time when you deposited. \n\nIf you enter when there’s only 20% time left, your effective balance will be equal to actual balance * 20% where the multiplier is exactly that 20%. For the next epoch (and any subsequent epoch), the multiplier is set back to 100%. \n\nIf you deposit some more, the multiplier will be less, but the effective balance will always be greater than the previous. For example: you start the epoch with 100 DAI, then deposit 100 DAI at exactly 50% of the epoch => your effective balance for this epoch is 150 DAI = 100 + 50% * 100 or 200*75% - 75% being the new weighted-average multiplier."
     }
   ],
   "footer": {}

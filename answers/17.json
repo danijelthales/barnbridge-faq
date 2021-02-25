@@ -1,13 +1,12 @@
 {
   "title": "Question 17",
-  "description": "$BOND Hodl Pool (ENDED)",
+  "description": "How can I earn rewards from the USDC/BOND pool?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "$BOND Hodl Pool was launched on Nov 16th, 2020. It has been running for 12 epochs (weeks) and distributing 60,000 $BOND tokens in rewards to the users. \n\n$BOND Hodl Pool ended on Feb 8th, 2021. If you haven’t claimed your rewards or withdrawn your deposit yet - don’t panic. You’ll be able to do that for literally forever but you will no longer be able to stake and earn rewards from the pool."
+      "value": "1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here.](https://app.barnbridge.com)"
     }
   ],
-  "image": "pool3.png",
   "footer": {}
 }

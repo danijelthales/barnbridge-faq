@@ -1,11 +1,11 @@
 {
   "title": "Question 26",
-  "description": "What are senior and junior tranches?",
+  "description": "What is a tranche?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Senior and junior tranches will be available in our main products - SMART Yield Bond & SMART Alpha. Senior tranches are less risky and guarantee yield with the fixed interest. Junior tranches are liquidity providers to senior tranches, so if there isn’t enough yield - they lose first and cover the losses of seniors if needed. At the same time, juniors take more profit in case the yield was high."
+      "value": "Tranches are pieces of a pooled collection of securities, usually debt instruments, that are split up by risk or other characteristics in order to be marketable to different investors. \n\nTranches carry different maturities, yields, and degrees of risk - and privileges in repayment in case of default."
     }
   ],
   "footer": {}

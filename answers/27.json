@@ -1,11 +1,11 @@
 {
   "title": "Question 27",
-  "description": "Are you considering L2 as a possible solution for improving gas fee efficiency?",
+  "description": "What are senior and junior tranches?",
   "color": "0099ff",
   "fields": [
     {
       "title": "Answer:",
-      "value": "Yes, we’re definitely looking at L2 solutions and their adoption across other protocols. Check some of our previous answers on Discord: [here](https://discord.com/channels/748538797662273636/751179180053364830/801127333746049095) and [here](https://discord.com/channels/748538797662273636/751179159077650549/788041682590367745)."
+      "value": "Senior and junior tranches will be available in our main products - SMART Yield Bond & SMART Alpha. Senior tranches are less risky and guarantee yield with the fixed interest. Junior tranches are liquidity providers to senior tranches, so if there isn’t enough yield - they lose first and cover the losses of seniors if needed. At the same time, juniors take more profit in case the yield was high."
     }
   ],
   "footer": {}
