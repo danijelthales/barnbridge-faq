@@ -521,7 +521,7 @@ client.on("message", msg => {
             const fullMatches = [];
             const partialMatches = [];
             qaMaps.forEach((value, key) => {
-                let res = value.title;
+                let res = value.description;
                 if (res.includes(searchWord)) {
                     res = replaceString(res, searchWord, '**' + searchWord + '**');
                     fullMatches.push(new Match(file.substring(0, file.lastIndexOf(".")), res));
@@ -594,7 +594,7 @@ client.on("message", msg => {
             const fullMatches = [];
             const partialMatches = [];
             qaMaps.forEach((value, key) => {
-                let res = value.title;
+                let res = value.description;
                 if (res.includes(searchWord)) {
                     res = replaceString(res, searchWord, '**' + searchWord + '**');
                     fullMatches.push(new Match(file.substring(0, file.lastIndexOf(".")), res));
