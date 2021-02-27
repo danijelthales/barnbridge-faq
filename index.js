@@ -539,7 +539,7 @@ client.on("message", msg => {
                         }
                     });
                     if (matchedCount > 0) {
-                        let match = new Match(file.substring(0, file.lastIndexOf(".")), res);
+                        let match = new Match(key, res);
                         match.matchedCount = matchedCount;
                         partialMatches.push(match);
                     }
@@ -612,7 +612,7 @@ client.on("message", msg => {
                         }
                     });
                     if (matchedCount > 0) {
-                        let match = new Match(file.substring(0, file.lastIndexOf(".")), res);
+                        let match = new Match(key, res);
                         match.matchedCount = matchedCount;
                         partialMatches.push(match);
                     }
