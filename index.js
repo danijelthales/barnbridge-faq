@@ -56,6 +56,15 @@ var btcMarketCap = 242750958733;
 
 console.log("Redis URL:" + process.env.REDIS_URL);
 
+
+let contentRaw = fs.readFileSync('content.json');
+let answersContent = JSON.parse(contentRaw);
+let qaMaps = new Map();
+answersContent.forEach(a => {
+    qaMaps.set(a.number, a.content);
+})
+
+
 if (process.env.REDIS_URL) {
     redisClient = redis.createClient(process.env.REDIS_URL);
     redisClient.on("error", function (error) {
@@ -138,48 +147,13 @@ client.on('messageReactionAdd', (reaction, user) => {
 
 function doInnerQuestion(command, doReply, msg) {
     try {
-        let rawdata = fs.readFileSync('answers/' + command + '.json');
-        let answer = JSON.parse(rawdata);
+        let answer = qaMaps.get(command * 1.0);
 
         const exampleEmbed = new Discord.MessageEmbed();
         exampleEmbed.setColor(answer.color);
         exampleEmbed.setTitle(answer.title);
         exampleEmbed.setDescription(answer.description);
         exampleEmbed.setURL(answer.url);
-
-        // if (command == "25") {
-        //
-        //     exampleEmbed.addField("Safe low gas price:", lowGasPrice + ' gwei', false);
-        //     exampleEmbed.addField("Standard gas price:", gasPrice + ' gwei', false);
-        //     exampleEmbed.addField("Fast gas price:", fastGasPrice + ' gwei', false);
-        //     exampleEmbed.addField("Instant gas price:", instantGasPrice + ' gwei', false);
-        //     if (doReply) {
-        //         msg.reply(exampleEmbed);
-        //     } else {
-        //         msg.channel.send(exampleEmbed).then(function (message) {
-        //             message.react("❌");
-        //         }).catch(function () {
-        //             //Something
-        //         });
-        //     }
-        //
-        //
-        // } else if (command == "26") {
-        //
-        //     exampleEmbed.addField("USD (coingecko)", coingeckoUsd, false);
-        //     exampleEmbed.addField("ETH (coingecko):", coingeckoEth, false);
-        //     exampleEmbed.addField("BTC (coingecko):", coingeckoBtc, false);
-        //     if (doReply) {
-        //         msg.reply(exampleEmbed);
-        //     } else {
-        //         msg.channel.send(exampleEmbed).then(function (message) {
-        //             message.react("❌");
-        //         }).catch(function () {
-        //             //Something
-        //         });
-        //     }
-        //
-        // } else {
 
         answer.fields.forEach(function (field) {
             exampleEmbed.addField(field.title, field.value, field.inline);
@@ -343,8 +317,7 @@ client.on("message", msg => {
                                 if (category.name == command) {
                                     found = true;
                                     category.questions.forEach(function (question) {
-                                        rawdata = fs.readFileSync('questions/' + question + ".txt", "utf8");
-                                        exampleEmbed.addField(question, rawdata, false);
+                                        exampleEmbed.addField(question, qaMaps.get(question).title, false);
                                     });
                                 }
                             });
@@ -416,8 +389,7 @@ client.on("message", msg => {
                 questions.forEach(function (q) {
                     questionsString += (isDM ? "" : "!faq ") + q + "\n";
                 })
-                let rawdata = fs.readFileSync('answers/' + questionNumber + '.json');
-                let answer = JSON.parse(rawdata);
+                let answer = qaMaps.get(questionNumber);
                 exampleEmbed.addField(answer.title + ' ' + answer.description, questionsString);
 
                 counter++;
@@ -496,33 +468,22 @@ client.on("message", msg => {
                 .setTitle('Frequently Asked Questions')
                 .setURL('https://barnbridge.gitbook.io/docs/faq');
 
-            fs.readdir('questions', function (err, files) {
-                if (err) {
-                    console.log("Error getting directory information.")
-                } else {
-                    let counter = 0;
-                    let pagenumber = 2;
-                    files.sort(function (a, b) {
-                        return a.substring(0, a.lastIndexOf(".")) * 1.0 - b.substring(0, b.lastIndexOf(".")) * 1.0;
-                    });
-                    files.forEach(function (file) {
-                        let rawdata = fs.readFileSync('questions/' + file, "utf8");
-                        exampleEmbed.addField(file.substring(0, file.lastIndexOf(".")), rawdata, false)
-                        counter++;
-                        if (counter == 20) {
-                            msg.reply(exampleEmbed);
-                            exampleEmbed = new Discord.MessageEmbed()
-                                .setColor('#0099ff')
-                                .setTitle('Frequently Asked Questions page ' + pagenumber)
-                                .setURL('https://barnbridge.gitbook.io/docs/faq');
-                            pagenumber++;
-                            counter = 0;
-                        }
-                    })
+            let counter = 0;
+            let pagenumber = 2;
+            qaMaps.forEach((value, key) => {
+                exampleEmbed.addField(key, value.title, false)
+                counter++;
+                if (counter == 20) {
+                    msg.reply(exampleEmbed);
+                    exampleEmbed = new Discord.MessageEmbed()
+                        .setColor('#0099ff')
+                        .setTitle('Frequently Asked Questions page ' + pagenumber)
+                        .setURL('https://barnbridge.gitbook.io/docs/faq');
+                    pagenumber++;
+                    counter = 0;
                 }
-                exampleEmbed.addField('\u200b', 'Choose your question with e.g. **question 1**');
-                msg.reply(exampleEmbed);
             })
+            msg.reply(exampleEmbed);
         }
 
         function listCategories() {
@@ -559,66 +520,59 @@ client.on("message", msg => {
 
             const fullMatches = [];
             const partialMatches = [];
-            fs.readdir('questions', function (err, files) {
-                if (err) {
-                    console.log("Error getting directory information.")
+            qaMaps.forEach((value, key) => {
+                let res = value.description;
+                if (res.includes(searchWord)) {
+                    res = replaceString(res, searchWord, '**' + searchWord + '**');
+                    fullMatches.push(new Match(file.substring(0, file.lastIndexOf(".")), res));
                 } else {
-                    files.sort(function (a, b) {
-                        return a.substring(0, a.lastIndexOf(".")) * 1.0 - b.substring(0, b.lastIndexOf(".")) * 1.0;
+                    let matchedCount = 0;
+                    args.sort(function (a, b) {
+                        return a.length - b.length;
                     });
-                    files.forEach(function (file) {
-                        let rawdata = fs.readFileSync('questions/' + file, "utf8");
-                        if (rawdata.includes(searchWord)) {
-                            rawdata = replaceString(rawdata, searchWord, '**' + searchWord + '**');
-                            fullMatches.push(new Match(file.substring(0, file.lastIndexOf(".")), rawdata));
-                        } else {
-                            let matchedCount = 0;
-                            args.sort(function (a, b) {
-                                return a.length - b.length;
-                            });
-                            args.forEach(function (arg) {
-                                if (rawdata.toLowerCase().includes(arg.toLowerCase())) {
-                                    rawdata = replaceString(rawdata, arg, '**' + arg + '**');
-                                    rawdata = replaceString(rawdata, arg.toLowerCase(), '**' + arg.toLowerCase() + '**');
-                                    rawdata = replaceString(rawdata, arg.toUpperCase(), '**' + arg.toUpperCase() + '**');
-                                    matchedCount++;
-                                }
-                            });
-                            if (matchedCount > 0) {
-                                let match = new Match(file.substring(0, file.lastIndexOf(".")), rawdata);
-                                match.matchedCount = matchedCount;
-                                partialMatches.push(match);
-                            }
+                    args.forEach(function (arg) {
+                        if (res.toLowerCase().includes(arg.toLowerCase())) {
+                            res = replaceString(res, arg, '**' + arg + '**');
+                            res = replaceString(res, arg.toLowerCase(), '**' + arg.toLowerCase() + '**');
+                            res = replaceString(res, arg.toUpperCase(), '**' + arg.toUpperCase() + '**');
+                            matchedCount++;
                         }
-                    })
+                    });
+                    if (matchedCount > 0) {
+                        let match = new Match(key, res);
+                        match.matchedCount = matchedCount;
+                        partialMatches.push(match);
+                    }
                 }
-
-                if (fullMatches.length == 0 && partialMatches.length == 0) {
-                    exampleEmbed.setTitle('No questions found for ***' + searchWord + '***. Please refine your search.');
-                } else {
-
-                    let counter = 0;
-                    fullMatches.forEach(function (match) {
-                        counter++;
-                        if (counter < 6) {
-                            exampleEmbed.addField(match.title, match.value, false);
-                        }
-                    });
-
-                    partialMatches.sort(function (a, b) {
-                        return b.matchedCount - a.matchedCount;
-                    });
-                    partialMatches.forEach(function (match) {
-                        counter++;
-                        if (counter < 6) {
-                            exampleEmbed.addField(match.title, match.value, false);
-                        }
-                    });
-
-                    exampleEmbed.addField('\u200b', 'Choose your question with e.g. **question 1**');
-                }
-                msg.reply(exampleEmbed);
             })
+
+
+            if (fullMatches.length == 0 && partialMatches.length == 0) {
+                exampleEmbed.setTitle('No questions found for ***' + searchWord + '***. Please refine your search.');
+            } else {
+
+                let counter = 0;
+                fullMatches.forEach(function (match) {
+                    counter++;
+                    if (counter < 6) {
+                        exampleEmbed.addField(match.title, match.value, false);
+                    }
+                });
+
+                partialMatches.sort(function (a, b) {
+                    return b.matchedCount - a.matchedCount;
+                });
+                partialMatches.forEach(function (match) {
+                    counter++;
+                    if (counter < 6) {
+                        exampleEmbed.addField(match.title, match.value, false);
+                    }
+                });
+
+                exampleEmbed.addField('\u200b', 'Choose your question with e.g. **question 1**');
+            }
+            msg.reply(exampleEmbed);
+
         }
 
         function doCustomQuestion(searchWord, args) {
@@ -639,66 +593,58 @@ client.on("message", msg => {
 
             const fullMatches = [];
             const partialMatches = [];
-            fs.readdir('questions', function (err, files) {
-                if (err) {
-                    console.log("Error getting directory information.")
+            qaMaps.forEach((value, key) => {
+                let res = value.description;
+                if (res.includes(searchWord)) {
+                    res = replaceString(res, searchWord, '**' + searchWord + '**');
+                    fullMatches.push(new Match(file.substring(0, file.lastIndexOf(".")), res));
                 } else {
-                    files.sort(function (a, b) {
-                        return a.substring(0, a.lastIndexOf(".")) * 1.0 - b.substring(0, b.lastIndexOf(".")) * 1.0;
+                    let matchedCount = 0;
+                    args.sort(function (a, b) {
+                        return a.length - b.length;
                     });
-                    files.forEach(function (file) {
-                        let rawdata = fs.readFileSync('questions/' + file, "utf8");
-                        if (rawdata.includes(searchWord)) {
-                            rawdata = replaceString(rawdata, searchWord, '**' + searchWord + '**');
-                            fullMatches.push(new Match(file.substring(0, file.lastIndexOf(".")), rawdata));
-                        } else {
-                            args.sort(function (a, b) {
-                                return a.length - b.length;
-                            });
-                            let matchedCount = 0;
-                            args.forEach(function (arg) {
-                                if (rawdata.toLowerCase().includes(arg.toLowerCase())) {
-                                    rawdata = replaceString(rawdata, arg, '**' + arg + '**');
-                                    rawdata = replaceString(rawdata, arg.toLowerCase(), '**' + arg.toLowerCase() + '**');
-                                    rawdata = replaceString(rawdata, arg.toUpperCase(), '**' + arg.toUpperCase() + '**');
-                                    matchedCount++;
-                                }
-                            });
-                            if (matchedCount > 0) {
-                                let match = new Match(file.substring(0, file.lastIndexOf(".")), rawdata);
-                                match.matchedCount = matchedCount;
-                                partialMatches.push(match);
-                            }
+                    args.forEach(function (arg) {
+                        if (res.toLowerCase().includes(arg.toLowerCase())) {
+                            res = replaceString(res, arg, '**' + arg + '**');
+                            res = replaceString(res, arg.toLowerCase(), '**' + arg.toLowerCase() + '**');
+                            res = replaceString(res, arg.toUpperCase(), '**' + arg.toUpperCase() + '**');
+                            matchedCount++;
                         }
-                    })
+                    });
+                    if (matchedCount > 0) {
+                        let match = new Match(key, res);
+                        match.matchedCount = matchedCount;
+                        partialMatches.push(match);
+                    }
                 }
-
-                if (fullMatches.length == 0 && partialMatches.length == 0) {
-                    exampleEmbed.setTitle('No questions found for ***' + searchWord + '***. Please refine your search.');
-                } else {
-
-                    let counter = 0;
-                    fullMatches.forEach(function (match) {
-                        counter++;
-                        if (counter < 4) {
-                            exampleEmbed.addField(match.title, match.value, false);
-                        }
-                    });
-
-                    partialMatches.sort(function (a, b) {
-                        return b.matchedCount - a.matchedCount;
-                    });
-                    partialMatches.forEach(function (match) {
-                        counter++;
-                        if (counter < 4) {
-                            exampleEmbed.addField(match.title, match.value, false);
-                        }
-                    });
-
-                    exampleEmbed.addField('\u200b', 'Choose your question with e.g. **question 1**');
-                }
-                msg.reply(exampleEmbed);
             })
+
+
+            if (fullMatches.length == 0 && partialMatches.length == 0) {
+                exampleEmbed.setTitle('No questions found for ***' + searchWord + '***. Please refine your search.');
+            } else {
+
+                let counter = 0;
+                fullMatches.forEach(function (match) {
+                    counter++;
+                    if (counter < 6) {
+                        exampleEmbed.addField(match.title, match.value, false);
+                    }
+                });
+
+                partialMatches.sort(function (a, b) {
+                    return b.matchedCount - a.matchedCount;
+                });
+                partialMatches.forEach(function (match) {
+                    counter++;
+                    if (counter < 6) {
+                        exampleEmbed.addField(match.title, match.value, false);
+                    }
+                });
+
+                exampleEmbed.addField('\u200b', 'Choose your question with e.g. **question 1**');
+            }
+            msg.reply(exampleEmbed);
         }
 
 

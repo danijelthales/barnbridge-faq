@@ -1,0 +1,489 @@
+[
+  {
+    "number":1,
+    "content":{
+      "title":"Question 1",
+      "description":"Where to start?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"BarnBridge is the first risk tokenizing protocol. It allows hedging yield sensitivity and price volatility. BarnBridge does this by accessing debt pools on other DeFi protocols, and transforming single pools into multiple assets with varying risk/return characteristics. \n\nIf you want to learn more about the project you should start by reading the [Introducing BarnBridge](https://medium.com/barnbridge/introducing-barnbridge-3f0015fef3bb) article on our [blog](https://barnbridge.com/). For a better understanding of the idea behind BarnBridge, take a look at our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper). In addition, you can view all our contributors on the [team page](http://barnbridge.io/team). \n\nFollow us on [Twitter](https://twitter.com/barn_bridge), [Medium](https://medium.com/barnbridge) and sign up for the [newsletter](https://barnbridge.com/) to always get the latest updates."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":2,
+    "content":{
+      "title":"Question 2",
+      "description":"What is the purpose of the project?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"We started BarnBridge because we want to use it. \n\nBarnbridge seeks to provide a range of products that allows investors of all skill levels to manage their individual and portfolio risk exposure through a secure, decentralized, and permissionless platform. \n\nAt scale, BarnBridge allows you to trade in and out of any risk exposed position for any asset in the world. Assuming infinite liquidity, we can build infinite numbers of products and hedged strategies."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":3,
+    "content":{
+      "title":"Question 3",
+      "description":"Is there a Telegram group?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"We do have a Telegram group but we’re currently building community on Discord. \n\nAttention! The only official BarnBridge Telegram group is[https://t.me/barnbridge_official](https://t.me/barnbridge_official). Other groups or bots are scams. Please, report as you see them."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":4,
+    "content":{
+      "title":"Question 4",
+      "description":"What is the $BOND token?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"The $BOND token is a governance token that powers the BarnBridge DAO protocol. \n\n$BOND is an ERC-20 token. Holders of the token will have the ability to govern the network by staking their holdings in return for the right to govern the network. \n\nThe $BOND token is tradeable on any exchange and storable on any wallet that has adopted the ERC-20 token standard - providing broad access across the world."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":5,
+    "content":{
+      "title":"Question 5",
+      "description":"What is $BOND total supply?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer",
+          "value":"The total amount of $BOND tokens is fixed at **10,000,000**. There is no ability to create or issue additional tokens."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":6,
+    "content":{
+      "title":"Question 6",
+      "description":"What is the $BOND token contract address?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"[0x0391D2021f89DC339F60Fff84546EA23E337750f](https://etherscan.io/token/0x0391D2021f89DC339F60Fff84546EA23E337750f)"
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":7,
+    "content":{
+      "title":"Question 7",
+      "description":"What is the token distribution?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"The distribution breakdown is designed to facilitate the most decentralized protocol and make sure power doesn’t reside in the hands of a few. \n\nLearn more about the token distribution and liquidity schedule on the [website](https://barnbridge.com/token-bond/)."
+        }
+      ],
+      "image":"TokenDistribution.png",
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":8,
+    "content":{
+      "title":"Question 8",
+      "description":"How long is the vesting schedule?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"The vesting schedule is designed so that there is not a giant cliff waiting over user’s heads at a specific point. The tokens allocated to the Founders, Seed Investors, and Advisors are locked in a smart contract that releases the tokens **on a weekly basis over a two year period.** The vesting period started with the launch of the Yield Farming mechanism. \n\n[Learn More](https://github.com/BarnBridge/BarnBridge-Whitepaper#311-fair-vesting)"
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":9,
+    "content":{
+      "title":"Question 9",
+      "description":"How many tokens are released each week?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"As of right now, a total of 86,200 $BOND tokens is distributed weekly. \n- USDC/DAI/sUSD Pool (25 weeks): 32,000; \n- USDC/BOND Pool (100 weeks): 20,000; \n- DAO Staking (50 weeks): 12,200; \n- Team vesting (100 weeks): 22,000. \n\nYou can also check the circulating supply using our bot in the Casino Royale section or check it on the [website](https://barnbridge.com/token-bond/)."
+        }
+      ],
+      "image":"WeeklyDistribution.png",
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":10,
+    "content":{
+      "title":"Question 10",
+      "description":"What are $BOND NFT tokens?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"BarnBridge Non-Fungible Tokens program was an additional initiative for rewarding active community participants with custom ERC-721 NFTs. The program has ended on Jan 28th, 2021. Read more in this [Medium post](https://medium.com/barnbridge/sunsetting-our-nft-program-with-community-rewards-85fc8fd1a82a), also taking the ticker for $BOND, were just another way of incentivizing early project supporters may be and will likely be completely pointless outside of being cool and fun. Every $BOND NFT is one of a kind. There may be similar ones in the collection but no 2 are exactly the same. \n\nDownstream, we’ve seen DeFi projects propose using NFTs as proof of liquidity in income streams & wrapped NFTs as loan representations. With almost every high profile DeFi project experimenting in one way or another, the point is clear: DeFi is looking into NFTs. While we’ve been looking at what NFTs mean for DeFi, at the moment, we’re just paying attention."
+        },
+        {
+          "title":"Learn more:",
+          "value":"Learn more in our [Medium article.](https://medium.com/barnbridge/introducing-the-barnbridge-erc-721-the-nft-bond-collection-ca2be6aefa84)"
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":11,
+    "content":{
+      "title":"Question 11",
+      "description":"What is LaunchDAO?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"BarnBridge has been using the “DAO First” governance model, which means it has never been, and never will be, a traditional company. Instead, BarnBridge founders decided to launch the project as a DAO and split the governance between the core team. This DAO was called LaunchDAO. \n\nIt was created using Aragon DAO Company Template which uses transferable tokens to represent ownership stake. Decisions are made based on stake-weighted voting with the $BBVOTE token. \n\nThe Founders received 45%, Seeders received 45%, and Advisors got 10%. The minimum voting support is set to 62%, meaning for a proposal to be passed it must be approved by at least 62%. \n\nThe funds from the seeders and the initial supply of the $BOND token will be kept in the Launch DAO treasury. You can find the LaunchDAO [here](https://client.aragon.org/#/barnbridgelaunch/)."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":12,
+    "content":{
+      "title":"Question 12",
+      "description":"What is BarnBridge DAO?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"BarnBridge DAO is the DAO that is controlled by the $BOND community. It has full control over the protocol and the features that are built into it. \n\nFind out the DAO specifications in this Medium post: [BarnBridge DAO: Built for the Future.](https://medium.com/barnbridge/barnbridge-dao-built-for-the-future-3735fbd671c5) and check out [BarnBridge Documentation](https://docs.barnbridge.com/governance/barnbridge-dao)."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":13,
+    "content":{
+      "title":"Question 13",
+      "description":"What is the difference between LaunchDAO and BarnBridge DAO?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"LaunchDAO was a temporary DAO that consisted of the project founders, seeders and advisors for building the initial version of the protocol. LaunchDAO used $BBVOTE token. \n\nBarnBridge DAO is the final DAO where the community can vote with their $BOND tokens. The BarnBridge DAO is the core component of the BarnBridge platform as it enables decentralized decision making to enforce actions in the interest of the community. \n\nFind more details about our “DAO First” approach in this Medium post: [DAO First: A new governance model.](Find more details about our “DAO First” approach in this Medium post: DAO First: A new governance model)."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":14,
+    "content":{
+      "title":"Question 14",
+      "description":"Why can’t I vote on the proposal if I staked in the DAO?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"You most likely staked $BOND tokens after the proposal was created. Proposals take a snapshot of user balances at the block they are created. It is designed this way to prevent double voting - if someone votes using one wallet address, then sends to another wallet address and votes again. By taking the snapshot at a block creation, the second address would register as having 0 voting power, which prevents the fraud."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":15,
+    "content":{
+      "title":"Question 15",
+      "description":"USDC/DAI/sUSD Yield Farming Pool",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"USDC/DAI/sUSD yield farming pool was launched on Oct 19th, 2020. This staking contract was the first mechanism delivering initial $BOND token distribution to the community. This contract holds 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD. \n\nStablecoins are equally rewarded. 1 USDC = 1 DAI = 1 sUSD. \n\nRead more about the pool in this Medium post: [Yield Farming and LP Incentivization.](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4)"
+        }
+      ],
+      "image":"pool1.png",
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":16,
+    "content":{
+      "title":"Question 16",
+      "description":"USDC/BOND LP Pool",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"USDC/BOND liquidity pool incentivization program was launched on Oct 26th, 2020. The concept behind the initiative is to reward long-term liquidity providers of the Uniswap USDC/BOND pool with progressively more power over the protocol as they continue to signal their belief in the BarnBridge vision. \n\nYou have to stake the uniswapv2 LP tokens (USDC_BOND_UNI_LP). You’ll get them for providing liquidity to the [USDC/BOND pool](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) on Uniswap. \n\nRead more about USDC/BOND pool on Medium: [Yield Farming and LP Incentivization](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4) and [Yield Farming $BOND: The Risks Involved.](https://medium.com/barnbridge/yield-farming-bond-the-risks-involved-7cefdba01b17)"
+        }
+      ],
+      "image":"pool2.png",
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":17,
+    "content":{
+      "title":"Question 17",
+      "description":"How can I earn rewards from the USDC/BOND pool?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here.](https://app.barnbridge.com)"
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":18,
+    "content":{
+      "title":"Question 18",
+      "description":"$BOND Hodl Pool",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"$BOND Hodl Pool was launched on Nov 16th, 2020. It has been running for 12 epochs (weeks) and distributing 60,000 $BOND tokens in rewards to the users. \n\n$BOND Hodl Pool ended on Feb 8th, 2021. If you haven’t claimed your rewards or withdrawn your deposit yet - don’t panic. You’ll be able to do that for literally forever but you will no longer be able to stake and earn rewards from the pool."
+        }
+      ],
+      "image":"pool3.png",
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":19,
+    "content":{
+      "title":"Question 19",
+      "description":"DAO Staking Pool",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"DAO Staking pool was launched on Feb 8th, 2021. It was designed as an extra incentive for the early DAO participants. In addition to voting power, you also receive rewards from the DAO rewards pool. \n\nThe pool is currently preloaded with 610,000 $BOND tokens and should run for 50 weeks. \n\nFind more details about DAO staking here:[Pool 3 ends and DAO governance rewards begins](https://medium.com/barnbridge/pool-3-ends-and-dao-governance-rewards-begins-8e57ec5041)."
+        }
+      ],
+      "image":"daopool.png",
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":20,
+    "content":{
+      "title":"Question 20",
+      "description":"What if I deposit after the start of the epoch?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"*NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool.* \n\nThe deposit works like this: for the current epoch, the amount that is taken into consideration when the reward is calculated is relative to the time when you deposited. \n\nIf you enter when there’s only 20% time left, your effective balance will be equal to actual balance * 20% where the multiplier is exactly that 20%. For the next epoch (and any subsequent epoch), the multiplier is set back to 100%. \n\nIf you deposit some more, the multiplier will be less, but the effective balance will always be greater than the previous. For example: you start the epoch with 100 DAI, then deposit 100 DAI at exactly 50% of the epoch => your effective balance for this epoch is 150 DAI = 100 + 50% * 100 or 200*75% - 75% being the new weighted-average multiplier."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":21,
+    "content":{
+      "title":"Question 21",
+      "description":"What if I withdraw before the end of the epoch?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool. \n\nIf you withdraw before the epoch ends, there are 2 possibilities: \n1. You withdraw the full amount => in which case your effective balance goes to 0 because your actual balance, which is now 0, multiplied by any kind of multiplier is still 0. \n2. You withdraw only a part of it => the multiplier is recalculated as the weighted average of the deposits (let’s say you deposit 100 DAI then after half of the time you withdraw 50 DAI => you’ll end up just like you initially deposited 50 DAI). \n\nAny withdrawal causes the reward for the amount of money withdrawn to be lost."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":22,
+    "content":{
+      "title":"Question 22",
+      "description":"What if I don't claim rewards after the epoch ends?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"Nothing bad will happen. Your rewards will be accumulating for however much time you stay in the pool. You can also claim after you withdraw your deposit."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":23,
+    "content":{
+      "title":"Question 23",
+      "description":"What is the current APY?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"You can check the APY all pools on [CoinGecko](https://www.coingecko.com/en/yield-farming) or using our Discord APR Bot displayed under the Casino Royale section."
+        }
+      ],
+      "image":"APYBot.png",
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":24,
+    "content":{
+      "title":"Question 24",
+      "description":"What is SMART Yield Bond?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"This is the first DeFi product of the BarnBridge platform designed to mitigate interest rate volatility risk using debt-based derivatives. \n\nRead more in our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper#21-smart-yield-bonds) and on the [website.](https://barnbridge.com/)"
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":25,
+    "content":{
+      "title":"Question 25",
+      "description":"What is SMART Alpha Bond?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"Market Price Exposure Risk Mitigation using tranched volatility derivatives. \n\nThe SMART Alpha bonds will not be structured via traditional yield tranches but instead with various levels of market price exposure, which we will call risk ramps. The idea is that every bucket or tranche of price exposure does not need to be flat across the entire risk curve, meaning the first $100 of price exposure does not need to deserve the same upside and downside volatility. This is similar to having fractional ownership but with different risk/reward for the fractions. \n\nRead more in our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper#21-smart-yield-bonds) and on the [website.](https://barnbridge.com/)"
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":26,
+    "content":{
+      "title":"Question 26",
+      "description":"What is a tranche?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"Tranches are pieces of a pooled collection of securities, usually debt instruments, that are split up by risk or other characteristics in order to be marketable to different investors. \n\nTranches carry different maturities, yields, and degrees of risk - and privileges in repayment in case of default."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":27,
+    "content":{
+      "title":"Question 27",
+      "description":"What are senior and junior tranches?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"Senior and junior tranches will be available in our main products - SMART Yield Bond & SMART Alpha. Senior tranches are less risky and guarantee yield with the fixed interest. Junior tranches are liquidity providers to senior tranches, so if there isn’t enough yield - they lose first and cover the losses of seniors if needed. At the same time, juniors take more profit in case the yield was high."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  },
+  {
+    "number":28,
+    "content":{
+      "title":"Question 28",
+      "description":"Are you considering L2 as a possible solution for improving gas fee efficiency?",
+      "color":"0099ff",
+      "fields":[
+        {
+          "title":"Answer:",
+          "value":"Yes, we’re definitely looking at L2 solutions and their adoption across other protocols. Check some of our previous answers on Discord: [here](https://discord.com/channels/748538797662273636/751179180053364830/801127333746049095) and [here](https://discord.com/channels/748538797662273636/751179159077650549/788041682590367745)."
+        }
+      ],
+      "footer":{
+
+      }
+    }
+  }
+]
