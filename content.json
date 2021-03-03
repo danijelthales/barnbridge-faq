@@ -1,862 +1,824 @@
 [
   {
-    "number":1,
-    "content":{
-      "title":"Question 1",
-      "description":"Where to start?",
-      "color":"0099ff",
-      "fields":[
+    "number": 1,
+    "content": {
+      "title": "Question 1",
+      "description": "Where to start?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"BarnBridge is the first risk tokenizing protocol. It allows hedging yield sensitivity and price volatility. BarnBridge does this by accessing debt pools on other DeFi protocols, and transforming single pools into multiple assets with varying risk/return characteristics. \n\nIf you want to learn more about the project you should start by reading the [Introducing BarnBridge](https://medium.com/barnbridge/introducing-barnbridge-3f0015fef3bb) article on our [blog](https://barnbridge.com/). For a better understanding of the idea behind BarnBridge, take a look at our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper). In addition, you can view all our contributors on the [team page](http://barnbridge.io/team). \n\nFollow us on [Twitter](https://twitter.com/barn_bridge), [Medium](https://medium.com/barnbridge) and sign up for the [newsletter](https://barnbridge.com/) to always get the latest updates."
+          "title": "Answer:",
+          "value": "BarnBridge is the first risk tokenizing protocol. It allows hedging yield sensitivity and price volatility. BarnBridge does this by accessing debt pools on other DeFi protocols, and transforming single pools into multiple assets with varying risk/return characteristics. \n\nIf you want to learn more about the project you should start by reading the [Introducing BarnBridge](https://medium.com/barnbridge/introducing-barnbridge-3f0015fef3bb) article on our [blog](https://barnbridge.com/). For a better understanding of the idea behind BarnBridge, take a look at our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper). In addition, you can view all our contributors on the [team page](http://barnbridge.io/team). \n\nFollow us on [Twitter](https://twitter.com/barn_bridge), [Medium](https://medium.com/barnbridge) and sign up for the [newsletter](https://barnbridge.com/) to always get the latest updates."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":2,
-    "content":{
-      "title":"Question 2",
-      "description":"What is the purpose of the project?",
-      "color":"0099ff",
-      "fields":[
+    "number": 2,
+    "content": {
+      "title": "Question 2",
+      "description": "What is the purpose of the project?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"We started BarnBridge because we want to use it. \n\nBarnbridge seeks to provide a range of products that allows investors of all skill levels to manage their individual and portfolio risk exposure through a secure, decentralized, and permissionless platform. \n\nAt scale, BarnBridge allows you to trade in and out of any risk exposed position for any asset in the world. Assuming infinite liquidity, we can build infinite numbers of products and hedged strategies."
+          "title": "Answer:",
+          "value": "We started BarnBridge because we want to use it. \n\nBarnbridge seeks to provide a range of products that allows investors of all skill levels to manage their individual and portfolio risk exposure through a secure, decentralized, and permissionless platform. \n\nAt scale, BarnBridge allows you to trade in and out of any risk exposed position for any asset in the world. Assuming infinite liquidity, we can build infinite numbers of products and hedged strategies."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":3,
-    "content":{
-      "title":"Question 3",
-      "description":"Is there a Telegram group?",
-      "color":"0099ff",
-      "fields":[
+    "number": 3,
+    "content": {
+      "title": "Question 3",
+      "description": "Is there a Telegram group?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"We do have a Telegram group but we’re currently building community on Discord. \n\nAttention! The only official BarnBridge Telegram group is[https://t.me/barnbridge_official](https://t.me/barnbridge_official). Other groups or bots are scams. Please, report as you see them."
+          "title": "Answer:",
+          "value": "We do have a Telegram group but we’re currently building community on Discord. \n\nAttention! The only official BarnBridge Telegram group is[https://t.me/barnbridge_official](https://t.me/barnbridge_official). Other groups or bots are scams. Please, report as you see them."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":4,
-    "content":{
-      "title":"Question 4",
-      "description":"Are you considering L2 as a possible solution for improving gas fee efficiency?",
-      "color":"0099ff",
-      "fields":[
+    "number": 4,
+    "content": {
+      "title": "Question 4",
+      "description": "Are you considering L2 as a possible solution for improving gas fee efficiency?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Yes, we’re definitely looking at L2 solutions and their adoption across other protocols. Check some of our previous answers on Discord: [here](https://discord.com/channels/748538797662273636/751179180053364830/801127333746049095) and [here](https://discord.com/channels/748538797662273636/751179159077650549/788041682590367745)."
+          "title": "Answer:",
+          "value": "Yes, we’re definitely looking at L2 solutions and their adoption across other protocols. Check some of our previous answers on Discord: [here](https://discord.com/channels/748538797662273636/751179180053364830/801127333746049095) and [here](https://discord.com/channels/748538797662273636/751179159077650549/788041682590367745)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":5,
-    "content":{
-      "title":"Question 5",
-      "description":"What is a $BOND token?",
-      "color":"0099ff",
-      "fields":[
+    "number": 5,
+    "content": {
+      "title": "Question 5",
+      "description": "What is a $BOND token?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"The $BOND token is a governance token that powers the BarnBridge DAO protocol. \n\n$BOND is an ERC-20 token. Holders of the token will have the ability to govern the network by staking their holdings in return for the right to govern the network. \n\nThe $BOND token is tradeable on any exchange and storable on any wallet that has adopted the ERC-20 token standard - providing broad access across the world."
+          "title": "Answer:",
+          "value": "The $BOND token is a governance token that powers the BarnBridge DAO protocol. \n\n$BOND is an ERC-20 token. Holders of the token will have the ability to govern the network by staking their holdings in return for the right to govern the network. \n\nThe $BOND token is tradeable on any exchange and storable on any wallet that has adopted the ERC-20 token standard - providing broad access across the world."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":6,
-    "content":{
-      "title":"Question 6",
-      "description":"What is $BOND total supply?",
-      "color":"0099ff",
-      "fields":[
+    "number": 6,
+    "content": {
+      "title": "Question 6",
+      "description": "What is $BOND total supply?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer",
-          "value":"The total amount of $BOND tokens is fixed at **10,000,000**. There is no ability to create or issue additional tokens."
+          "title": "Answer",
+          "value": "The total amount of $BOND tokens is fixed at **10,000,000**. There is no ability to create or issue additional tokens."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":7,
-    "content":{
-      "title":"Question 7",
-      "description":"What is the $BOND token contract address?",
-      "color":"0099ff",
-      "fields":[
+    "number": 7,
+    "content": {
+      "title": "Question 7",
+      "description": "What is the $BOND token contract address?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"[0x0391D2021f89DC339F60Fff84546EA23E337750f](https://etherscan.io/token/0x0391D2021f89DC339F60Fff84546EA23E337750f)"
+          "title": "Answer:",
+          "value": "[0x0391D2021f89DC339F60Fff84546EA23E337750f](https://etherscan.io/token/0x0391D2021f89DC339F60Fff84546EA23E337750f)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":8,
-    "content":{
-      "title":"Question 8",
-      "description":"What is the token distribution?",
-      "color":"0099ff",
-      "fields":[
+    "number": 8,
+    "content": {
+      "title": "Question 8",
+      "description": "What is the token distribution?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"The distribution breakdown is designed to facilitate the most decentralized protocol and make sure power doesn’t reside in the hands of a few. \n\nLearn more about the token distribution and liquidity schedule on the [website](https://barnbridge.com/token-bond/)."
+          "title": "Answer:",
+          "value": "The distribution breakdown is designed to facilitate the most decentralized protocol and make sure power doesn’t reside in the hands of a few. \n\nLearn more about the token distribution and liquidity schedule on the [website](https://barnbridge.com/token-bond/)."
         }
       ],
-      "image":"TokenDistribution.png",
-      "footer":{
-
+      "image": "TokenDistribution.png",
+      "footer": {
       }
     }
   },
   {
-    "number":9,
-    "content":{
-      "title":"Question 9",
-      "description":"How long is the vesting schedule?",
-      "color":"0099ff",
-      "fields":[
+    "number": 9,
+    "content": {
+      "title": "Question 9",
+      "description": "How long is the vesting schedule?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"The vesting schedule is designed so that there is not a giant cliff waiting over user’s heads at a specific point. The tokens allocated to the Founders, Seed Investors, and Advisors are locked in a smart contract that releases the tokens **on a weekly basis over a two year period.** The vesting period started with the launch of the Yield Farming mechanism. \n\n[Learn More](https://github.com/BarnBridge/BarnBridge-Whitepaper#311-fair-vesting)"
+          "title": "Answer:",
+          "value": "The vesting schedule is designed so that there is not a giant cliff waiting over user’s heads at a specific point. The tokens allocated to the Founders, Seed Investors, and Advisors are locked in a smart contract that releases the tokens **on a weekly basis over a two year period.** The vesting period started with the launch of the Yield Farming mechanism. \n\n[Learn More](https://github.com/BarnBridge/BarnBridge-Whitepaper#311-fair-vesting)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":10,
-    "content":{
-      "title":"Question 10",
-      "description":"How many tokens are released each week?",
-      "color":"0099ff",
-      "fields":[
+    "number": 10,
+    "content": {
+      "title": "Question 10",
+      "description": "How many tokens are released each week?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"As of right now, a total of 86,200 $BOND tokens is distributed weekly. \n- USDC/DAI/sUSD Pool (25 weeks): 32,000; \n- USDC/BOND Pool (100 weeks): 20,000; \n- DAO Staking (50 weeks): 12,200; \n- Team vesting (100 weeks): 22,000. \n\nYou can also check the circulating supply using our bot in the Casino Royale section or check it on the [website](https://barnbridge.com/token-bond/)."
+          "title": "Answer:",
+          "value": "As of right now, a total of 86,200 $BOND tokens is distributed weekly. \n- USDC/DAI/sUSD Pool (25 weeks): 32,000; \n- USDC/BOND Pool (100 weeks): 20,000; \n- DAO Staking (50 weeks): 12,200; \n- Team vesting (100 weeks): 22,000. \n\nYou can also check the circulating supply using our bot in the Casino Royale section or check it on the [website](https://barnbridge.com/token-bond/)."
         }
       ],
-      "image":"WeeklyDistribution.png",
-      "footer":{
-
+      "image": "WeeklyDistribution.png",
+      "footer": {
       }
     }
   },
   {
-    "number":11,
-    "content":{
-      "title":"Question 11",
-      "description":"What are $BOND NFT tokens?",
-      "color":"0099ff",
-      "fields":[
+    "number": 11,
+    "content": {
+      "title": "Question 11",
+      "description": "What are $BOND NFT tokens?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"BarnBridge Non-Fungible Tokens program was an additional initiative for rewarding active community participants with custom ERC-721 NFTs. The program has ended on Jan 28th, 2021. Read more in this [Medium post](https://medium.com/barnbridge/sunsetting-our-nft-program-with-community-rewards-85fc8fd1a82a), also taking the ticker for $BOND, were just another way of incentivizing early project supporters may be and will likely be completely pointless outside of being cool and fun. Every $BOND NFT is one of a kind. There may be similar ones in the collection but no 2 are exactly the same. \n\nDownstream, we’ve seen DeFi projects propose using NFTs as proof of liquidity in income streams & wrapped NFTs as loan representations. With almost every high profile DeFi project experimenting in one way or another, the point is clear: DeFi is looking into NFTs. While we’ve been looking at what NFTs mean for DeFi, at the moment, we’re just paying attention."
+          "title": "Answer:",
+          "value": "BarnBridge Non-Fungible Tokens program was an additional initiative for rewarding active community participants with custom ERC-721 NFTs. The program has ended on Jan 28th, 2021. Read more in this [Medium post](https://medium.com/barnbridge/sunsetting-our-nft-program-with-community-rewards-85fc8fd1a82a), also taking the ticker for $BOND, were just another way of incentivizing early project supporters may be and will likely be completely pointless outside of being cool and fun. Every $BOND NFT is one of a kind. There may be similar ones in the collection but no 2 are exactly the same. \n\nDownstream, we’ve seen DeFi projects propose using NFTs as proof of liquidity in income streams & wrapped NFTs as loan representations. With almost every high profile DeFi project experimenting in one way or another, the point is clear: DeFi is looking into NFTs. While we’ve been looking at what NFTs mean for DeFi, at the moment, we’re just paying attention."
         },
         {
-          "title":"Learn more:",
-          "value":"Learn more in our [Medium article.](https://medium.com/barnbridge/introducing-the-barnbridge-erc-721-the-nft-bond-collection-ca2be6aefa84)"
+          "title": "Learn more:",
+          "value": "Learn more in our [Medium article.](https://medium.com/barnbridge/introducing-the-barnbridge-erc-721-the-nft-bond-collection-ca2be6aefa84)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":12,
-    "content":{
-      "title":"Question 12",
-      "description":"What is LaunchDAO?",
-      "color":"0099ff",
-      "fields":[
+    "number": 12,
+    "content": {
+      "title": "Question 12",
+      "description": "What is LaunchDAO?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"BarnBridge has been using the “DAO First” governance model, which means it has never been, and never will be, a traditional company. Instead, BarnBridge founders decided to launch the project as a DAO and split the governance between the core team. This DAO was called LaunchDAO. \n\nIt was created using Aragon DAO Company Template which uses transferable tokens to represent ownership stake. Decisions are made based on stake-weighted voting with the $BBVOTE token. \n\nThe Founders received 45%, Seeders received 45%, and Advisors got 10%. The minimum voting support is set to 62%, meaning for a proposal to be passed it must be approved by at least 62%. \n\nThe funds from the seeders and the initial supply of the $BOND token will be kept in the Launch DAO treasury. You can find the LaunchDAO [here](https://client.aragon.org/#/barnbridgelaunch/)."
+          "title": "Answer:",
+          "value": "BarnBridge has been using the “DAO First” governance model, which means it has never been, and never will be, a traditional company. Instead, BarnBridge founders decided to launch the project as a DAO and split the governance between the core team. This DAO was called LaunchDAO. \n\nIt was created using Aragon DAO Company Template which uses transferable tokens to represent ownership stake. Decisions are made based on stake-weighted voting with the $BBVOTE token. \n\nThe Founders received 45%, Seeders received 45%, and Advisors got 10%. The minimum voting support is set to 62%, meaning for a proposal to be passed it must be approved by at least 62%. \n\nThe funds from the seeders and the initial supply of the $BOND token will be kept in the Launch DAO treasury. You can find the LaunchDAO [here](https://client.aragon.org/#/barnbridgelaunch/)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":13,
-    "content":{
-      "title":"Question 13",
-      "description":"What is BarnBridge DAO?",
-      "color":"0099ff",
-      "fields":[
+    "number": 13,
+    "content": {
+      "title": "Question 13",
+      "description": "What is BarnBridge DAO?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"BarnBridge DAO is the DAO that is controlled by the $BOND community. It has full control over the protocol and the features that are built into it. \n\nFind out the DAO specifications in this Medium post: [BarnBridge DAO: Built for the Future.](https://medium.com/barnbridge/barnbridge-dao-built-for-the-future-3735fbd671c5) and check out [BarnBridge Documentation](https://docs.barnbridge.com/governance/barnbridge-dao)."
+          "title": "Answer:",
+          "value": "BarnBridge DAO is the DAO that is controlled by the $BOND community. It has full control over the protocol and the features that are built into it. \n\nFind out the DAO specifications in this Medium post: [BarnBridge DAO: Built for the Future.](https://medium.com/barnbridge/barnbridge-dao-built-for-the-future-3735fbd671c5) and check out [BarnBridge Documentation](https://docs.barnbridge.com/governance/barnbridge-dao)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":14,
-    "content":{
-      "title":"Question 14",
-      "description":"What is the difference between LaunchDAO and BarnBridge DAO?",
-      "color":"0099ff",
-      "fields":[
+    "number": 14,
+    "content": {
+      "title": "Question 14",
+      "description": "What is the difference between LaunchDAO and BarnBridge DAO?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"LaunchDAO was a temporary DAO that consisted of the project founders, seeders and advisors for building the initial version of the protocol. LaunchDAO used $BBVOTE token. \n\nBarnBridge DAO is the final DAO where the community can vote with their $BOND tokens. The BarnBridge DAO is the core component of the BarnBridge platform as it enables decentralized decision making to enforce actions in the interest of the community. \n\nFind more details about our “DAO First” approach in this Medium post: [DAO First: A new governance model.](Find more details about our “DAO First” approach in this Medium post: DAO First: A new governance model)."
+          "title": "Answer:",
+          "value": "LaunchDAO was a temporary DAO that consisted of the project founders, seeders and advisors for building the initial version of the protocol. LaunchDAO used $BBVOTE token. \n\nBarnBridge DAO is the final DAO where the community can vote with their $BOND tokens. The BarnBridge DAO is the core component of the BarnBridge platform as it enables decentralized decision making to enforce actions in the interest of the community. \n\nFind more details about our “DAO First” approach in this Medium post: [DAO First: A new governance model.](Find more details about our “DAO First” approach in this Medium post: DAO First: A new governance model)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":15,
-    "content":{
-      "title":"Question 15",
-      "description":"Why can’t I vote on the proposal if I staked in the DAO?",
-      "color":"0099ff",
-      "fields":[
+    "number": 15,
+    "content": {
+      "title": "Question 15",
+      "description": "Why can’t I vote on the proposal if I staked in the DAO?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"You most likely staked $BOND tokens after the proposal was created. Proposals take a snapshot of user balances at the block they are created. It is designed this way to prevent double voting - if someone votes using one wallet address, then sends to another wallet address and votes again. By taking the snapshot at a block creation, the second address would register as having 0 voting power, which prevents the fraud."
+          "title": "Answer:",
+          "value": "You most likely staked $BOND tokens after the proposal was created. Proposals take a snapshot of user balances at the block they are created. It is designed this way to prevent double voting - if someone votes using one wallet address, then sends to another wallet address and votes again. By taking the snapshot at a block creation, the second address would register as having 0 voting power, which prevents the fraud."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":16,
-    "content":{
-      "title":"Question 16",
-      "description":"What is a Snapshot Vote?",
-      "color":"0099ff",
-      "fields":[
+    "number": 16,
+    "content": {
+      "title": "Question 16",
+      "description": "What is a Snapshot Vote?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Snapshot.page is an off-chain gasless governance client. We use it to test the proposal potential before we create a real one on the Ethereum mainnet. Creating a proposal and voting is free no transaction. Proposals and votes are just signed messages stored on IPFS. Signatures are easily verifiable online they use the “eth_sign” format. \n\nHere is the link to the BarnBridge Snapshot page: [https://signal.barnbridge.com](https://signal.barnbridge.com)."
+          "title": "Answer:",
+          "value": "Snapshot.page is an off-chain gasless governance client. We use it to test the proposal potential before we create a real one on the Ethereum mainnet. Creating a proposal and voting is free no transaction. Proposals and votes are just signed messages stored on IPFS. Signatures are easily verifiable online they use the “eth_sign” format. \n\nHere is the link to the BarnBridge Snapshot page: [https://signal.barnbridge.com](https://signal.barnbridge.com)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":17,
-    "content":{
-      "title":"Question 17",
-      "description":"How to get $BOND tokens?",
-      "color":"0099ff",
-      "fields":[
+    "number": 17,
+    "content": {
+      "title": "Question 17",
+      "description": "How to get $BOND tokens?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"There are a few places where you can get $BOND. The full list is available on [Coinmarketcap](https://coinmarketcap.com/currencies/barnbridge/markets/) or [Coinmarketcap](https://www.coingecko.com/en/coins/barnbridge#markets) \n\nIf you are looking for a market with the most liquidity - [USDC/BOND](https://app.uniswap.org/#/swap?inputCurrency=0x0391d2021f89dc339f60fff84546ea23e337750f&outputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) Uniswap Pool is definitely what you need. \n\nCheck our detailed guide here: [How to get $BOND tokens?](https://docs.barnbridge.com/barnbridge-dao/how-to-get-bond-tokens)"
+          "title": "Answer:",
+          "value": "There are a few places where you can get $BOND. The full list is available on [Coinmarketcap](https://coinmarketcap.com/currencies/barnbridge/markets/) or [Coinmarketcap](https://www.coingecko.com/en/coins/barnbridge#markets) \n\nIf you are looking for a market with the most liquidity - [USDC/BOND](https://app.uniswap.org/#/swap?inputCurrency=0x0391d2021f89dc339f60fff84546ea23e337750f&outputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) Uniswap Pool is definitely what you need. \n\nCheck our detailed guide here: [How to get $BOND tokens?](https://docs.barnbridge.com/barnbridge-dao/how-to-get-bond-tokens)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":18,
-    "content":{
-      "title":"Question 18",
-      "description":"How to obtain voting power (stake) in the DAO?",
-      "color":"0099ff",
-      "fields":[
+    "number": 18,
+    "content": {
+      "title": "Question 18",
+      "description": "How to obtain voting power (stake) in the DAO?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"To be able to participate in the DAO, you will need to stake $BOND tokens. \n\nCheck our detailed guide here: [How to obtain voting power (stake) in the DAO?](https://docs.barnbridge.com/barnbridge-dao/how-to-obtain-voting-power-on-the-dao)"
+          "title": "Answer:",
+          "value": "To be able to participate in the DAO, you will need to stake $BOND tokens. \n\nCheck our detailed guide here: [How to obtain voting power (stake) in the DAO?](https://docs.barnbridge.com/barnbridge-dao/how-to-obtain-voting-power-on-the-dao)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":19,
-    "content":{
-      "title":"Question 19",
-      "description":"How to lock $BOND to increase voting power?",
-      "color":"0099ff",
-      "fields":[
+    "number": 19,
+    "content": {
+      "title": "Question 19",
+      "description": "How to lock $BOND to increase voting power?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"To increase voting power you will need to lock your $BOND for the specific period. \n\nCheck our detailed guide here: [How to lock $BOND to increase voting power?](https://docs.barnbridge.com/barnbridge-dao/how-to-lock-bond-to-increase-voting-power)"
+          "title": "Answer:",
+          "value": "To increase voting power you will need to lock your $BOND for the specific period. \n\nCheck our detailed guide here: [How to lock $BOND to increase voting power?](https://docs.barnbridge.com/barnbridge-dao/how-to-lock-bond-to-increase-voting-power)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":20,
-    "content":{
-      "title":"Question 20",
-      "description":"How to delegate voting power (vBOND)?",
-      "color":"0099ff",
-      "fields":[
+    "number": 20,
+    "content": {
+      "title": "Question 20",
+      "description": "How to delegate voting power (vBOND)?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"You can easily delegate your voting power to any platform member. \n\nCheck our detailed guide here: [How to delegate voting power (vBOND)?](https://docs.barnbridge.com/barnbridge-dao/how-to-delegate-voting-power)"
+          "title": "Answer:",
+          "value": "You can easily delegate your voting power to any platform member. \n\nCheck our detailed guide here: [How to delegate voting power (vBOND)?](https://docs.barnbridge.com/barnbridge-dao/how-to-delegate-voting-power)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":21,
-    "content":{
-      "title":"Question 21",
-      "description":"How to return delegated voting power (vBOND)?",
-      "color":"0099ff",
-      "fields":[
+    "number": 21,
+    "content": {
+      "title": "Question 21",
+      "description": "How to return delegated voting power (vBOND)?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"You can return delegated voting power any time you want. \n\nCheck our detailed guide here: [How to return delegated voting power (vBOND)?](https://docs.barnbridge.com/barnbridge-dao/how-to-return-delegated-voting-power)"
+          "title": "Answer:",
+          "value": "You can return delegated voting power any time you want. \n\nCheck our detailed guide here: [How to return delegated voting power (vBOND)?](https://docs.barnbridge.com/barnbridge-dao/how-to-return-delegated-voting-power)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":22,
-    "content":{
-      "title":"Question 22",
-      "description":"How to withdraw $BOND from the DAO?",
-      "color":"0099ff",
-      "fields":[
+    "number": 22,
+    "content": {
+      "title": "Question 22",
+      "description": "How to withdraw $BOND from the DAO?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"If you didn't lock your $BOND you can withdraw it whenever you need. \n\nCheck our detailed guide here: [How to withdraw $BOND from the DAO?](https://docs.barnbridge.com/barnbridge-dao/how-to-withdraw-bond-from-the-dao)"
+          "title": "Answer:",
+          "value": "If you didn't lock your $BOND you can withdraw it whenever you need. \n\nCheck our detailed guide here: [How to withdraw $BOND from the DAO?](https://docs.barnbridge.com/barnbridge-dao/how-to-withdraw-bond-from-the-dao)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":23,
-    "content":{
-      "title":"Question 23",
-      "description":"How to create a proposal?",
-      "color":"0099ff",
-      "fields":[
+    "number": 23,
+    "content": {
+      "title": "Question 23",
+      "description": "How to create a proposal?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"To create a proposal you need to have at least 1% of the $BOND staked in Barn (DAO Staking contract). \n\nCheck our detailed guide here: [How to create a proposal?](https://docs.barnbridge.com/barnbridge-dao/how-to-create-a-proposal)"
+          "title": "Answer:",
+          "value": "To create a proposal you need to have at least 1% of the $BOND staked in Barn (DAO Staking contract). \n\nCheck our detailed guide here: [How to create a proposal?](https://docs.barnbridge.com/barnbridge-dao/how-to-create-a-proposal)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":24,
-    "content":{
-      "title":"Question 24",
-      "description":"USDC/DAI/sUSD Yield Farming Pool",
-      "color":"0099ff",
-      "fields":[
+    "number": 24,
+    "content": {
+      "title": "Question 24",
+      "description": "USDC/DAI/sUSD Yield Farming Pool",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"USDC/DAI/sUSD yield farming pool was launched on Oct 19th, 2020. This staking contract was the first mechanism delivering initial $BOND token distribution to the community. This contract holds 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD. \n\nStablecoins are equally rewarded. 1 USDC = 1 DAI = 1 sUSD. \n\nRead more about the pool in this Medium post: [Yield Farming and LP Incentivization.](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4)"
+          "title": "Answer:",
+          "value": "USDC/DAI/sUSD yield farming pool was launched on Oct 19th, 2020. This staking contract was the first mechanism delivering initial $BOND token distribution to the community. This contract holds 8% of the total supply and will be distributed to community members who stake DAI, USDC, & sUSD. \n\nStablecoins are equally rewarded. 1 USDC = 1 DAI = 1 sUSD. \n\nRead more about the pool in this Medium post: [Yield Farming and LP Incentivization.](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4)"
         }
       ],
-      "image":"pool1.png",
-      "footer":{
-
+      "image": "pool1.png",
+      "footer": {
       }
     }
   },
   {
-    "number":25,
-    "content":{
-      "title":"Question 25",
-      "description":"USDC/BOND LP Pool",
-      "color":"0099ff",
-      "fields":[
+    "number": 25,
+    "content": {
+      "title": "Question 25",
+      "description": "USDC/BOND LP Pool",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"USDC/BOND liquidity pool incentivization program was launched on Oct 26th, 2020. The concept behind the initiative is to reward long-term liquidity providers of the Uniswap USDC/BOND pool with progressively more power over the protocol as they continue to signal their belief in the BarnBridge vision. \n\nYou have to stake the uniswapv2 LP tokens (USDC_BOND_UNI_LP). You’ll get them for providing liquidity to the [USDC/BOND pool](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) on Uniswap. \n\nRead more about USDC/BOND pool on Medium: [Yield Farming and LP Incentivization](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4) and [Yield Farming $BOND: The Risks Involved.](https://medium.com/barnbridge/yield-farming-bond-the-risks-involved-7cefdba01b17)"
+          "title": "Answer:",
+          "value": "USDC/BOND liquidity pool incentivization program was launched on Oct 26th, 2020. The concept behind the initiative is to reward long-term liquidity providers of the Uniswap USDC/BOND pool with progressively more power over the protocol as they continue to signal their belief in the BarnBridge vision. \n\nYou have to stake the uniswapv2 LP tokens (USDC_BOND_UNI_LP). You’ll get them for providing liquidity to the [USDC/BOND pool](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48) on Uniswap. \n\nRead more about USDC/BOND pool on Medium: [Yield Farming and LP Incentivization](https://medium.com/barnbridge/yield-farming-and-lp-incentivization-25eba3f55ec4) and [Yield Farming $BOND: The Risks Involved.](https://medium.com/barnbridge/yield-farming-bond-the-risks-involved-7cefdba01b17)"
         }
       ],
-      "image":"pool2.png",
-      "footer":{
-
+      "image": "pool2.png",
+      "footer": {
       }
     }
   },
   {
-    "number":26,
-    "content":{
-      "title":"Question 26",
-      "description":"How can I earn rewards from the USDC/BOND pool?",
-      "color":"0099ff",
-      "fields":[
+    "number": 26,
+    "content": {
+      "title": "Question 26",
+      "description": "How can I earn rewards from the USDC/BOND pool?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here.](https://app.barnbridge.com)"
+          "title": "Answer:",
+          "value": "1. Go to the Uniswap BOND/USDC pool and start providing liquidity [here](https://app.uniswap.org/#/add/0x0391d2021f89dc339f60fff84546ea23e337750f/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48). \n2. Get LP tokens. \n3. Stake LP tokens on BarnBridge platform [here.](https://app.barnbridge.com)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":27,
-    "content":{
-      "title":"Question 27",
-      "description":"$BOND Hodl Pool",
-      "color":"0099ff",
-      "fields":[
+    "number": 27,
+    "content": {
+      "title": "Question 27",
+      "description": "$BOND Hodl Pool",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"$BOND Hodl Pool was launched on Nov 16th, 2020. It has been running for 12 epochs (weeks) and distributing 60,000 $BOND tokens in rewards to the users. \n\n$BOND Hodl Pool ended on Feb 8th, 2021. If you haven’t claimed your rewards or withdrawn your deposit yet - don’t panic. You’ll be able to do that for literally forever but you will no longer be able to stake and earn rewards from the pool."
+          "title": "Answer:",
+          "value": "$BOND Hodl Pool was launched on Nov 16th, 2020. It has been running for 12 epochs (weeks) and distributing 60,000 $BOND tokens in rewards to the users. \n\n$BOND Hodl Pool ended on Feb 8th, 2021. If you haven’t claimed your rewards or withdrawn your deposit yet - don’t panic. You’ll be able to do that for literally forever but you will no longer be able to stake and earn rewards from the pool."
         }
       ],
-      "image":"pool3.png",
-      "footer":{
-
+      "image": "pool3.png",
+      "footer": {
       }
     }
   },
   {
-    "number":28,
-    "content":{
-      "title":"Question 28",
-      "description":"DAO Staking Pool",
-      "color":"0099ff",
-      "fields":[
+    "number": 28,
+    "content": {
+      "title": "Question 28",
+      "description": "DAO Staking Pool",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"DAO Staking pool was launched on Feb 8th, 2021. It was designed as an extra incentive for the early DAO participants. In addition to voting power, you also receive rewards from the DAO rewards pool. \n\nThe pool is currently preloaded with 610,000 $BOND tokens and should run for 50 weeks. \n\nFind more details about DAO staking here:[Pool 3 ends and DAO governance rewards begins](https://medium.com/barnbridge/pool-3-ends-and-dao-governance-rewards-begins-8e57ec5041)."
+          "title": "Answer:",
+          "value": "DAO Staking pool was launched on Feb 8th, 2021. It was designed as an extra incentive for the early DAO participants. In addition to voting power, you also receive rewards from the DAO rewards pool. \n\nThe pool is currently preloaded with 610,000 $BOND tokens and should run for 50 weeks. \n\nFind more details about DAO staking here:[Pool 3 ends and DAO governance rewards begins](https://medium.com/barnbridge/pool-3-ends-and-dao-governance-rewards-begins-8e57ec5041)."
         }
       ],
-      "image":"daopool.png",
-      "footer":{
-
+      "image": "daopool.png",
+      "footer": {
       }
     }
   },
   {
-    "number":29,
-    "content":{
-      "title":"Question 29",
-      "description":"What if I deposit after the start of the epoch?",
-      "color":"0099ff",
-      "fields":[
+    "number": 29,
+    "content": {
+      "title": "Question 29",
+      "description": "What if I deposit after the start of the epoch?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"*NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool.* \n\nThe deposit works like this: for the current epoch, the amount that is taken into consideration when the reward is calculated is relative to the time when you deposited. \n\nIf you enter when there’s only 20% time left, your effective balance will be equal to actual balance * 20% where the multiplier is exactly that 20%. For the next epoch (and any subsequent epoch), the multiplier is set back to 100%. \n\nIf you deposit some more, the multiplier will be less, but the effective balance will always be greater than the previous. For example: you start the epoch with 100 DAI, then deposit 100 DAI at exactly 50% of the epoch => your effective balance for this epoch is 150 DAI = 100 + 50% * 100 or 200*75% - 75% being the new weighted-average multiplier."
+          "title": "Answer:",
+          "value": "*NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool.* \n\nThe deposit works like this: for the current epoch, the amount that is taken into consideration when the reward is calculated is relative to the time when you deposited. \n\nIf you enter when there’s only 20% time left, your effective balance will be equal to actual balance * 20% where the multiplier is exactly that 20%. For the next epoch (and any subsequent epoch), the multiplier is set back to 100%. \n\nIf you deposit some more, the multiplier will be less, but the effective balance will always be greater than the previous. For example: you start the epoch with 100 DAI, then deposit 100 DAI at exactly 50% of the epoch => your effective balance for this epoch is 150 DAI = 100 + 50% * 100 or 200*75% - 75% being the new weighted-average multiplier."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":30,
-    "content":{
-      "title":"Question 30",
-      "description":"What if I withdraw before the end of the epoch?",
-      "color":"0099ff",
-      "fields":[
+    "number": 30,
+    "content": {
+      "title": "Question 30",
+      "description": "What if I withdraw before the end of the epoch?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool. \n\nIf you withdraw before the epoch ends, there are 2 possibilities: \n1. You withdraw the full amount => in which case your effective balance goes to 0 because your actual balance, which is now 0, multiplied by any kind of multiplier is still 0. \n2. You withdraw only a part of it => the multiplier is recalculated as the weighted average of the deposits (let’s say you deposit 100 DAI then after half of the time you withdraw 50 DAI => you’ll end up just like you initially deposited 50 DAI). \n\nAny withdrawal causes the reward for the amount of money withdrawn to be lost."
+          "title": "Answer:",
+          "value": "NOTE: This mechanic works for the USDC/DAI/sUSD Pool 1 and USDC/BOND Pool 2 but not for the DAO Staking Pool where you get rewards for the time you staked in the pool. \n\nIf you withdraw before the epoch ends, there are 2 possibilities: \n1. You withdraw the full amount => in which case your effective balance goes to 0 because your actual balance, which is now 0, multiplied by any kind of multiplier is still 0. \n2. You withdraw only a part of it => the multiplier is recalculated as the weighted average of the deposits (let’s say you deposit 100 DAI then after half of the time you withdraw 50 DAI => you’ll end up just like you initially deposited 50 DAI). \n\nAny withdrawal causes the reward for the amount of money withdrawn to be lost."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":31,
-    "content":{
-      "title":"Question 31",
-      "description":"What if I don't claim rewards after the epoch ends?",
-      "color":"0099ff",
-      "fields":[
+    "number": 31,
+    "content": {
+      "title": "Question 31",
+      "description": "What if I don't claim rewards after the epoch ends?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Nothing bad will happen. Your rewards will be accumulating for however much time you stay in the pool. You can also claim after you withdraw your deposit."
+          "title": "Answer:",
+          "value": "Nothing bad will happen. Your rewards will be accumulating for however much time you stay in the pool. You can also claim after you withdraw your deposit."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":32,
-    "content":{
-      "title":"Question 32",
-      "description":"What is the current APY?",
-      "color":"0099ff",
-      "fields":[
+    "number": 32,
+    "content": {
+      "title": "Question 32",
+      "description": "What is the current APY?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"You can check the APY all pools on [CoinGecko](https://www.coingecko.com/en/yield-farming) or using our Discord APR Bot displayed under the Casino Royale section."
+          "title": "Answer:",
+          "value": "You can check the APY all pools on [CoinGecko](https://www.coingecko.com/en/yield-farming) or using our Discord APR Bot displayed under the Casino Royale section."
         }
       ],
-      "image":"APYBot.png",
-      "footer":{
-
+      "image": "APYBot.png",
+      "footer": {
       }
     }
   },
   {
-    "number":33,
-    "content":{
-      "title":"Question 33",
-      "description":"What is SMART Yield?",
-      "color":"0099ff",
-      "fields":[
+    "number": 33,
+    "content": {
+      "title": "Question 33",
+      "description": "What is SMART Yield?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"SMART Yield allows users to tranche out the yield from the debt pools of other projects, such as Aave, Compound, Cream or Yearn Finance to normalize the risk curve by creating derivatives for risk mitigation. \n\nUsers are able to buy junior or senior tokens which represent tranches. Junior token holders provide liquidity & buy risk from senior bond investors. The risk here is variable rate annuities going below the expected level. Investors that buy senior bonds will have a guaranteed yield/interest rate for the life of the bond. \n\nAt the same time, juniors will benefit from the extra rewards generated by tokens locked by seniors in cases where the variable APY of the underlying lending protocol (including the governance token rewards) are higher than the weighted average guaranteed yields of current seniors. \n\nJunior tranches are ERC-20 fungible tokens. Senior tranches are ERC-721 (NFTs) non-fungible tokens. \n\nRead more on our [website](https://barnbridge.com)."
+          "title": "Answer:",
+          "value": "SMART Yield allows users to tranche out the yield from the debt pools of other projects, such as Aave, Compound, Cream or Yearn Finance to normalize the risk curve by creating derivatives for risk mitigation. \n\nUsers are able to buy junior or senior tokens which represent tranches. Junior token holders provide liquidity & buy risk from senior bond investors. The risk here is variable rate annuities going below the expected level. Investors that buy senior bonds will have a guaranteed yield/interest rate for the life of the bond. \n\nAt the same time, juniors will benefit from the extra rewards generated by tokens locked by seniors in cases where the variable APY of the underlying lending protocol (including the governance token rewards) are higher than the weighted average guaranteed yields of current seniors. \n\nJunior tranches are ERC-20 fungible tokens. Senior tranches are ERC-721 (NFTs) non-fungible tokens. \n\nRead more on our [website](https://barnbridge.com)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":34,
-    "content":{
-      "title":"Question 34",
-      "description":"What is a tranche?",
-      "color":"0099ff",
-      "fields":[
+    "number": 34,
+    "content": {
+      "title": "Question 34",
+      "description": "What is a tranche?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Tranches are pieces of a pooled collection of securities, usually debt instruments, that are split up by risk or other characteristics in order to be marketable to different investors. \n\nTranches carry different maturities, yields, and degrees of risk - and privileges in repayment in case of default."
+          "title": "Answer:",
+          "value": "Tranches are pieces of a pooled collection of securities, usually debt instruments, that are split up by risk or other characteristics in order to be marketable to different investors. \n\nTranches carry different maturities, yields, and degrees of risk - and privileges in repayment in case of default."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":35,
-    "content":{
-      "title":"Question 35",
-      "description":"What is a junior tranche (token)?",
-      "color":"0099ff",
-      "fields":[
+    "number": 35,
+    "content": {
+      "title": "Question 35",
+      "description": "What is a junior tranche (token)?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Junior tranches are represented by ERC-20 tokens (jTokens) which provide liquidity and buy risk from Senior bond investors. Junior tranches have variable APY and are more risky than senior tranches. \n\nRead more about [tranches here](https://docs.barnbridge.com/sy-specs/junior-tranches)."
+          "title": "Answer:",
+          "value": "Junior tranches are represented by ERC-20 tokens (jTokens) which provide liquidity and buy risk from Senior bond investors. Junior tranches have variable APY and are more risky than senior tranches. \n\nRead more about [tranches here](https://docs.barnbridge.com/sy-specs/junior-tranches)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":36,
-    "content":{
-      "title":"Question 36",
-      "description":"What is a senior tranche (bond)?",
-      "color":"0099ff",
-      "fields":[
+    "number": 36,
+    "content": {
+      "title": "Question 36",
+      "description": "What is a senior tranche (bond)?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Senior tranches are represented by ERC-721 non-fungible tokens (sBONDs) that have a guaranteed yield for the life of the bond. Senior tranches have fixed APY and are less risky compared to junior tranches. \n\nThe set of features that a senior bond has is: \n- principal — the amount deposited in the bond \n- gain - the amount of token that will be gained (this is used to determine the APY) \n- issuedAt - the issuance date \n- maturesAt - the maturity date \n- liquidated - a flag used to determine if the senior bond was redeemed or not \n\nRead more about [tranches here](https://docs.barnbridge.com/sy-specs/senior-tranches)."
+          "title": "Answer:",
+          "value": "Senior tranches are represented by ERC-721 non-fungible tokens (sBONDs) that have a guaranteed yield for the life of the bond. Senior tranches have fixed APY and are less risky compared to junior tranches. \n\nThe set of features that a senior bond has is: \n- principal — the amount deposited in the bond \n- gain - the amount of token that will be gained (this is used to determine the APY) \n- issuedAt - the issuance date \n- maturesAt - the maturity date \n- liquidated - a flag used to determine if the senior bond was redeemed or not \n\nRead more about [tranches here](https://docs.barnbridge.com/sy-specs/senior-tranches)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":37,
-    "content":{
-      "title":"Question 37",
-      "description":"What is a junior bond?",
-      "color":"0099ff",
-      "fields":[
+    "number": 37,
+    "content": {
+      "title": "Question 37",
+      "description": "What is a junior bond?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"The Junior Bonds are represented by ERC-721 non-fungible tokens that have a value denominated in junior tokens, and a maturity date equal to that of the ABOND. These special types of bonds are issued as part of the 2-step withdrawal process. \n\nA junior is subject to Senior tranche risk. In order for a jToken holder to exit the pool, the current sBONDs need to mature. Because it is computationally intensive and gas inefficient to track each and every sBOND with each tx, we opt to use the Aggregated Bond (ABOND) as an approximation for the Senior tranche. \n\nSteps for exit: \n**1st step:** \n- recalculate price \n- transfer Junior jTokenDAI (for example) to pool (lock) \n- mint a junior BOND token (NFT) and transfer to Junior \n- queue liquidation after ABOND.maturesAt. First tx after that timestamp will trigger the liquidation. \n\n**2nd step** (after the lock period has ended, the Junior can redeem the jBOND NFT and finish the Withdraw process): \n- send junior's liquidated DAI \n- burn the jBOND NFT \n\nThe set of features that a junior bond has is: \n- tokens - the amount of jTokens deposited in the bond \n- maturesAt - the maturity date at which it can be redeemed"
+          "title": "Answer:",
+          "value": "The Junior Bonds are represented by ERC-721 non-fungible tokens that have a value denominated in junior tokens, and a maturity date equal to that of the ABOND. These special types of bonds are issued as part of the 2-step withdrawal process. \n\nA junior is subject to Senior tranche risk. In order for a jToken holder to exit the pool, the current sBONDs need to mature. Because it is computationally intensive and gas inefficient to track each and every sBOND with each tx, we opt to use the Aggregated Bond (ABOND) as an approximation for the Senior tranche. \n\nSteps for exit: \n**1st step:** \n- recalculate price \n- transfer Junior jTokenDAI (for example) to pool (lock) \n- mint a junior BOND token (NFT) and transfer to Junior \n- queue liquidation after ABOND.maturesAt. First tx after that timestamp will trigger the liquidation."
+        },
+        {
+          "title": "\u200b",
+          "value": "**2nd step** (after the lock period has ended, the Junior can redeem the jBOND NFT and finish the Withdraw process): \n- send junior's liquidated DAI \n- burn the jBOND NFT \n\nThe set of features that a junior bond has is: \n- tokens - the amount of jTokens deposited in the bond \n- maturesAt - the maturity date at which it can be redeemed"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":38,
-    "content":{
-      "title":"Question 38",
-      "description":"What is the ABOND?",
-      "color":"0099ff",
-      "fields":[
+    "number": 38,
+    "content": {
+      "title": "Question 38",
+      "description": "What is the ABOND?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"In order to provide the best UX for Juniors and encourage them to participate in our SMART Yield pools, we want the system to allow them to join the pool at any time. Moreover we want the possibility of instant withdrawal of at least part of their funds, without affecting the integrity of the system and keeping the guarantees. \n\nTo do that, we have to be able to calculate the profits and losses of the pool very efficiently. We do that by averaging all existing senior bonds into one “weighted average” **ABOND** with the following properties: \n- Principal locked (sum) -> ABOND.principal \n- Guaranteed rewards (sum) -> ABOND.gain \n- Start timestamp -> ABOND.issuedAt \n- Weighted average end timestamp -> ABOND.maturesAt \n\nThe aggregate sBOND (ABOND) represents the current Senior pool and it will help us calculate the health of the Senior pool at an instant. If the rewards generated by the Senior pool so far exceed the guaranteed rewards at this time (abond.paid), the extra reward can be considered profit for the junior pool (and loss if it's negative). \n\nABOND parameters are recalculated each time new Senior bonds are purchased."
+          "title": "Answer:",
+          "value": "In order to provide the best UX for Juniors and encourage them to participate in our SMART Yield pools, we want the system to allow them to join the pool at any time. Moreover we want the possibility of instant withdrawal of at least part of their funds, without affecting the integrity of the system and keeping the guarantees. \n\nTo do that, we have to be able to calculate the profits and losses of the pool very efficiently. We do that by averaging all existing senior bonds into one “weighted average” **ABOND** with the following properties: \n- Principal locked (sum) -> ABOND.principal \n- Guaranteed rewards (sum) -> ABOND.gain \n- Start timestamp -> ABOND.issuedAt \n- Weighted average end timestamp -> ABOND.maturesAt \n\nThe aggregate sBOND (ABOND) represents the current Senior pool and it will help us calculate the health of the Senior pool at an instant."
+        },
+        {
+          "title": "\u200b",
+          "value": " If the rewards generated by the Senior pool so far exceed the guaranteed rewards at this time (abond.paid), the extra reward can be considered profit for the junior pool (and loss if it's negative). \n\nABOND parameters are recalculated each time new Senior bonds are purchased."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":39,
-    "content":{
-      "title":"Question 39",
-      "description":"What is the senior tranche APY?",
-      "color":"0099ff",
-      "fields":[
+    "number": 39,
+    "content": {
+      "title": "Question 39",
+      "description": "What is the senior tranche APY?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Senior APY determines the annual percentage for senior bonds at the current time. \n\nIt can be derived for any and all senior bonds in existence by annualizing the percentage difference between the deposited value and the gained value using the following formula: \n\n((gain/principal) / (maturesAt - issuedAt)) * 365 * 100 \n\nView the current senior APY here: [app.barnbridge.com/smart-yield.](https://app.barnbridge.com/smart-yield)"
+          "title": "Answer:",
+          "value": "Senior APY determines the annual percentage for senior bonds at the current time. \n\nIt can be derived for any and all senior bonds in existence by annualizing the percentage difference between the deposited value and the gained value using the following formula: \n\n((gain/principal) / (maturesAt - issuedAt)) * 365 * 100 \n\nView the current senior APY here: [app.barnbridge.com/smart-yield.](https://app.barnbridge.com/smart-yield)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":40,
-    "content":{
-      "title":"Question 40",
-      "description":"What is the junior tranche APY?",
-      "color":"0099ff",
-      "fields":[
+    "number": 40,
+    "content": {
+      "title": "Question 40",
+      "description": "What is the junior tranche APY?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Junior APY determines the annual percentage yield for junior tokens at the current time. \n\nThe APY for your junior position is realized when selling your junior tokens for their respective underlying tokens, at whatever the current junior token-to-underlying token price is. The conversion rate of junior tokens starts at 1:1, and slowly grows (or drops) when interest accrues. Depending on the annualized difference between your purchase and sell price you can calculate your APY. \n\nWhenever senior positions have to be filled by junior funds (in the case that the underlying lending protocol offers lower rates than current seniors get), the price drops. \n\nOtherwise, whenever yield accrues to junior positions that leverage senior funds, the conversion rate increases. \n\nView the current junior APY here: [app.barnbridge.com/smart-yield.](https://app.barnbridge.com/smart-yield)"
+          "title": "Answer:",
+          "value": "Junior APY determines the annual percentage yield for junior tokens at the current time. \n\nThe APY for your junior position is realized when selling your junior tokens for their respective underlying tokens, at whatever the current junior token-to-underlying token price is. The conversion rate of junior tokens starts at 1:1, and slowly grows (or drops) when interest accrues. Depending on the annualized difference between your purchase and sell price you can calculate your APY. \n\nWhenever senior positions have to be filled by junior funds (in the case that the underlying lending protocol offers lower rates than current seniors get), the price drops. \n\nOtherwise, whenever yield accrues to junior positions that leverage senior funds, the conversion rate increases. \n\nView the current junior APY here: [app.barnbridge.com/smart-yield.](https://app.barnbridge.com/smart-yield)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":41,
-    "content":{
-      "title":"Question 41",
-      "description":"What are the junior tranche fees?",
-      "color":"0099ff",
-      "fields":[
+    "number": 41,
+    "content": {
+      "title": "Question 41",
+      "description": "What are the junior tranche fees?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"On the junior side, fees are collected on jToken purchases."
+          "title": "Answer:",
+          "value": "On the junior side, fees are collected on jToken purchases."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":42,
-    "content":{
-      "title":"Question 42",
-      "description":"What are the senior tranche fees?",
-      "color":"0099ff",
-      "fields":[
+    "number": 42,
+    "content": {
+      "title": "Question 42",
+      "description": "What are the senior tranche fees?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"On the senior side, fees are collected after maturity date, and only from the gains of the bond - when sBonds are redeemed."
+          "title": "Answer:",
+          "value": "On the senior side, fees are collected after maturity date, and only from the gains of the bond - when sBonds are redeemed."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":43,
-    "content":{
-      "title":"Question 43",
-      "description":"How to buy junior tokens?",
-      "color":"0099ff",
-      "fields":[
+    "number": 43,
+    "content": {
+      "title": "Question 43",
+      "description": "How to buy junior tokens?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"To buy junior tokens you need to own at least some amount of token from the markets list at app.barnbridge.com/smart-yield. \n\nCheck our detailed guide here: [How to buy junior tokens?](https://docs.barnbridge.com/smart-yield/how-to-buy-junior-tokens)"
+          "title": "Answer:",
+          "value": "To buy junior tokens you need to own at least some amount of token from the markets list at app.barnbridge.com/smart-yield. \n\nCheck our detailed guide here: [How to buy junior tokens?](https://docs.barnbridge.com/smart-yield/how-to-buy-junior-tokens)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":44,
-    "content":{
-      "title":"Question 44",
-      "description":"What is a junior tranche (token)?",
-      "color":"0099ff",
-      "fields":[
+    "number": 44,
+    "content": {
+      "title": "Question 44",
+      "description": "What is a junior tranche (token)?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"To buy senior bonds you need to own at least some amount of token from the markets list at app.barnbridge.com/smart-yield. \n\nCheck our detailed guide here: [How to buy senior bonds?](https://docs.barnbridge.com/smart-yield/how-to-buy-senior-bonds)"
+          "title": "Answer:",
+          "value": "To buy senior bonds you need to own at least some amount of token from the markets list at app.barnbridge.com/smart-yield. \n\nCheck our detailed guide here: [How to buy senior bonds?](https://docs.barnbridge.com/smart-yield/how-to-buy-senior-bonds)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":45,
-    "content":{
-      "title":"Question 45",
-      "description":"Can I set up the custom lock end date for a senior bond?",
-      "color":"0099ff",
-      "fields":[
+    "number": 45,
+    "content": {
+      "title": "Question 45",
+      "description": "Can I set up the custom lock end date for a senior bond?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Yes, you can choose a custom lock end date with the 1 day as a step size up to 30 days from the bond issue date. This parameter can be expanded through the DAO voting process."
+          "title": "Answer:",
+          "value": "Yes, you can choose a custom lock end date with the 1 day as a step size up to 30 days from the bond issue date. This parameter can be expanded through the DAO voting process."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":46,
-    "content":{
-      "title":"Question 46",
-      "description":"How to redeem senior bonds?",
-      "color":"0099ff",
-      "fields":[
+    "number": 46,
+    "content": {
+      "title": "Question 46",
+      "description": "How to redeem senior bonds?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"To redeem senior bonds you have to wait until the maturity date of the bond. If you want to withdraw your liquidity before that, you can try to sell it. \n\nCheck our guide here: [How to redeem senior bonds?](https://docs.barnbridge.com/smart-yield/how-to-redeem-senior-bonds)"
+          "title": "Answer:",
+          "value": "To redeem senior bonds you have to wait until the maturity date of the bond. If you want to withdraw your liquidity before that, you can try to sell it. \n\nCheck our guide here: [How to redeem senior bonds?](https://docs.barnbridge.com/smart-yield/how-to-redeem-senior-bonds)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":47,
-    "content":{
-      "title":"Question 47",
-      "description":"How to sell senior bonds?",
-      "color":"0099ff",
-      "fields":[
+    "number": 47,
+    "content": {
+      "title": "Question 47",
+      "description": "How to sell senior bonds?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"If you want to withdraw your liquidity before the maturity date, you can sell the senior bonds on secondary markets. These will have a discount from the redeemable value of the senior bond, but should still be profitable even after the gains portion of the bond takes a haircut. \n\nCheck our guide here: [How to sell senior bonds?](https://docs.barnbridge.com/smart-yield/how-to-sell-senior-bonds)"
+          "title": "Answer:",
+          "value": "If you want to withdraw your liquidity before the maturity date, you can sell the senior bonds on secondary markets. These will have a discount from the redeemable value of the senior bond, but should still be profitable even after the gains portion of the bond takes a haircut. \n\nCheck our guide here: [How to sell senior bonds?](https://docs.barnbridge.com/smart-yield/how-to-sell-senior-bonds)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":48,
-    "content":{
-      "title":"Question 48",
-      "description":"How to withdraw junior tokens?",
-      "color":"0099ff",
-      "fields":[
+    "number": 48,
+    "content": {
+      "title": "Question 48",
+      "description": "How to withdraw junior tokens?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"If you want to get your liquidity and profits you can withdraw it from the pool. To do so, you’ll have 2 options: \n\n**1. Instant Withdrawal** \nThe sellTokens() function allows juniors to instantly withdraw their unlocked underlying tokens. The locked part of each jToken is burnt in favor of the existing jToken holders, increasing the price. Effectively using this function, a junior forfeits their locked underlying. This allows instant arbitrage opportunities between our pool and secondary markets where jTokens are traded, like Uniswap, creating a floor for the jToken price. \n\n**2. 2-step Withdrawal** \nThe 2-step process allows a user to first signal the intention of exiting the pool. In return they receive an NFT that can be redeemed after the current ABOND ends. The first transaction after ABOND.maturesAt triggers the liquidation for all jTokens scheduled for liquidation. The user can come anytime after ABOND.maturesAt to withdraw their part of the liquidation. \na) Signal withdrawal = buy junior bond NFT \nb) Redeem junior bond NFT \n\nAll jTokens locked in junior Bond NFTs after the 1st step are excluded from the junior pool when calculating new senior BOND rates, so these funds are not used to collateralize any further senior positions, but they will be subject to the profit and losses of the pool until the maturity date of the aggregate bond - in order to continue to guarantee the yields for the senior positions that were opened during their lifetime. \n\nEach 2 step withdraw initiation will create a jBOND NFT with a maturity date for the second step. The second and final step of withdrawal, can be called publicly by anyone and it will burn the NFT and send the owed tokens to the NFT's owner. \n\nCheck our detailed guide here: [How to withdraw junior tokens?](https://docs.barnbridge.com/smart-yield/how-to-withdraw-junior-tokens)"
+          "title": "Answer:",
+          "value": "If you want to get your liquidity and profits you can withdraw it from the pool. To do so, you’ll have 2 options: \n\n**1. Instant Withdrawal** \nThe sellTokens() function allows juniors to instantly withdraw their unlocked underlying tokens. The locked part of each jToken is burnt in favor of the existing jToken holders, increasing the price. Effectively using this function, a junior forfeits their locked underlying. This allows instant arbitrage opportunities between our pool and secondary markets where jTokens are traded, like Uniswap, creating a floor for the jToken price. \n\n**2. 2-step Withdrawal** \nThe 2-step process allows a user to first signal the intention of exiting the pool. In return they receive an NFT that can be redeemed after the current ABOND ends. The first transaction after ABOND.maturesAt triggers the liquidation for all jTokens scheduled for liquidation. The user can come anytime after ABOND.maturesAt to withdraw their part of the liquidation."
+        },
+        {
+          "title": "\u200b",
+          "value": "a) Signal withdrawal = buy junior bond NFT \nb) Redeem junior bond NFT \n\nAll jTokens locked in junior Bond NFTs after the 1st step are excluded from the junior pool when calculating new senior BOND rates, so these funds are not used to collateralize any further senior positions, but they will be subject to the profit and losses of the pool until the maturity date of the aggregate bond - in order to continue to guarantee the yields for the senior positions that were opened during their lifetime. \n\nEach 2 step withdraw initiation will create a jBOND NFT with a maturity date for the second step. The second and final step of withdrawal, can be called publicly by anyone and it will burn the NFT and send the owed tokens to the NFT's owner. \n\nCheck our detailed guide here: [How to withdraw junior tokens?](https://docs.barnbridge.com/smart-yield/how-to-withdraw-junior-tokens)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":49,
-    "content":{
-      "title":"Question 49",
-      "description":"How to sell junior tokens?",
-      "color":"0099ff",
-      "fields":[
+    "number": 49,
+    "content": {
+      "title": "Question 49",
+      "description": "How to sell junior tokens?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"If you want to get your liquidity back another option you can use is selling them on secondary markets. These secondary venues will also serve to create a floor price for jTokens. \n\nCheck our detailed guide here: [How to sell junior tokens?](https://docs.barnbridge.com/smart-yield/how-to-sell-junior-tokens)"
+          "title": "Answer:",
+          "value": "If you want to get your liquidity back another option you can use is selling them on secondary markets. These secondary venues will also serve to create a floor price for jTokens. \n\nCheck our detailed guide here: [How to sell junior tokens?](https://docs.barnbridge.com/smart-yield/how-to-sell-junior-tokens)"
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   },
   {
-    "number":50,
-    "content":{
-      "title":"Question 50",
-      "description":"What is SMART Alpha?",
-      "color":"0099ff",
-      "fields":[
+    "number": 50,
+    "content": {
+      "title": "Question 50",
+      "description": "What is SMART Alpha?",
+      "color": "0099ff",
+      "fields": [
         {
-          "title":"Answer:",
-          "value":"Market Price Exposure Risk Mitigation using tranched volatility derivatives. \n\nThe SMART Alpha bonds will not be structured via traditional yield tranches but instead with various levels of market price exposure, which we will call risk ramps. The idea is that every bucket or tranche of price exposure does not need to be flat across the entire risk curve, meaning the first $100 of price exposure does not need to deserve the same upside and downside volatility. This is similar to having fractional ownership but with different risk/reward for the fractions. \n\nRead more in our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper#21-smart-yield-bonds) and on the [website](https://barnbridge.com/)."
+          "title": "Answer:",
+          "value": "Market Price Exposure Risk Mitigation using tranched volatility derivatives. \n\nThe SMART Alpha bonds will not be structured via traditional yield tranches but instead with various levels of market price exposure, which we will call risk ramps. The idea is that every bucket or tranche of price exposure does not need to be flat across the entire risk curve, meaning the first $100 of price exposure does not need to deserve the same upside and downside volatility. This is similar to having fractional ownership but with different risk/reward for the fractions. \n\nRead more in our [Whitepaper](https://github.com/BarnBridge/BarnBridge-Whitepaper#21-smart-yield-bonds) and on the [website](https://barnbridge.com/)."
         }
       ],
-      "footer":{
-
+      "footer": {
       }
     }
   }
