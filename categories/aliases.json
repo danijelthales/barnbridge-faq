@@ -25,95 +25,115 @@
   },
   {
     "number": 4,
+    "alias": "l2"
+  },
+  {
+    "number": 4,
+    "alias": "layer2"
+  },
+  {
+    "number": 5,
     "alias": "bond"
   },
    {
-    "number": 4,
+    "number": 5,
     "alias": "token"
   },
   {
-    "number": 5,
+    "number": 6,
     "alias": "amount"
   },
   {
-    "number": 5,
+    "number": 6,
     "alias": "total supply"
   },
   {
-    "number": 5,
+    "number": 6,
     "alias": "supply"
   },
   {
-    "number": 6,
+    "number": 7,
     "alias": "contract"
   },
   {
-    "number": 6,
+    "number": 7,
     "alias": "contract address"
   },
   {
-    "number": 7,
+    "number": 8,
     "alias": "distribution"
   },
   {
-    "number": 7,
+    "number": 8,
     "alias": "token distribution"
   },
   {
-    "number": 8,
+    "number": 9,
     "alias": "vesting"
   },
   {
-    "number": 8,
+    "number": 9,
     "alias": "vesting schedule"
   },
    {
-    "number": 9,
+    "number": 10,
     "alias": "weekly distribution"
   },
   {
-    "number": 10,
+    "number": 11,
     "alias": "bond nft"
   },
   {
-    "number": 11,
+    "number": 12,
     "alias": "launchdao"
   },
   {
-    "number": 11,
+    "number": 12,
     "alias": "launch dao"
   },
   {
-    "number": 12,
+    "number": 13,
     "alias": "bb dao"
   },
   {
-    "number": 12,
+    "number": 13,
     "alias": "bbdao"
   },
   {
-    "number": 12,
+    "number": 13,
     "alias": "barnbridgedao"
   },
   {
-    "number": 12,
+    "number": 13,
     "alias": "barnbridge dao"
   },
   {
+    "number": 14,
+    "alias": "launchdao vs barnbridgedao"
+  },
+  {
     "number": 15,
-    "alias": "yield farming"
+    "alias": "vote restrictions"
+  },
+  {
+    "number": 15,
+    "alias": "can’t vote"
   },
   {
     "number": 16,
-    "alias": "lp"
+    "alias": "snapshot"
   },
   {
     "number": 16,
-    "alias": "pool 2"
+    "alias": "signal"
   },
   {
     "number": 17,
-    "alias": "lp earn"
+    "alias": "buy bond"
+  },
+  {
+    "number": 17,
+    "alias": "get bond"
   },
   {
     "number": 18,
@@ -121,74 +141,234 @@
   },
   {
     "number": 18,
-    "alias": "hodl pool"
+    "alias": "deposit to DAO"
+  },
+  {
+    "number": 18,
+    "alias": "dao staking"
+  },
+  {
+    "number": 18,
+    "alias": "how to stake"
   },
   {
     "number": 19,
-    "alias": "dao pool"
+    "alias": "lock bond"
   },
   {
     "number": 19,
-    "alias": "dao staking pool"
+    "alias": "locking bond"
   },
   {
     "number": 20,
-    "alias": "effective tvl"
-  },
-  {
-    "number": 20,
-    "alias": "deposit"
+    "alias": "delegate vbond"
   },
   {
     "number": 21,
-    "alias": "withdraw"
+    "alias": "return vbond"
   },
   {
     "number": 22,
-    "alias": "rewards"
+    "alias": "withdraw from dao"
+  },
+  {
+    "number": 22,
+    "alias": "dao withdraw"
   },
   {
     "number": 23,
-    "alias": "apy"
+    "alias": "create proposal"
   },
   {
     "number": 24,
-    "alias": "smart yield"
+    "alias": "yield farming"
   },
   {
     "number": 25,
-    "alias": "smart alpha"
+    "alias": "lp"
+  },
+   {
+    "number": 25,
+    "alias": "pool 2"
   },
   {
     "number": 26,
+    "alias": "lp earn"
+  },
+  {
+    "number": 27,
+    "alias": "pool 3"
+  },
+  {
+    "number": 27,
+    "alias": "hodl pool"
+  },
+  {
+    "number": 28,
+    "alias": "dao pool"
+  },
+  {
+    "number": 28,
+    "alias": "dao staking pool"
+  },
+  {
+    "number": 32,
+    "alias": "apy"
+  },
+  {
+    "number": 32,
+    "alias": "apr"
+  },
+  {
+    "number": 33,
+    "alias": "smart yield"
+  },
+  {
+    "number": 33,
+    "alias": "sy"
+  },
+  {
+    "number": 34,
     "alias": "tranche"
   },
   {
-    "number": 26,
+    "number": 34,
     "alias": "tranches"
   },
-   {
-    "number": 27,
-    "alias": "senior tranche"
-  },
   {
-    "number": 27,
+    "number": 35,
     "alias": "junior tranche"
   },
   {
-    "number": 27,
-    "alias": "senior tranches"
-  },
-  {
-    "number": 27,
+    "number": 35,
     "alias": "junior tranches"
   },
   {
-    "number": 28,
-    "alias": "l2"
+    "number": 35,
+    "alias": "jr tranche"
   },
   {
-    "number": 28,
-    "alias": "layer2"
+    "number": 36,
+    "alias": "senior tranche"
+  },
+  {
+    "number": 36,
+    "alias": "senior tranches"
+  },
+  {
+    "number": 36,
+    "alias": "sr tranche"
+  },
+  {
+    "number": 37,
+    "alias": "junior bond"
+  },
+  {
+    "number": 37,
+    "alias": "jr bond"
+  },
+  {
+    "number": 38,
+    "alias": "abond"
+  },
+  {
+    "number": 39,
+    "alias": "senior apy"
+  },
+  {
+    "number": 39,
+    "alias": "sr apy"
+  },
+  {
+    "number": 40,
+    "alias": "junior apy"
+  },
+  {
+    "number": 40,
+    "alias": "jr apy"
+  },
+  {
+    "number": 41,
+    "alias": "junior fees"
+  },
+  {
+    "number": 41,
+    "alias": "jr fees"
+  },
+  {
+    "number": 42,
+    "alias": "senior fees"
+  },
+  {
+    "number": 42,
+    "alias": "sr fees"
+  },
+  {
+    "number": 43,
+    "alias": "buy junior"
+  },
+  {
+    "number": 43,
+    "alias": "buy jr"
+  },
+  {
+    "number": 44,
+    "alias": "buy senior"
+  },
+  {
+    "number": 44,
+    "alias": "buy sr"
+  },
+  {
+    "number": 45,
+    "alias": "custom lock end date"
+  },
+  {
+    "number": 45,
+    "alias": "custom led"
+  },
+  {
+    "number": 46,
+    "alias": "redeem senior"
+  },
+  {
+    "number": 46,
+    "alias": "redeem sr"
+  },
+  {
+    "number": 46,
+    "alias": "withdraw sr"
+  },
+  {
+    "number": 47,
+    "alias": "sell senior"
+  },
+  {
+    "number": 47,
+    "alias": "sell sr"
+  },
+  {
+    "number": 48,
+    "alias": "withdraw junior"
+  },
+  {
+    "number": 48,
+    "alias": "withdraw jr"
+  },
+  {
+    "number": 49,
+    "alias": "sell junior"
+  },
+  {
+    "number": 49,
+    "alias": "sell jr"
+  },
+  {
+    "number": 50,
+    "alias": "smart alpha"
+  },
+  {
+    "number": 50,
+    "alias": "sa"
   }
 ]
