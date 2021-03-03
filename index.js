@@ -317,7 +317,7 @@ client.on("message", msg => {
                                 if (category.name == command) {
                                     found = true;
                                     category.questions.forEach(function (question) {
-                                        exampleEmbed.addField(question, qaMaps.get(question).title, false);
+                                        exampleEmbed.addField(question, qaMaps.get(question).description, false);
                                     });
                                 }
                             });
