@@ -10,7 +10,7 @@
     ]
   },
   {
-    "name": "$BOND Token",
+    "name": "$BOND_Token",
     "desc": "Token-related questions",
     "questions": [
       5,
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "name": "DAO Structure",
+    "name": "DAO_Structure",
     "desc": "Questions about the DAO structure",
     "questions": [
       12,
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "name": "Token Distribution Programs",
+    "name": "Token_Distribution_Programs",
     "desc": "Eevrything about Yield Farming, Liquidity Mining, and DAO Staking",
     "questions": [
       24,
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "name": "SMART Yield",
+    "name": "SMART_Yield",
     "desc": "Eevrything you need to know about SMART Yield",
     "questions": [
       33,
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "name": "SMART Alpha",
+    "name": "SMART_Alpha",
     "desc": "Basic information about SMART Alpha",
     "questions": [
       50
