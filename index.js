@@ -471,7 +471,7 @@ client.on("message", msg => {
             let counter = 0;
             let pagenumber = 2;
             qaMaps.forEach((value, key) => {
-                exampleEmbed.addField(key, value.title, false)
+                exampleEmbed.addField(key, value.description, false)
                 counter++;
                 if (counter == 20) {
                     msg.reply(exampleEmbed);
