@@ -1096,7 +1096,7 @@ async function getTVL() {
             return prices
         })
 
-        tvl = prices[1];
+        tvl = prices[0];
         tvl = tvl.replace(/,/g, '').replace(/\$/g, '') * 1.0;
         browser.close()
     } catch (e) {
