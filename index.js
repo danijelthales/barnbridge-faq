@@ -1082,11 +1082,11 @@ async function getTVL() {
         });
         const page = await browser.newPage();
         await page.setViewport({width: 1000, height: 926});
-        await page.goto("https://app.barnbridge.com/pools", {waitUntil: 'networkidle2'});
+        await page.goto("https://app.barnbridge.com/yield-farming", {waitUntil: 'networkidle2'});
         await delay(5000);
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
-            var div = document.querySelectorAll('.styles_heading__JDdQE');
+            var div = document.querySelectorAll('.s_text__hBZHE s_h2__ztgjT s_weight-bold__3Fsf9 s_primary-color__1-UdC');
 
             var prices = []
             div.forEach(element => {
