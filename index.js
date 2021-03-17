@@ -317,7 +317,7 @@ client.on("message", msg => {
                                 if (category.name == command) {
                                     found = true;
                                     category.questions.forEach(function (question) {
-                                        exampleEmbed.addField(question, qaMaps.get(question).title, false);
+                                        exampleEmbed.addField(question, qaMaps.get(question).description, false);
                                     });
                                 }
                             });
@@ -471,7 +471,7 @@ client.on("message", msg => {
             let counter = 0;
             let pagenumber = 2;
             qaMaps.forEach((value, key) => {
-                exampleEmbed.addField(key, value.title, false)
+                exampleEmbed.addField(key, value.description, false)
                 counter++;
                 if (counter == 20) {
                     msg.reply(exampleEmbed);
@@ -1082,11 +1082,11 @@ async function getTVL() {
         });
         const page = await browser.newPage();
         await page.setViewport({width: 1000, height: 926});
-        await page.goto("https://app.barnbridge.com/pools", {waitUntil: 'networkidle2'});
+        await page.goto("https://app.barnbridge.com/yield-farming", {waitUntil: 'networkidle2'});
         await delay(5000);
         /** @type {string[]} */
         var prices = await page.evaluate(() => {
-            var div = document.querySelectorAll('.styles_heading__JDdQE');
+            var div = document.querySelectorAll('.s_h2__ztgjT');
 
             var prices = []
             div.forEach(element => {
@@ -1096,7 +1096,7 @@ async function getTVL() {
             return prices
         })
 
-        tvl = prices[1];
+        tvl = prices[0];
         tvl = tvl.replace(/,/g, '').replace(/\$/g, '') * 1.0;
         browser.close()
     } catch (e) {
