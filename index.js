@@ -1354,10 +1354,11 @@ function doSYAPY() {
                         tvl += (result.state.seniorLiquidity * 1.0);
                         tvl += (result.state.juniorLiquidity * 1.0);
                         setTimeout(function () {
-                            var seniorApy =
+                            clientBotTokenSy.guilds.cache.forEach(function (value, key) {
                                 value.members.cache.get("828030565945049088").setNickname("Compound SY APY");
-                            var symbol = result.underlyingSymbol;
-                            value.members.cache.get("828030565945049088").user.setActivity("USDC Senior APY = " + seniorApy + "%  " + "USDC Junior APY = " + juniorApy + "% ", {type: 'PLAYING'});
+                                var symbol = result.underlyingSymbol;
+                                value.members.cache.get("828030565945049088").user.setActivity("USDC Senior APY = " + seniorApy + "%  " + "USDC Junior APY = " + juniorApy + "% ", {type: 'PLAYING'});
+                            });
                         }, increment * counter);
                         counter++;
                     }
