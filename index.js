@@ -48,6 +48,9 @@ clientBtcPrice.login(process.env.BOT_TOKEN_BTC);
 const clientEpoch = new Discord.Client();
 clientEpoch.login(process.env.BOT_TOKEN_EPOCH);
 
+const clientBotTokenSy = new Discord.Client();
+clientBotTokenSy.login(process.env.BOT_TOKEN_SY_APY);
+
 var bondPrice = 100;
 var bondMarketCap = 1000000;
 
@@ -1071,40 +1074,6 @@ setInterval(function () {
 }, 20 * 1000);
 
 
-async function getTVL() {
-    try {
-        console.log("Fetching tvl");
-        const browser = await puppeteer.launch({
-            args: [
-                '--no-sandbox',
-                '--disable-setuid-sandbox',
-            ],
-        });
-        const page = await browser.newPage();
-        await page.setViewport({width: 1000, height: 926});
-        await page.goto("https://app.barnbridge.com/yield-farming", {waitUntil: 'networkidle2'});
-        await delay(5000);
-        /** @type {string[]} */
-        var prices = await page.evaluate(() => {
-            var div = document.querySelectorAll('.s_h2__ztgjT');
-
-            var prices = []
-            div.forEach(element => {
-                prices.push(element.textContent);
-            });
-
-            return prices
-        })
-
-        tvl = prices[0];
-        tvl = tvl.replace(/,/g, '').replace(/\$/g, '') * 1.0;
-        browser.close()
-    } catch (e) {
-        console.log("Error happened on getting data from barnbridge.");
-        console.log(e);
-    }
-}
-
 function delay(time) {
     return new Promise(function (resolve) {
         setTimeout(resolve, time)
@@ -1169,7 +1138,6 @@ async function getAPY() {
 }
 
 setInterval(getAPY, 1000 * 30);
-setInterval(getTVL, 1000 * 30);
 
 let bondStakingApy = 20;
 setInterval(function () {
@@ -1358,3 +1326,61 @@ setInterval(function () {
         console.log(e);
     }
 }, 80 * 1000);
+
+
+function doSYAPY() {
+    try {
+        https.get('https://api.barnbridge.com/api/smartyield/pools', (resp) => {
+            let data = '';
+
+            // A chunk of data has been recieved.
+            resp.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            // The whole response has been received. Print out the result.
+            resp.on('end', () => {
+                try {
+                    tvl = 0;
+                    let r = JSON.parse(data).data;
+                    var increment = 30;
+                    var counter = 1;
+                    for (var c in r) {
+                        var result = r[c];
+                        var juniorApy = result.state.juniorApy * 100.0;
+                        juniorApy = juniorApy.toFixed(2);
+                        var seniorApy = result.state.seniorApy * 100.0;
+                        seniorApy = seniorApy.toFixed(2);
+                        tvl += (result.state.seniorLiquidity * 1.0);
+                        tvl += (result.state.juniorLiquidity * 1.0);
+                        setTimeout(function () {
+                            var seniorApy =
+                                value.members.cache.get("828030565945049088").setNickname("Compound SY APY");
+                            var symbol = result.underlyingSymbol;
+                            value.members.cache.get("828030565945049088").user.setActivity("USDC Senior APY = " + seniorApy + "%  " + "USDC Junior APY = " + juniorApy + "% ", {type: 'PLAYING'});
+                        }, increment * counter);
+                        counter++;
+                    }
+                    tvl = tvl.toFixed(2);
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+        }).on("error", (err) => {
+            console.log("Error: " + err.message);
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+setInterval(function () {
+    doSYAPY();
+}, 1000 * 300);
+
+setTimeout(function () {
+    doSYAPY();
+}, 1000 * 10);
+
+
