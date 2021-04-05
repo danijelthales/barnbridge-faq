@@ -1355,7 +1355,7 @@ function doSYAPY() {
                         tvl += (result.state.juniorLiquidity * 1.0);
                         var lockedinpool = result.state.juniorLiquidity * 1.0;
                         var dailyReward = 1428.5714 * bondPrice;
-                        var additionalApy = dailyReward * 365 / lockedinpool * 102;
+                        var additionalApy = dailyReward * 365 / lockedinpool * 101;
                         additionalApy = additionalApy.toFixed(2);
                         setTimeout(function () {
                             clientBotTokenSy.guilds.cache.forEach(function (value, key) {
