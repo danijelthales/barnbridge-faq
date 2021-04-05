@@ -975,7 +975,7 @@ setInterval(function () {
             minutes %= 60;
             seconds %= 60;
 
-            value.members.cache.get("772028195264266240").setNickname("tvl=$" + getNumberLabel(tvl));
+            value.members.cache.get("772028195264266240").setNickname("TVL=$" + getNumberLabel(tvl));
             value.members.cache.get("772028195264266240").user.setActivity(days + " days " + hours + " hours " + minutes + " minutes ", {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
@@ -1023,7 +1023,7 @@ var bondbetpayday = new Date('2021-02-07 22:20');
 const {ChainId, Fetcher, Route, Trade, TokenAmount, TradeType, WETH, Token} = require('@uniswap/sdk');
 var bond = null;
 var pair = null;
-var bondPrice = 100;
+var bondPrice = 41.7;
 var bondPriceETH = 100;
 
 // setInterval(async function () {
@@ -1353,11 +1353,17 @@ function doSYAPY() {
                         seniorApy = seniorApy.toFixed(2);
                         tvl += (result.state.seniorLiquidity * 1.0);
                         tvl += (result.state.juniorLiquidity * 1.0);
+                        var lockedinpool = result.state.juniorLiquidity * 1.0;
+                        var dailyReward = 1428.5714 * bondPrice;
+                        var additionalApy = dailyReward * 365 / lockedinpool * 102;
+                        additionalApy = additionalApy.toFixed(2);
                         setTimeout(function () {
                             clientBotTokenSy.guilds.cache.forEach(function (value, key) {
                                 value.members.cache.get("828030565945049088").setNickname("Compound SY APY");
                                 var symbol = result.underlyingSymbol;
-                                value.members.cache.get("828030565945049088").user.setActivity("USDC Senior APY = " + seniorApy + "%  " + "USDC Junior APY = " + juniorApy + "% ", {type: 'PLAYING'});
+                                value.members.cache.get("828030565945049088")
+                                    .user.setActivity(
+                                    "USDC Senior APY = " + seniorApy + "%  " + "USDC Junior APY = " + juniorApy + "% (+" + additionalApy + " %)", {type: 'PLAYING'});
                             });
                         }, increment * counter);
                         counter++;
