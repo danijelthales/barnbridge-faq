@@ -50,7 +50,6 @@ clientEpoch.login(process.env.BOT_TOKEN_EPOCH);
 const clientBotTokenSy = new Discord.Client();
 clientBotTokenSy.login(process.env.BOT_TOKEN_SY_APY);
 
-var bondPrice = 100;
 var bondMarketCap = 1000000;
 
 var btcPrice = 13000;
@@ -660,31 +659,6 @@ client.on("message", msg => {
     }
 )
 
-setInterval(function () {
-    https.get('https://api.coingecko.com/api/v3/coins/ethereum', (resp) => {
-        let data = '';
-
-        // A chunk of data has been recieved.
-        resp.on('data', (chunk) => {
-            data += chunk;
-        });
-
-        // The whole response has been received. Print out the result.
-        resp.on('end', () => {
-            try {
-                let result = JSON.parse(data);
-                ethPrice = result.market_data.current_price.usd;
-            } catch (e) {
-                console.log(e);
-            }
-        });
-
-    }).on("error", (err) => {
-        console.log("Error: " + err.message);
-    });
-
-}, 50 * 1000);
-
 
 setInterval(function () {
     https.get('https://api.coingecko.com/api/v3/coins/barnbridge', (resp) => {
@@ -1018,60 +992,6 @@ setInterval(function () {
 var payday = new Date('2020-10-19 00:00');
 var bondbetpayday = new Date('2021-02-07 22:20');
 
-const {ChainId, Fetcher, Route, Trade, TokenAmount, TradeType, WETH, Token} = require('@uniswap/sdk');
-var bond = null;
-var pair = null;
-var bondPrice = 41.7;
-var bondPriceETH = 100;
-
-// setInterval(async function () {
-//     try {
-//         bond = new Token(ChainId.MAINNET, '0x0391d2021f89dc339f60fff84546ea23e337750f', 18)
-//
-//         // note that you may want/need to handle this async code differently,
-//         // for example if top-level await is not an option
-//         pair = await Fetcher.fetchPairData(bond, WETH[bond.chainId])
-//
-//         var route = new Route([pair], WETH[bond.chainId])
-//
-//         bondPriceETH = route.midPrice.invert().toSignificant(6);
-//         bondPrice = bondPriceETH * ethPrice;
-//         bondPriceETH = Math.round(((bondPriceETH * 1.0) + Number.EPSILON) * 1000) / 1000;
-//         bondPrice = Math.round(((bondPrice * 1.0) + Number.EPSILON) * 100) / 100;
-//         console.log(bondPrice);
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }, 10 * 1000);
-
-var ethPrice = 360;
-
-setInterval(function () {
-    https.get('https://api.coingecko.com/api/v3/coins/ethereum', (resp) => {
-        let data = '';
-
-        // A chunk of data has been recieved.
-        resp.on('data', (chunk) => {
-            data += chunk;
-        });
-
-        // The whole response has been received. Print out the result.
-        resp.on('end', () => {
-            try {
-                let result = JSON.parse(data);
-                ethPrice = result.market_data.current_price.usd;
-            } catch (e) {
-                console.log(e);
-            }
-        });
-
-    }).on("error", (err) => {
-        console.log("Error: " + err.message);
-    });
-
-}, 20 * 1000);
-
-
 function delay(time) {
     return new Promise(function (resolve) {
         setTimeout(resolve, time)
@@ -1105,8 +1025,8 @@ async function getAPY() {
 
         let tvl2 = prices[11];
         tvl2 = tvl2.replace(/,/g, '').replace(/\$/g, '') * 1.0;
-        bondApy = (20000 * bondPrice * 365 / 7) * 100 / tvl2;
-        bondApy = bondApy.toFixed(2)
+        bondApy = (20000 * coingeckoUsd * 365 / 7) * 100 / tvl2;
+        bondApy = bondApy.toFixed(2) + "%";
         browser.close()
     } catch (e) {
         console.log("Error happened on getting data from barnbridge.");
@@ -1330,7 +1250,7 @@ function doSYAPY() {
                         tvl += (result.state.seniorLiquidity * 1.0);
                         tvl += (result.state.juniorLiquidity * 1.0);
                         let lockedinpool = result.state.juniorLiquidity * 1.0;
-                        let dailyReward = 1428.5714 * bondPrice;
+                        let dailyReward = 1428.5714 * coingeckoUsd;
                         let additionalApy = dailyReward * 365 / lockedinpool * 101;
                         additionalApy = additionalApy.toFixed(2);
                         setTimeout(function () {
