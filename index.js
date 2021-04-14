@@ -1089,42 +1089,24 @@ async function getAPY() {
         });
         const page = await browser.newPage();
         await page.setViewport({width: 1000, height: 926});
-        await page.goto("https://www.coingecko.com/en/yield-farming", {waitUntil: 'networkidle2'});
-        await page.waitForSelector('table');
+        await page.goto("https://app.barnbridge.com/yield-farming", {waitUntil: 'networkidle2'});
         await delay(5000);
 
-        /** @type {string[]} */
-        var farm = await page.evaluate(() => {
-            var div = document.querySelectorAll('tr td:nth-child(2) a');
+        var prices = await page.evaluate(() => {
+            var div = document.querySelectorAll('.s_p1__2yd3a');
 
-            var farm = new Object();
-            farm.assets = [];
+            var prices = []
             div.forEach(element => {
-                farm.assets.push(element.textContent);
+                prices.push(element.textContent);
             });
 
-            div = document.querySelectorAll('tr td:nth-child(3) a');
-            farm.pools = [];
-            div.forEach(element => {
-                farm.pools.push(element.textContent);
-            });
-
-            div = document.querySelectorAll('tr td div div.mr-4');
-            farm.apys = [];
-            div.forEach(element => {
-                farm.apys.push(element.textContent);
-            });
-
-            return farm
+            return prices
         })
 
-        for (var i = 0; i < farm.pools.length; i++) {
-            if (farm.pools[i].includes("BOND") && farm.pools[i].includes("USDC")) {
-                bondApy = farm.apys[i];
-                bondApy = bondApy.substring(0, bondApy.indexOf("Yearly")).replace("\n", "");
-            }
-        }
-
+        let tvl2 = prices[11];
+        tvl2 = tvl2.replace(/,/g, '').replace(/\$/g, '') * 1.0;
+        bondApy = (20000 * bondPrice * 365 / 7) * 100 / tvl2;
+        bondApy = bondApy.toFixed(2)
         browser.close()
     } catch (e) {
         console.log("Error happened on getting data from barnbridge.");
