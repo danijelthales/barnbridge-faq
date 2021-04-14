@@ -1352,7 +1352,7 @@ function doSYAPY() {
                         var dailyReward = 1428.5714 * bondPrice;
                         var additionalApy = dailyReward * 365 / lockedinpool * 101;
                         additionalApy = additionalApy.toFixed(2);
-                        setTimeout(function (result) {
+                        setTimeout(function () {
                             clientBotTokenSy.guilds.cache.forEach(function (value, key) {
                                 value.members.cache.get("828030565945049088").setNickname("Compound SY APY");
                                 var symbol = result.underlyingSymbol;
