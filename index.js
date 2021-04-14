@@ -1279,7 +1279,6 @@ setInterval(function () {
             minutes %= 60;
             seconds %= 60;
 
-
             value.members.cache.get("806453685495529512").setNickname("Bond.Bet");
             value.members.cache.get("806453685495529512").user.setActivity(days + "D:" + hours + "H:" + minutes + "M deposited=" + lockedBondBet + " $BOND", {type: 'PLAYING'});
         } catch (e) {
@@ -1341,28 +1340,28 @@ function doSYAPY() {
                     var increment = 120 / (r.length);
                     var counter = 1;
                     for (var c in r) {
-                        var result = r[c];
-                        var juniorApy = result.state.juniorApy * 100.0;
+                        let result = r[c];
+                        let juniorApy = result.state.juniorApy * 100.0;
                         juniorApy = juniorApy.toFixed(2);
-                        var seniorApy = result.state.seniorApy * 100.0;
+                        let seniorApy = result.state.seniorApy * 100.0;
                         seniorApy = seniorApy.toFixed(2);
                         tvl += (result.state.seniorLiquidity * 1.0);
                         tvl += (result.state.juniorLiquidity * 1.0);
-                        var lockedinpool = result.state.juniorLiquidity * 1.0;
-                        var dailyReward = 1428.5714 * bondPrice;
-                        var additionalApy = dailyReward * 365 / lockedinpool * 101;
+                        let lockedinpool = result.state.juniorLiquidity * 1.0;
+                        let dailyReward = 1428.5714 * bondPrice;
+                        let additionalApy = dailyReward * 365 / lockedinpool * 101;
                         additionalApy = additionalApy.toFixed(2);
                         setTimeout(function () {
                             clientBotTokenSy.guilds.cache.forEach(function (value, key) {
                                 value.members.cache.get("828030565945049088").setNickname("Compound SY APY");
-                                var symbol = result.underlyingSymbol;
-                                var additionalApy = " (+" + additionalApy + " %)";
-                                additionalApy = symbol.toLowerCase().includes("usdc") ? additionalApy : "";
+                                let symbol = result.underlyingSymbol;
+                                let additionalApyText = " (+" + additionalApy + " %)";
+                                additionalApyText = symbol.toLowerCase().includes("usdc") ? additionalApyText : "";
                                 value.members.cache.get("828030565945049088")
                                     .user.setActivity(
-                                    symbol + " Senior APY = " + seniorApy + "%  " + symbol + " Junior APY = " + juniorApy + "%" + additionalApy, {type: 'PLAYING'});
+                                    symbol + " Senior APY = " + seniorApy + "%  " + symbol + " Junior APY = " + juniorApy + "%" + additionalApyText, {type: 'PLAYING'});
                             });
-                        }, increment * counter);
+                        }, increment * counter * 1000);
                         counter++;
                     }
                     tvl = tvl.toFixed(2);
