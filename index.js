@@ -1343,7 +1343,7 @@ function doSYAPY() {
                 try {
                     tvl = 0;
                     let r = JSON.parse(data).data;
-                    var increment = 30;
+                    var increment = 300 / (r.length + 1);
                     var counter = 1;
                     for (var c in r) {
                         var result = r[c];
@@ -1363,7 +1363,7 @@ function doSYAPY() {
                                 var symbol = result.underlyingSymbol;
                                 value.members.cache.get("828030565945049088")
                                     .user.setActivity(
-                                    "USDC Senior APY = " + seniorApy + "%  " + "USDC Junior APY = " + juniorApy + "% (+" + additionalApy + " %)", {type: 'PLAYING'});
+                                    symbol + " Senior APY = " + seniorApy + "%  " + symbol + " Junior APY = " + juniorApy + "% (+" + additionalApy + " %)", {type: 'PLAYING'});
                             });
                         }, increment * counter);
                         counter++;
