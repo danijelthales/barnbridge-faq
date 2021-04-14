@@ -20,7 +20,6 @@ var tvl = 531132484;
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
 
-var barnApy = '15%';
 var bondApy = '590%';
 
 let daoBond = 214311.49;
@@ -991,8 +990,7 @@ setInterval(function () {
 
             if (!bondApy.includes("590")) {
                 value.members.cache.get("774419786935173140").setNickname("APR");
-                value.members.cache.get("774419786935173140").user.setActivity("USDC/DAI/SUSD=" + barnApy
-                    + ", USDC/BOND=" + bondApy
+                value.members.cache.get("774419786935173140").user.setActivity("USDC/BOND=" + bondApy
                     + ", DAO=" + daoBondAPR, {type: 'PLAYING'});
             }
         } catch (e) {
@@ -1093,6 +1091,7 @@ async function getAPY() {
         await page.setViewport({width: 1000, height: 926});
         await page.goto("https://www.coingecko.com/en/yield-farming", {waitUntil: 'networkidle2'});
         await page.waitForSelector('table');
+        await delay(5000);
 
         /** @type {string[]} */
         var farm = await page.evaluate(() => {
@@ -1120,10 +1119,6 @@ async function getAPY() {
         })
 
         for (var i = 0; i < farm.pools.length; i++) {
-            if (farm.pools[i].includes("Barn")) {
-                barnApy = farm.apys[i];
-                barnApy = barnApy.substring(0, barnApy.indexOf("Yearly")).replace("\n", "");
-            }
             if (farm.pools[i].includes("BOND") && farm.pools[i].includes("USDC")) {
                 bondApy = farm.apys[i];
                 bondApy = bondApy.substring(0, bondApy.indexOf("Yearly")).replace("\n", "");
@@ -1343,7 +1338,7 @@ function doSYAPY() {
                 try {
                     tvl = 0;
                     let r = JSON.parse(data).data;
-                    var increment = 300 / (r.length + 1);
+                    var increment = 120 / (r.length);
                     var counter = 1;
                     for (var c in r) {
                         var result = r[c];
@@ -1357,13 +1352,15 @@ function doSYAPY() {
                         var dailyReward = 1428.5714 * bondPrice;
                         var additionalApy = dailyReward * 365 / lockedinpool * 101;
                         additionalApy = additionalApy.toFixed(2);
-                        setTimeout(function () {
+                        setTimeout(function (result) {
                             clientBotTokenSy.guilds.cache.forEach(function (value, key) {
                                 value.members.cache.get("828030565945049088").setNickname("Compound SY APY");
                                 var symbol = result.underlyingSymbol;
+                                var additionalApy = " (+" + additionalApy + " %)";
+                                additionalApy = symbol.toLowerCase().includes("usdc") ? additionalApy : "";
                                 value.members.cache.get("828030565945049088")
                                     .user.setActivity(
-                                    symbol + " Senior APY = " + seniorApy + "%  " + symbol + " Junior APY = " + juniorApy + "% (+" + additionalApy + " %)", {type: 'PLAYING'});
+                                    symbol + " Senior APY = " + seniorApy + "%  " + symbol + " Junior APY = " + juniorApy + "%" + additionalApy, {type: 'PLAYING'});
                             });
                         }, increment * counter);
                         counter++;
@@ -1384,7 +1381,7 @@ function doSYAPY() {
 
 setInterval(function () {
     doSYAPY();
-}, 1000 * 300);
+}, 1000 * 120);
 
 setTimeout(function () {
     doSYAPY();
