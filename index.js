@@ -1021,10 +1021,7 @@ async function getAPY() {
             return prices
         })
 
-        let tvl2 = prices[11];
-        tvl2 = tvl2.replace(/,/g, '').replace(/\$/g, '') * 1.0;
-        bondApy = (20000 * coingeckoUsd * 365 / 7) * 100 / tvl2;
-        bondApy = bondApy.toFixed(2) + "%";
+        let bondApy = prices[11].replace(/,/g, '').replace(/\%/g, '') * 1.0;
         browser.close()
     } catch (e) {
         console.log("Error happened on getting data from barnbridge.");
