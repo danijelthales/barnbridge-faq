@@ -1021,7 +1021,7 @@ async function getAPY() {
             return prices
         })
 
-        let bondApy = prices[11].replace(/,/g, '').replace(/\%/g, '') * 1.0;
+        bondApy = prices[11].replace(/,/g, '').replace(/\%/g, '') * 1.0;
         browser.close()
     } catch (e) {
         console.log("Error happened on getting data from barnbridge.");
