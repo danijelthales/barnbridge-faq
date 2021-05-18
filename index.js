@@ -960,11 +960,9 @@ setInterval(function () {
     clientApy.guilds.cache.forEach(function (value, key) {
         try {
 
-            if (!bondApy.includes("590")) {
                 value.members.cache.get("774419786935173140").setNickname("APR");
                 value.members.cache.get("774419786935173140").user.setActivity("USDC/BOND=" + bondApy
                     + ", DAO=" + daoBondAPR, {type: 'PLAYING'});
-            }
         } catch (e) {
             console.log(e);
         }
@@ -1022,6 +1020,7 @@ async function getAPY() {
         })
 
         bondApy = prices[11].replace(/,/g, '').replace(/\%/g, '') * 1.0;
+        bondApy = bondApy + "%";
         browser.close()
     } catch (e) {
         console.log("Error happened on getting data from barnbridge.");
