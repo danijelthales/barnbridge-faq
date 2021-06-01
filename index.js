@@ -1019,7 +1019,7 @@ async function getAPY() {
             return prices
         })
 
-        bondApy = prices[11].replace(/,/g, '').replace(/\%/g, '') * 1.0;
+        bondApy = prices[12].replace(/,/g, '').replace(/\%/g, '') * 1.0;
         bondApy = bondApy + "%";
         browser.close()
     } catch (e) {
