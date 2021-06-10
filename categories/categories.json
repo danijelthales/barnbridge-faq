@@ -1,88 +1,61 @@
 [
   {
     "name": "General",
-    "desc": "General questions about the project",
+    "desc": "General information about the project",
     "questions": [
-      1,
-      2,
-      3,
-      4
+      1
     ]
   },
   {
-    "name": "$BOND_Token",
-    "desc": "Token-related questions",
+    "name": "BOND Token",
+    "desc": "Token-related questions and information",
     "questions": [
+      2,
+      3,
+      4,
       5,
       6,
       7,
-      8,
-      9,
-      10,
-      11
+      8
     ]
   },
   {
-    "name": "DAO_Structure",
-    "desc": "Questions about the DAO structure",
+    "name": "Token Distribution Programs",
+    "desc": "Everything about Yield Farming, Liquidity Mining and DAO Staking",
     "questions": [
+      9,
+      10,
+      11,
       12,
       13,
-      14,
+      14
+    ]
+  },
+  {
+    "name": "BarnBridge Governance",
+    "desc": "How does BarnBridge governance work",
+    "questions": [
       15,
       16,     
       17,
       18,
       19,
-      20,
-      21,
-      22,
-      23
+      20
     ]
   },
   {
-    "name": "Token_Distribution_Programs",
-    "desc": "Eevrything about Yield Farming, Liquidity Mining, and DAO Staking",
+    "name": "SMART Yield",
+    "desc": "Everything you need to know about SMART Yield",
     "questions": [
+      21,
+      22,
+      23,
       24,
       25,
       26,
       27,
       28,
-      29,
-      30,
-      31,
-      32
-    ]
-  },
-  {
-    "name": "SMART_Yield",
-    "desc": "Eevrything you need to know about SMART Yield",
-    "questions": [
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49
-    ]
-  },
-  {
-    "name": "SMART_Alpha",
-    "desc": "Basic information about SMART Alpha",
-    "questions": [
-      50
+      29
     ]
   }
 ]
