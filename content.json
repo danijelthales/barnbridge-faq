@@ -269,7 +269,7 @@
       "fields": [
         {
           "title": "Answer:",
-          "value": "Snapshot.page is an off-chain gasless governance client. We use it to test the proposal potential before we create a real one on the Ethereum mainnet. Creating a proposal and voting is free, no transactions needed. Proposals and votes are just signed messages stored on IPFS. Signatures are easily verifiable online, they use the "eth_sign" format. \n\n🔗 [BarnBridge Signal](https://signal.barnbridge.com)"
+          "value": "Snapshot.page is an off-chain gasless governance client. We use it to test the proposal potential before we create a real one on the Ethereum mainnet. Creating a proposal and voting is free, no transactions needed. Proposals and votes are just signed messages stored on IPFS. Signatures are easily verifiable online, they use the \"eth_sign\" format. \n\n🔗 [BarnBridge Signal](https://signal.barnbridge.com)"
         }
       ],
       "footer": {
