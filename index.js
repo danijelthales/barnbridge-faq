@@ -960,9 +960,9 @@ setInterval(function () {
     clientApy.guilds.cache.forEach(function (value, key) {
         try {
 
-                value.members.cache.get("774419786935173140").setNickname("APR");
-                value.members.cache.get("774419786935173140").user.setActivity("USDC/BOND=" + bondApy
-                    + ", DAO=" + daoBondAPR, {type: 'PLAYING'});
+            value.members.cache.get("774419786935173140").setNickname("APR");
+            value.members.cache.get("774419786935173140").user.setActivity("USDC/BOND=" + bondApy
+                + ", DAO=" + daoBondAPR, {type: 'PLAYING'});
         } catch (e) {
             console.log(e);
         }
@@ -1019,7 +1019,7 @@ async function getAPY() {
             return prices
         })
 
-        bondApy = prices[12].replace(/,/g, '').replace(/\%/g, '') * 1.0;
+        bondApy = prices[10].replace(/,/g, '').replace(/\%/g, '') * 1.0;
         bondApy = bondApy + "%";
         browser.close()
     } catch (e) {
