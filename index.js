@@ -1314,6 +1314,10 @@ setInterval(function () {
 
 async function getPoolTransactions() {
     for (const poolAddress of poolAddresses.keys()) {
+        console.log("key is " + poolAddress);
+        redisClient.llen(barnbridgeTransactionHashKey, function (err, listSize) {
+            console.log("key is " + poolAddress + " size of redis is" + listSize);
+        });
         axios.get('https://api.barnbridge.com/api/smartyield/pools/' +
             poolAddress
             + '/transactions?limit=10000&page=1&transactionType=all'
