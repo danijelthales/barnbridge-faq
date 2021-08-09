@@ -1366,7 +1366,7 @@ async function getPoolTransactions() {
                 }
             })
             .catch(function (error) {
-                console.log(error);
+                console.log('error in transactions ' + error);
             });
     }
 }
