@@ -88,10 +88,14 @@ answersContent.forEach(a => {
 
 if (process.env.REDIS_URL) {
     console.log("creating redis client");
-    redisClient = redis.createClient(process.env.REDIS_URL);
+    redisClient = redis.createClient(process.env.REDIS_URL, {
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
     console.log("redis client " + redisClient);
     redisClient.on("error", function (error) {
-        console.error('#### REDIS ERROR ####' + error);
+        console.error('#### REDIS ERROR #### ' + error);
     });
 
     redisClient.get("gasSubscribersMap", function (err, obj) {
