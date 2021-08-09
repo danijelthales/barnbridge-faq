@@ -87,9 +87,11 @@ answersContent.forEach(a => {
 
 
 if (process.env.REDIS_URL) {
+    console.log("creating redis client");
     redisClient = redis.createClient(process.env.REDIS_URL);
+    console.log("redis client " + redisClient);
     redisClient.on("error", function (error) {
-        console.error(error);
+        console.error('#### REDIS ERROR ####' + error);
     });
 
     redisClient.get("gasSubscribersMap", function (err, obj) {
@@ -1302,6 +1304,11 @@ setTimeout(function () {
     doSYAPY();
 }, 1000 * 10);
 
+clientBotTokenTX.once('ready', () => {
+    console("on start tx");
+    getPoolTransactions();
+});
+
 
 setInterval(function () {
     try {
@@ -1314,7 +1321,6 @@ setInterval(function () {
 
 async function getPoolTransactions() {
     for (const poolAddress of poolAddresses.keys()) {
-        console.log("key is " + poolAddress);
         redisClient.llen(barnbridgeTransactionHashKey, function (err, listSize) {
             console.log("key is " + poolAddress + " size of redis is" + listSize);
         });
@@ -1323,6 +1329,7 @@ async function getPoolTransactions() {
             + '/transactions?limit=10000&page=1&transactionType=all'
         )
             .then(function (response) {
+                console.log("i got the data");
                 if (response.data.data) {
                     response.data.data.forEach(function (transaction) {
                         redisClient.lrange(barnbridgeTransactionHashKey, 0, -1, function (err, transactionHashArray) {
