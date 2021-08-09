@@ -18,6 +18,7 @@
     "puppeteer": "^5.2.1",
     "redis": "^3.0.2",
     "replace-string": "^3.1.0",
+    "axios": "^0.21.1",
     "synthetix-data": "^2.1.33"
   },
   "devDependencies": {

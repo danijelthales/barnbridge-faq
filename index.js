@@ -5,6 +5,7 @@ const client = new Discord.Client();
 const replaceString = require('replace-string');
 const https = require('https');
 const redis = require("redis");
+const axios = require('axios');
 let redisClient = null;
 
 var fs = require('fs');
@@ -54,6 +55,22 @@ var bondMarketCap = 1000000;
 
 var btcPrice = 13000;
 var btcMarketCap = 242750958733;
+
+const barnbridgeTransactionHashKey = 'TnxHash'
+let poolAddresses = new Map();
+poolAddresses.set('0x4B8d90D68F26DEF303Dcb6CFc9b63A1aAEC15840', 'cUSDC');
+poolAddresses.set('0x673f9488619821aB4f4155FdFFe06f6139De518F', 'cDAI');
+poolAddresses.set('0x3E3349E43e5EeaAEDC5Dc2cf7e022919a6751907', 'cUSDT');
+poolAddresses.set('0x3cf46DA7D65E9aa2168a31b73dd4BeEA5cA1A1f1', 'aUSDC');
+poolAddresses.set('0x6c9DaE2C40b1e5883847bF5129764e76Cb69Fc57', 'aDAI');
+poolAddresses.set('0x660dAF6643191cF0eD045B861D820F283cA078fc', 'aUSDT');
+poolAddresses.set('0x6324538cc222b43490dd95CEBF72cf09d98D9dAe', 'aGUSD');
+poolAddresses.set('0x4dB6fb0218cE5DA392f1E6475A554BAFcb62EF30', 'aRAI');
+poolAddresses.set('0xEc810FDd49e756fB7Ce87DC9D53C7cAB58EAB4Ce', 'aSUSD');
+poolAddresses.set('0x62e479060c89C48199FC7ad43b1432CC585BA1b9', 'crUSDC');
+poolAddresses.set('0x89d82FdF095083Ded96B48FC6462Ed5dBD14151f', 'crDAI');
+poolAddresses.set('0xc45F49bE156888a1C0C93dc0fE7dC89091E291f5', 'crUSDT');
+
 
 console.log("Redis URL:" + process.env.REDIS_URL);
 
@@ -1282,4 +1299,71 @@ setTimeout(function () {
     doSYAPY();
 }, 1000 * 10);
 
+
+setInterval(function () {
+    try {
+        console.log("starting pool transactions")
+        getPoolTransactions();
+    } catch (e) {
+        console.log(e);
+    }
+}, 60 * 10 * 1000);
+
+async function getPoolTransactions() {
+    for (const poolAddress of poolAddresses.keys()) {
+        axios.get('https://api.barnbridge.com/api/smartyield/pools/' +
+            poolAddress
+            + '/transactions?limit=10000&page=1&transactionType=all'
+        )
+            .then(function (response) {
+                if (response.data.data) {
+                    response.data.data.forEach(function (transaction) {
+                        redisClient.lrange(barnbridgeTransactionHashKey, 0, -1, function (err, transactionHashArray) {
+                            if (!transactionHashArray.includes(transaction.transactionHash)) {
+                                client.guilds.cache.forEach(function (guildValue, key) {
+                                    const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('asdaddsacxvxcvwe23r322rrr'));
+                                    if (channel) {
+                                        var message = new Discord.MessageEmbed()
+                                            .addFields(
+                                                {
+                                                    name: ':lock: New SMART Yield Transaction :lock:',
+                                                    value: "\u200b"
+                                                },
+                                                {
+                                                    name: ':link: URL:',
+                                                    value: "[" + transaction.transactionHash + "](https://etherscan.io/tx/" + transaction.transactionHash + ")"
+                                                },
+                                                {
+                                                    name: ':coin: Token:',
+                                                    value: poolAddresses.get(poolAddress)
+                                                },
+                                                {
+                                                    name: ':arrows_counterclockwise: Transaction Type:',
+                                                    value: transaction.transactionType
+                                                },
+                                                {
+                                                    name: ':dollar: Amount:',
+                                                    value: getNumberLabel(transaction.amount)
+                                                },
+                                                {
+                                                    name: ':alarm_clock: Block Timestamp:',
+                                                    value: new Date(transaction.blockTimestamp * 1000)
+                                                }
+                                            )
+                                            .setColor("#0037ff")
+                                        //channel.send(message);
+                                    }
+                                });
+                                redisClient.lpush(barnbridgeTransactionHashKey, transaction.transactionHash);
+
+                            }
+                        });
+                    });
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+}
 
