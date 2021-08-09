@@ -1309,7 +1309,7 @@ setTimeout(function () {
 }, 1000 * 10);
 
 clientBotTokenTX.once('ready', () => {
-    console("on start tx");
+    console.log("on start tx");
     getPoolTransactions();
 });
 
