@@ -51,6 +51,9 @@ clientEpoch.login(process.env.BOT_TOKEN_EPOCH);
 const clientBotTokenSy = new Discord.Client();
 clientBotTokenSy.login(process.env.BOT_TOKEN_SY_APY);
 
+const clientBotTokenTX = new Discord.Client();
+clientBotTokenTX.login(process.env.BOT_TOKEN_TX);
+
 var bondMarketCap = 1000000;
 
 var btcPrice = 13000;
@@ -1320,8 +1323,9 @@ async function getPoolTransactions() {
                     response.data.data.forEach(function (transaction) {
                         redisClient.lrange(barnbridgeTransactionHashKey, 0, -1, function (err, transactionHashArray) {
                             if (!transactionHashArray.includes(transaction.transactionHash)) {
-                                client.guilds.cache.forEach(function (guildValue, key) {
-                                    const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('asdaddsacxvxcvwe23r322rrr'));
+                                console.log("found new transaction" + transaction.transactionHash);
+                                clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
+                                    const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('tx-alerts'));
                                     if (channel) {
                                         var message = new Discord.MessageEmbed()
                                             .addFields(
@@ -1351,7 +1355,7 @@ async function getPoolTransactions() {
                                                 }
                                             )
                                             .setColor("#0037ff")
-                                        //channel.send(message);
+                                        channel.send(message);
                                     }
                                 });
                                 redisClient.lpush(barnbridgeTransactionHashKey, transaction.transactionHash);
