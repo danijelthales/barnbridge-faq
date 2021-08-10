@@ -1310,6 +1310,7 @@ setTimeout(function () {
 
 clientBotTokenTX.once('ready', () => {
     console.log("on start tx");
+    redis.del(barnbridgeTransactionHashKey);
     getPoolTransactions();
 });
 
@@ -1324,10 +1325,11 @@ setInterval(function () {
 }, 60 * 10 * 1000);
 
 async function getPoolTransactions() {
+    var startdate = new Date();
+    var durationInMinutes = 11;
+    startdate.setMinutes(startdate.getMinutes() - durationInMinutes);
+    let startDateUnixTime = startdate.getTime() / 1000;
     for (const poolAddress of poolAddresses.keys()) {
-        redisClient.llen(barnbridgeTransactionHashKey, function (err, listSize) {
-            console.log("key is " + poolAddress + " size of redis is" + listSize);
-        });
         axios.get('https://api.barnbridge.com/api/smartyield/pools/' +
             poolAddress
             + '/transactions?limit=10000&page=1&transactionType=all'
@@ -1336,47 +1338,43 @@ async function getPoolTransactions() {
                 console.log("i got the data");
                 if (response.data.data) {
                     response.data.data.forEach(function (transaction) {
-                        redisClient.lrange(barnbridgeTransactionHashKey, 0, -1, function (err, transactionHashArray) {
-                            if (!transactionHashArray.includes(transaction.transactionHash)) {
-                                console.log("found new transaction" + transaction.transactionHash);
-                                clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
-                                    const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('tx-alerts'));
-                                    if (channel) {
-                                        var message = new Discord.MessageEmbed()
-                                            .addFields(
-                                                {
-                                                    name: ':lock: New SMART Yield Transaction :lock:',
-                                                    value: "\u200b"
-                                                },
-                                                {
-                                                    name: ':link: URL:',
-                                                    value: "[" + transaction.transactionHash + "](https://etherscan.io/tx/" + transaction.transactionHash + ")"
-                                                },
-                                                {
-                                                    name: ':coin: Token:',
-                                                    value: poolAddresses.get(poolAddress)
-                                                },
-                                                {
-                                                    name: ':arrows_counterclockwise: Transaction Type:',
-                                                    value: transaction.transactionType
-                                                },
-                                                {
-                                                    name: ':dollar: Amount:',
-                                                    value: getNumberLabel(transaction.amount)
-                                                },
-                                                {
-                                                    name: ':alarm_clock: Block Timestamp:',
-                                                    value: new Date(transaction.blockTimestamp * 1000)
-                                                }
-                                            )
-                                            .setColor("#0037ff")
-                                        channel.send(message);
-                                    }
-                                });
-                                redisClient.lpush(barnbridgeTransactionHashKey, transaction.transactionHash);
-
-                            }
-                        });
+                        if (startDateUnixTime > transaction.blockTimestamp) {
+                            console.log("found new transaction" + transaction.transactionHash);
+                            clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
+                                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('tx-alerts'));
+                                if (channel) {
+                                    var message = new Discord.MessageEmbed()
+                                        .addFields(
+                                            {
+                                                name: ':lock: New SMART Yield Transaction :lock:',
+                                                value: "\u200b"
+                                            },
+                                            {
+                                                name: ':link: URL:',
+                                                value: "[" + transaction.transactionHash + "](https://etherscan.io/tx/" + transaction.transactionHash + ")"
+                                            },
+                                            {
+                                                name: ':coin: Token:',
+                                                value: poolAddresses.get(poolAddress)
+                                            },
+                                            {
+                                                name: ':arrows_counterclockwise: Transaction Type:',
+                                                value: transaction.transactionType
+                                            },
+                                            {
+                                                name: ':dollar: Amount:',
+                                                value: getNumberLabel(transaction.amount)
+                                            },
+                                            {
+                                                name: ':alarm_clock: Block Timestamp:',
+                                                value: new Date(transaction.blockTimestamp * 1000)
+                                            }
+                                        )
+                                        .setColor("#0037ff")
+                                    channel.send(message);
+                                }
+                            });
+                        }
                     });
                 }
             })
