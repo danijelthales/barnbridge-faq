@@ -1338,7 +1338,7 @@ async function getPoolTransactions() {
                 console.log("i got the data");
                 if (response.data.data) {
                     response.data.data.forEach(function (transaction) {
-                        if (startDateUnixTime > transaction.blockTimestamp) {
+                        if (startDateUnixTime < transaction.blockTimestamp) {
                             console.log("found new transaction" + transaction.transactionHash);
                             clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
                                 const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('tx-alerts'));
