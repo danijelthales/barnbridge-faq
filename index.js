@@ -1310,7 +1310,7 @@ setTimeout(function () {
 
 clientBotTokenTX.once('ready', () => {
     console.log("on start tx");
-    redis.del(barnbridgeTransactionHashKey);
+    redisClient.del(barnbridgeTransactionHashKey);
     getPoolTransactions();
 });
 
