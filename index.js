@@ -1345,7 +1345,7 @@ async function getPoolTransactions() {
                         if (startDateUnixTime < transaction.blockTimestamp) {
                             console.log("found new transaction" + transaction.transactionHash);
                             clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
-                                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('testing'));
+                                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('on-chain-activity'));
                                 if (channel) {
                                     var message = new Discord.MessageEmbed()
                                         .addFields(
