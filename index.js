@@ -1310,7 +1310,12 @@ setTimeout(function () {
 
 clientBotTokenTX.once('ready', () => {
     console.log("on start tx");
-    getPoolTransactions();
+    try {
+        console.log("starting pool transactions")
+        getPoolTransactions();
+    } catch (e) {
+        console.log('on start pool stransactions' + e);
+    }
 });
 
 
@@ -1319,7 +1324,7 @@ setInterval(function () {
         console.log("starting pool transactions")
         getPoolTransactions();
     } catch (e) {
-        console.log(e);
+        console.log('pool stransactions' + e);
     }
 }, 60 * 10 * 1000);
 
@@ -1340,7 +1345,7 @@ async function getPoolTransactions() {
                         if (startDateUnixTime < transaction.blockTimestamp) {
                             console.log("found new transaction" + transaction.transactionHash);
                             clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
-                                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('tx-alerts'));
+                                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('testing'));
                                 if (channel) {
                                     var message = new Discord.MessageEmbed()
                                         .addFields(
