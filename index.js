@@ -1308,6 +1308,8 @@ setTimeout(function () {
     doSYAPY();
 }, 1000 * 10);
 
+let mapPoolTransactions = new Map();
+
 clientBotTokenTX.once('ready', () => {
     console.log("on start tx");
     try {
@@ -1328,6 +1330,33 @@ setInterval(function () {
     }
 }, 60 * 10 * 1000);
 
+
+setInterval(function () {
+    try {
+
+        if (mapPoolTransactions.size > 0) {
+            let sortedMessagesTransactions = new Map([...mapPoolTransactions.entries()].sort((a, b) => {
+                const first = a.key
+                const second = b.key
+                return first > second ? 1 : (first < second ? -1 : 0)
+            }).reverse());
+
+            clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
+                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('on-chain-activity'));
+                if (channel) {
+                    for (const message of sortedMessagesTransactions.values()) {
+                        channel.send(message);
+                    }
+                }
+            });
+            mapPoolTransactions = new Map();
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}, 60 * 10.6 * 1000);
+
+
 async function getPoolTransactions() {
     var startdate = new Date();
     var durationInMinutes = 11;
@@ -1344,40 +1373,35 @@ async function getPoolTransactions() {
                     response.data.data.forEach(function (transaction) {
                         if (startDateUnixTime < transaction.blockTimestamp) {
                             console.log("found new transaction" + transaction.transactionHash);
-                            clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
-                                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('on-chain-activity'));
-                                if (channel) {
-                                    var message = new Discord.MessageEmbed()
-                                        .addFields(
-                                            {
-                                                name: ':lock: New SMART Yield Transaction :lock:',
-                                                value: "\u200b"
-                                            },
-                                            {
-                                                name: ':link: URL:',
-                                                value: "[" + transaction.transactionHash + "](https://etherscan.io/tx/" + transaction.transactionHash + ")"
-                                            },
-                                            {
-                                                name: ':coin: Token:',
-                                                value: poolAddresses.get(poolAddress)
-                                            },
-                                            {
-                                                name: ':arrows_counterclockwise: Transaction Type:',
-                                                value: transaction.transactionType
-                                            },
-                                            {
-                                                name: ':dollar: Amount:',
-                                                value: getNumberLabel(transaction.amount)
-                                            },
-                                            {
-                                                name: ':alarm_clock: Block Timestamp:',
-                                                value: new Date(transaction.blockTimestamp * 1000)
-                                            }
-                                        )
-                                        .setColor("#0037ff")
-                                    channel.send(message);
-                                }
-                            });
+                            var message = new Discord.MessageEmbed()
+                                .addFields(
+                                    {
+                                        name: ':lock: New SMART Yield Transaction :lock:',
+                                        value: "\u200b"
+                                    },
+                                    {
+                                        name: ':link: URL:',
+                                        value: "[" + transaction.transactionHash + "](https://etherscan.io/tx/" + transaction.transactionHash + ")"
+                                    },
+                                    {
+                                        name: ':coin: Token:',
+                                        value: poolAddresses.get(poolAddress)
+                                    },
+                                    {
+                                        name: ':arrows_counterclockwise: Transaction Type:',
+                                        value: transaction.transactionType
+                                    },
+                                    {
+                                        name: ':dollar: Amount:',
+                                        value: getNumberLabel(transaction.amount)
+                                    },
+                                    {
+                                        name: ':alarm_clock: Block Timestamp:',
+                                        value: new Date(transaction.blockTimestamp * 1000)
+                                    }
+                                )
+                                .setColor("#0037ff")
+                            mapPoolTransactions.set(transaction.blockTimestamp, message);
                         }
                     });
                 }
