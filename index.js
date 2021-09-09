@@ -20,6 +20,7 @@ var tvl = 531132484;
 
 let gasSubscribersMap = new Map();
 let gasSubscribersLastPushMap = new Map();
+let mapSmartActivityPoolTransactions = new Map();
 
 var bondApy = '590%';
 
@@ -1351,6 +1352,22 @@ setInterval(function () {
             });
             mapPoolTransactions = new Map();
         }
+        if (mapSmartActivityPoolTransactions.size > 0) {
+            let sortedMessagesTransactions = new Map([...mapSmartActivityPoolTransactions.entries()].sort((a, b) => {
+                const first = a.key
+                const second = b.key
+                return first > second ? 1 : (first < second ? -1 : 0)
+            }).reverse());
+            clientBotTokenTX.guilds.cache.forEach(function (guildValue, key) {
+                const channel = guildValue.channels.cache.find(channel => channel.name.toLowerCase().includes('on-chain-activity'));
+                if (channel) {
+                    for (const message of sortedMessagesTransactions.values()) {
+                        channel.send(message);
+                    }
+                }
+            });
+            mapSmartActivityPoolTransactions = new Map();
+        }
     } catch (e) {
         console.log(e);
     }
@@ -1410,5 +1427,81 @@ async function getPoolTransactions() {
                 console.log('error in transactions ' + error);
             });
     }
+}
+
+
+async function getSmartActivityTransactions() {
+    var startdate = new Date();
+    var durationInMinutes = 11;
+    startdate.setMinutes(startdate.getMinutes() - durationInMinutes);
+    let startDateUnixTime = startdate.getTime() / 1000;
+
+    axios.get('https://api-v2.barnbridge.com/api/smartalpha/transactions?limit=10000&page=1'
+    )
+        .then(function (response) {
+            console.log("i got the data");
+            if (response.data.data) {
+                response.data.data.forEach(function (transaction) {
+                    if (startDateUnixTime < transaction.blockTimestamp) {
+                        console.log("found new smart alfa transaction" + transaction.transactionHash);
+                        axios.get('https://api-v2.barnbridge.com/api/smartalpha/pools').then(function (response) {
+                            let wantedPool;
+                            for (const pool of response.data.data) {
+                                if (transaction.poolAddress == pool.poolAddress) {
+                                    wantedPool = pool;
+                                    break;
+                                }
+                            }
+
+                            let amount = transaction.amount > 1 ? numberWithCommas(Math.round(transaction.amount)) : transaction.amount.replace(".", ".");
+                            let amountQuote = transaction.amountInQuoteAsset > 1 ? numberWithCommas(Math.round(transaction.amountInQuoteAsset)) : transaction.amountInQuoteAsset.replace(".", ".");
+                            let amountText = amount + " " + transaction.poolTokenSymbol + " | " + amountQuote + " " + transaction.oracleAssetSymbol;
+                            if (transaction.oracleAssetSymbol != 'USD') {
+                                let amountUSD = transaction.amountInUsd > 1 ? numberWithCommas(Math.round(transaction.amountInUsd)) : transaction.amountInUsd.replace(".", ".");
+                                amountText = amountText + " | " + amountUSD + " USD";
+                            }
+
+                            message = new Discord.MessageEmbed()
+                                .addFields(
+                                    {
+                                        name: ':bar_chart:  New SMART Alpha Transaction :bar_chart:',
+                                        value: "\u200b"
+                                    },
+                                    {
+                                        name: ':link: URL:',
+                                        value: "[" + transaction.transactionHash + "](https://etherscan.io/tx/" + transaction.transactionHash + ")"
+                                    },
+                                    {
+                                        name: ':cup_with_straw:  Pool:',
+                                        value: wantedPool.poolName
+                                    },
+                                    {
+                                        name: ':arrows_counterclockwise: Transaction Type:',
+                                        value: transaction.transactionType
+                                    },
+                                    {
+                                        name: ':dollar: Amount:',
+                                        value: amountText
+                                    },
+                                    {
+                                        name: ':alarm_clock: Block Timestamp:',
+                                        value: new Date(transaction.blockTimestamp * 1000)
+                                    }
+                                )
+                                .setColor("#0037ff")
+                            mapSmartActivityPoolTransactions.set(transaction.blockTimestamp, message);
+                        });
+                    }
+                });
+            }
+        })
+        .catch(function (error) {
+            console.log('error in transactions ' + error);
+        });
+}
+
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
