@@ -1316,6 +1316,7 @@ clientBotTokenTX.once('ready', () => {
     try {
         console.log("starting pool transactions")
         getPoolTransactions();
+        getSmartActivityTransactions();
     } catch (e) {
         console.log('on start pool stransactions' + e);
     }
@@ -1326,6 +1327,7 @@ setInterval(function () {
     try {
         console.log("starting pool transactions")
         getPoolTransactions();
+        getSmartActivityTransactions();
     } catch (e) {
         console.log('pool stransactions' + e);
     }
