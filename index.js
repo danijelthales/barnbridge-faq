@@ -1247,7 +1247,7 @@ setInterval(function () {
 
 function doSYAPY() {
     try {
-        https.get('https://api.barnbridge.com/api/smartyield/pools', (resp) => {
+        https.get('https://api-v2.barnbridge.com/api/smartyield/pools', (resp) => {
             let data = '';
 
             // A chunk of data has been recieved.
