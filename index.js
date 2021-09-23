@@ -1382,7 +1382,7 @@ async function getPoolTransactions() {
     startdate.setMinutes(startdate.getMinutes() - durationInMinutes);
     let startDateUnixTime = startdate.getTime() / 1000;
     for (const poolAddress of poolAddresses.keys()) {
-        axios.get('https://api.barnbridge.com/api/smartyield/pools/' +
+        axios.get('https://api-v2.barnbridge.com/api/smartyield/pools/' +
             poolAddress
             + '/transactions?limit=10000&page=1&transactionType=all'
         )
