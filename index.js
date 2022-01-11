@@ -1033,7 +1033,7 @@ async function getAPY() {
         const page = await browser.newPage();
         await page.setViewport({width: 1000, height: 926});
         await page.goto("https://app.barnbridge.com/yield-farming", {waitUntil: 'networkidle2'});
-        await delay(5000);
+        await delay(10000);
 
         var prices = await page.evaluate(() => {
             var div = document.querySelectorAll('.s_p1__2yd3a');
@@ -1046,8 +1046,10 @@ async function getAPY() {
             return prices
         })
 
-        bondApy = prices[10].replace(/,/g, '').replace(/\%/g, '') * 1.0;
+        bondApy = prices[5].replace(/,/g, '').replace(/\%/g, '') * 1.0;
         bondApy = bondApy + "%";
+        daoBondAPR = prices[10].replace(/,/g, '').replace(/\%/g, '') * 1.0;
+        daoBondAPR = daoBondAPR + "%";
         browser.close()
     } catch (e) {
         console.log("Error happened on getting data from barnbridge.");
@@ -1212,37 +1214,7 @@ setInterval(function () {
 }, 30 * 1000);
 
 
-setInterval(function () {
-    try {
-        https.get('https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=0x0391d2021f89dc339f60fff84546ea23e337750f&address=0x10e138877df69Ca44Fdc68655f86c88CDe142D7F&tag=latest', (resp) => {
-            let data = '';
 
-            // A chunk of data has been recieved.
-            resp.on('data', (chunk) => {
-                data += chunk;
-            });
-
-            // The whole response has been received. Print out the result.
-            resp.on('end', () => {
-                try {
-                    let result = JSON.parse(data).result / 1e18;
-                    if (!isNaN(result)) {
-                        daoBond = result.toFixed(2);
-                        daoBondAPR = 1742.86 * 365 * 100 / daoBond;
-                        daoBondAPR = daoBondAPR.toFixed(2) + "%";
-                    }
-                } catch (e) {
-                    console.log(e);
-                }
-            });
-
-        }).on("error", (err) => {
-            console.log("Error: " + err.message);
-        });
-    } catch (e) {
-        console.log(e);
-    }
-}, 80 * 1000);
 
 
 function doSYAPY() {
